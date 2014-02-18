@@ -23,6 +23,7 @@ Contents
 - [vim-pathogen](https://github.com/tpope/vim-pathogen)
 - [vim-sensible](https://github.com/tpope/vim-sensible)
 - [vim-signify](https://github.com/mhinz/vim-signify)
+- [php.vim](https://github.com/StanAngeloff/php.vim)
 
 Install
 -----

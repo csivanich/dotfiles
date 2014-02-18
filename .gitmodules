@@ -34,3 +34,6 @@
 [submodule "libs/github/oh-my-zsh"]
 	path = libs/github/oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule "libs/github/php.vim"]
+	path = libs/github/php.vim
+	url = https://github.com/StanAngeloff/php.vim.git
