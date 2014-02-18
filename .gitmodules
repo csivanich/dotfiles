@@ -1,0 +1,33 @@
+[submodule "libs/vim-pathogen"]
+	path = libs/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "libs/github/vim-pathogen"]
+	path = libs/github/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "libs/github/nerdtree"]
+	path = libs/github/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "libs/github/gruvbox"]
+	path = libs/github/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
+[submodule "libs/github/syntastic"]
+	path = libs/github/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "libs/github/vim-airline"]
+	path = libs/github/vim-airline
+	url = https://github.com/bling/vim-airline.git
+[submodule "libs/github/vim-fugitive"]
+	path = libs/github/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "libs/github/vim-sensible"]
+	path = libs/github/vim-sensible
+	url = https://github.com/tpope/vim-sensible.git
+[submodule "libs/github/vim-signify"]
+	path = libs/github/vim-signify
+	url = https://github.com/mhinz/vim-signify.git
+[submodule "libs/github/powerline-fonts"]
+	path = libs/github/powerline-fonts
+	url = https://github.com/Lokaltog/powerline-fonts.git
+[submodule "libs/github/solarized"]
+	path = libs/github/solarized
+	url = https://github.com/altercation/solarized.git
