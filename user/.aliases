@@ -1,1 +1,2 @@
 alias phplint="find -name '*.php' | xargs -n4 php -l"
+alias war="jar -cvvf "

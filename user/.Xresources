@@ -17,3 +17,33 @@ xterm*scrollTtyOutput:    false
 ! xterm*multiScroll:        true
 ! xterm*toolBar:            false
 
+! solarized color overrides --------------------------------------------------
+! Many colors from https://kuler.adobe.com/2014-Trends-color-theme-3429908
+!
+#define black		#1A1B21
+#define darkGray	#32343B
+#define brown		#8A7265
+#define darkBrown	#2B2321
+#define red			#D8403A
+#define lightRed 	#F0695E
+#define lightBlue	#BECDF0
+#define white		#ECEEE1
+#define cream		#FDCD8D
+#define green		#44BD2B
+#define lightGreen	#B9F0D0
+#define lightYellow #F0E49D
+#define lightBrown	#BAA061
+*background:				darkBrown
+*foreground:				white
+*fadeColor:					darkGray
+*pointerColorBackground:	white
+*pointerColorForeground:	black
+*color0:					darkGray
+*color3:					brown
+*color4:					cream
+! Color of execulables files
+*color10:					lightYellow
+! Color of directories
+*color12:					lightRed
+! Color of links
+*color14:					lightBlue
