@@ -1,7 +1,26 @@
 dotfiles
 ========
 
-Configuration repository containing most customized home folder dotfiles.
+My personal configuration repository containing most customized home folder dotfiles.
+
+## The current contents include:
+
+#### General:
+[solarized](https://github.com/altercation/solarized)
+
+#### Zsh:
+[oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+#### Vim:
+[gruvbox](https://github.com/morhetz/gruvbox)
+[nerdtree](https://github.com/scrooloose/nerdtree)
+[syntastic](https://github.com/scrooloose/syntastic)
+[vim-airline](https://github.com/bling/vim-airline)
+[powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
+[vim-fugitive](https://github.com/tpope/vim-fugitive)
+[vim-pathogen](https://github.com/tpope/vim-pathogen)
+[vim-sensible](https://github.com/tpope/vim-sensible)
+[vim-signify](https://github.com/mhinz/vim-signify)
 
 Install
 -----
