@@ -13,7 +13,7 @@ ZSH_THEME="agnoster"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-ALIAS_FILE="~/.aliases"
+ALIAS_FILE=$HOME/.aliases
 source $ALIAS_FILE
 
 # Set to this to use case-sensitive completion
