@@ -8,8 +8,9 @@ xterm*termName:	          xterm-256color
 ! xterm*font:              -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
 xterm*dynamicColors:      true
 xterm*utf8:               2
+xterm*locale:			  true
 xterm*eightBitInput:      true
-xterm*saveLines:          512
+xterm*saveLines:          4096
 ! xterm*scrollKey:          true
 xterm*scrollTtyOutput:    false
 ! xterm*scrollBar:          true

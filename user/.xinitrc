@@ -4,7 +4,7 @@
 #
 # Executed by startx (run your window manager from here)
 
-SOLARIZED=$HOME/config/libs/github/solarized/xresources/solarized
+SOLARIZED=$HOME/dotfiles/libs/github/solarized/xresources/solarized
 XRESOURCES=$HOME/.Xresources
 export LANG=en_US.utf8
 
