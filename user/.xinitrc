@@ -6,6 +6,7 @@
 
 SOLARIZED=$HOME/config/libs/github/solarized/xresources/solarized
 XRESOURCES=$HOME/.Xresources
+export LANG=en_US.utf8
 
 [ -r $SOLARIZED ] && xrdb -merge $SOLARIZED 
 [ -r $XRESOURCES ] && xrdb -merge $XRESOURCES

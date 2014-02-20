@@ -1,7 +1,8 @@
 ! xterm ----------------------------------------------------------------------
 !
 xterm*VT100.geometry:     80x25
-xterm*faceName:           Sauce Code Powerline
+!xterm*faceName:			  Terminess Powerline:style=Regular
+xterm*faceName:           Sauce Code Powerline:style=Regular
 xterm*faceSize:           10
 xterm*termName:	          xterm-256color
 ! xterm*font:              -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
@@ -38,8 +39,11 @@ xterm*scrollTtyOutput:    false
 *fadeColor:					darkGray
 *pointerColorBackground:	white
 *pointerColorForeground:	black
+! Color of hostname background
 *color0:					darkGray
+! Color of git branch background
 *color3:					brown
+! Color of current directory
 *color4:					cream
 ! Color of execulables files
 *color10:					lightYellow
