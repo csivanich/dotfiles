@@ -16,6 +16,9 @@ ZSH_THEME="agnoster"
 ALIAS_FILE=$HOME/.aliases
 source $ALIAS_FILE
 
+# Possibly fix the NVIDIA blue tint issue on flash videos...
+export VDPAU_NVIDIA_NO_OVERLAY=1
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
