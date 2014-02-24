@@ -12,7 +12,7 @@ xterm*locale:			  true
 xterm*eightBitInput:      true
 xterm*saveLines:          4096
 ! xterm*scrollKey:          true
-xterm*scrollTtyOutput:    false
+xterm*scrollTtyOutput:    true
 ! xterm*scrollBar:          true
 ! xterm*rightScrollBar:     true
 ! xterm*jumpScroll:         true
@@ -52,3 +52,5 @@ xterm*scrollTtyOutput:    false
 *color12:					lightRed
 ! Color of links
 *color14:					lightBlue
+! Color of some highlights
+*color8:					cream
