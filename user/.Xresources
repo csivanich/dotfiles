@@ -35,6 +35,10 @@ xterm*scrollTtyOutput:    true
 #define lightGreen	#B9F0D0
 #define lightYellow #F0E49D
 #define lightBrown	#BAA061
+! From solarized
+#define violet		#6C71C4
+#define base1		#93A1A1
+
 *background:				darkBrown
 *foreground:				white
 *fadeColor:					darkGray
@@ -46,6 +50,8 @@ xterm*scrollTtyOutput:    true
 *color3:					brown
 ! Color of current directory
 *color4:					cream
+! Color of some highlighted things
+*color6:					base1
 ! Color of execulables files
 *color10:					lightYellow
 ! Color of directories
