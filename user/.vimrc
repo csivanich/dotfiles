@@ -13,6 +13,7 @@ set background=dark
 set tabstop=4
 set shiftwidth=4
 set smarttab
+set expandtab
 set showcmd
 set number
 set showmatch
