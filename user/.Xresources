@@ -60,3 +60,10 @@ xterm*scrollTtyOutput:    true
 *color14:					lightBlue
 ! Color of some highlights
 *color8:					cream
+
+! xclock ---------------------------------------------------------------------
+!
+xclock*update:            1
+xclock*analog:            false
+xclock*Foreground:        white
+xclock*background:        black
