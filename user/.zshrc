@@ -14,7 +14,7 @@ ZSH_THEME="agnoster"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 ALIAS_FILE=$HOME/.aliases
-source $ALIAS_FILE
+test -r "$ALIAS_FILE" && source $ALIAS_FILE
 
 # Possibly fix the NVIDIA blue tint issue on flash videos...
 export VDPAU_NVIDIA_NO_OVERLAY=1
@@ -60,14 +60,12 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/usr/bin/core_perl:/opt/java/bin:/home/chris/bin"
+
+test -d "/usr/bin/vendor_perl" && PATH="$PATH:/usr/bin/vendor_perl"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+# Vim as default editor
+export EDITOR='vim'
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
