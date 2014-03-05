@@ -24,6 +24,7 @@ Contents
 - [vim-sensible](https://github.com/tpope/vim-sensible)
 - [vim-signify](https://github.com/mhinz/vim-signify)
 - [php.vim](https://github.com/StanAngeloff/php.vim)
+- [ack.vim](https://github.com/mileszs/ack.vim)
 
 Install
 -----
