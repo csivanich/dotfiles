@@ -37,3 +37,6 @@
 [submodule "libs/github/php.vim"]
 	path = libs/github/php.vim
 	url = https://github.com/StanAngeloff/php.vim.git
+[submodule "libs/github/ack.vim"]
+	path = libs/github/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
