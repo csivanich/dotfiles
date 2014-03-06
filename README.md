@@ -26,6 +26,7 @@ Contents
 - [php.vim](https://github.com/StanAngeloff/php.vim)
 - [ack.vim](https://github.com/mileszs/ack.vim)
 - [ctrlp.vim](https://github.com/kien/ctrlp.vim)
+- [rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)
 
 Install
 -----

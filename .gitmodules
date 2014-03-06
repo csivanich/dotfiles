@@ -43,3 +43,6 @@
 [submodule "libs/github/ctrlp.vim"]
 	path = libs/github/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim
+[submodule "libs/github/rainbow_parentheses.vim"]
+	path = libs/github/rainbow_parentheses.vim
+	url = https://github.com/kien/rainbow_parentheses.vim
