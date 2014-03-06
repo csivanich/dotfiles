@@ -25,6 +25,7 @@ Contents
 - [vim-signify](https://github.com/mhinz/vim-signify)
 - [php.vim](https://github.com/StanAngeloff/php.vim)
 - [ack.vim](https://github.com/mileszs/ack.vim)
+- [ctrlp.vim](https://github.com/kien/ctrlp.vim)
 
 Install
 -----

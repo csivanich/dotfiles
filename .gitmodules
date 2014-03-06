@@ -40,3 +40,6 @@
 [submodule "libs/github/ack.vim"]
 	path = libs/github/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "libs/github/ctrlp.vim"]
+	path = libs/github/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim
