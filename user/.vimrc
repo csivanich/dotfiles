@@ -36,8 +36,14 @@ let g:airline_powerline_fonts = 1
 set encoding=utf-8
 set laststatus=2
 
-autocmd vimenter * if !argc() | NERDTree | endif
-map <TAB> :NERDTreeToggle<CR>
+" NERDTree Options
+" Start if no file opened
+"autocmd vimenter * if !argc() | NERDTree | endif
+" Assign command to TAB
+"map <TAB> :NERDTreeToggle<CR>
+
+" Taglist toggle
+map <TAB> :Tlist<CR>
 
 " Trailing whitespace highlighting
 " http://vim.wikia.com/wiki/Highlight_unwanted_spaces
