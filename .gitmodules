@@ -46,3 +46,6 @@
 [submodule "libs/github/rainbow_parentheses.vim"]
 	path = libs/github/rainbow_parentheses.vim
 	url = https://github.com/kien/rainbow_parentheses.vim
+[submodule "libs/github/taglist.vim"]
+	path = libs/github/taglist.vim
+	url = https://github.com/vim-scripts/taglist.vim.git
