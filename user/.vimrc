@@ -41,6 +41,9 @@ set laststatus=2
 "autocmd vimenter * if !argc() | NERDTree | endif
 " Assign command to TAB
 "map <TAB> :NERDTreeToggle<CR>
+" Fix encoding issues surrounding arrows
+" (https://superuser.com/questions/387777/what-could-cause-strange-characters-in-vim)
+let g:NERDTreeDirArrows=0
 
 " Taglist toggle
 map <TAB> :Tlist<CR>
