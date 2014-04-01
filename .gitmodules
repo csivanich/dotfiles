@@ -49,3 +49,6 @@
 [submodule "libs/github/taglist.vim"]
 	path = libs/github/taglist.vim
 	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule "libs/github/vim-markdown"]
+	path = libs/github/vim-markdown
+	url = https://github.com/tpope/vim-markdown.git
