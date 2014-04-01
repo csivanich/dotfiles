@@ -23,6 +23,7 @@ Contents
 - [vim-pathogen](https://github.com/tpope/vim-pathogen)
 - [vim-sensible](https://github.com/tpope/vim-sensible)
 - [vim-signify](https://github.com/mhinz/vim-signify)
+- [vim-markdown](https://github.com/tpope/vim-markdown)
 - [php.vim](https://github.com/StanAngeloff/php.vim)
 - [ack.vim](https://github.com/mileszs/ack.vim)
 - [ctrlp.vim](https://github.com/kien/ctrlp.vim)
