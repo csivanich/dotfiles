@@ -118,5 +118,3 @@ The easiest way to install everything is to move the dotfiles you wish to replac
 mv <config> <config>.old
 ln -sv path/to/dotfiles/user/.* . 
 ```
-
-There will be a helpful tool for this eventually, however, it's not quite ready for prime time.
