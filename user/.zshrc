@@ -1,5 +1,5 @@
 # Username for agnoster theme
-DEFAULT_USER="Sivano"
+DEFAULT_USER="$USER"
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
@@ -15,9 +15,6 @@ ZSH_THEME="agnoster"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 ALIAS_FILE=$HOME/.aliases
 test -r "$ALIAS_FILE" && source $ALIAS_FILE
-
-# Possibly fix the NVIDIA blue tint issue on flash videos...
-export VDPAU_NVIDIA_NO_OVERLAY=1
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -59,7 +56,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/usr/bin/core_perl:/opt/java/bin:/home/chris/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/usr/bin/core_perl:/opt/java/bin:$HOME/bin"
 
 test -d "/usr/bin/vendor_perl" && PATH="$PATH:/usr/bin/vendor_perl"
 # export MANPATH="/usr/local/man:$MANPATH"

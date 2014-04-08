@@ -28,7 +28,7 @@ for_window [class="Xfce4-notifyd"] floating enable
 for_window [class="jetbrains-idea-ce"] floading disable
 for_window [class="feh"] floating enable
 
-exec --no-startup-id clipit
+exec --no-startup-id [ $(which clipit) ] && clipit
 exec --no-startup-id [ $(which compton) ] && compton -CGb
 
 # Move the current workspace to other outputs

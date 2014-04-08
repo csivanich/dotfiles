@@ -1,24 +1,89 @@
 dotfiles
 ========
 
-My personal configuration repository containing most customized home folder dotfiles.
-As of right now, this is a proof of concept. The colors/configs aren't complete yet, but will be soon!
+Configuration repository containing my customized home folder dotfiles, many using Git submodules.
+
+I was tired of having a bunch of configurations across all my machines, especially when trying to keep all the plugins and extras up to date. So I got fed up and started this. It's not perfect (yet!), but it's a great starting point for any Linux config.
+
+These are based from an Arch Linux system running i3wm and Compton, however most of the files should be usable on their own. 
 
 Contents
 -----
 
-### General:
+#### i3 Configuration
+
+- $mod set to Win key
+- DejaVu Sans Mono 10 font
+- 1px borders
+- Autostarts (if installed):
+  - [Compton](https://github.com/chjj/compton)
+  - [Clipit](http://sourceforge.net/projects/gtkclipit/)
+- Improved window movement between workspaces (\$mod+j/k)
+- Named/numbered workspaces, each with switch and move bindings
+- Top hidden bar
+- WIP colors
+
+#### X11 Configuration
+
+- Merges user configuration on top of solarized at startup
+- Default WM is `i3`
+- Custom color scheme loosely based on solarized dark
+- Xclock tweaks because why not?
+
+#### Xterm Configuration
+
+- Sauce Code Powerline font (see submodules) - size 10 regular
+- 256 color mode enabled
+- UTF8 enabled
+- 4096 lines saved
+- Nothing else that special
+
+#### Zshrc Configuration
+- Oh-my-zsh plugin (see submodules)
+    - Git plugin enabled
+    - Agnoster theme
+- Aliases file
+- Completion waiting dots
+- Custom $PATH
+- \$EDITOR is `vim`
+
+#### Vim Configuration
+- Global config base
+- Tons of plugins through Pathogen
+- Gruvbox theme
+- Dark background
+- 4 spaced tabs
+- Numbered lines
+- Global highlighting of search matches
+- Case insensitive search
+- Mouse support
+- 80 line marker and auto line breaks
+- TAB toggles Taglist
+- Trailing whitespace highlighting
+- Airline Configuration
+    - Powerline font support
+    - UTF-8 encoding enabled
+    - Status line always shown
+- NERDTree Configuration
+    - Removed arrows which have issues with Powerline fonts
+- Rainbow Parentheses Configuration
+    - Auto starts
+
+Submodules
+-----
+
+#### General:
 - [solarized](https://github.com/altercation/solarized)
 
-### Zsh:
+#### Zsh:
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
-### Vim:
+#### Vim:
 - [gruvbox](https://github.com/morhetz/gruvbox)
 - [nerdtree](https://github.com/scrooloose/nerdtree)
 - [syntastic](https://github.com/scrooloose/syntastic)
 - [vim-airline](https://github.com/bling/vim-airline)
-- [powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
+  - [powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [vim-pathogen](https://github.com/tpope/vim-pathogen)
 - [vim-sensible](https://github.com/tpope/vim-sensible)

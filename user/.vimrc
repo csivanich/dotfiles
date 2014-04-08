@@ -7,7 +7,7 @@ execute pathogen#infect()
 
 " Default options
 " https://wiki.archlinux.org/index.php/vim/.vimrc
-colorscheme gruvbox 
+colorscheme gruvbox
 " solarized
 set background=dark
 set tabstop=4

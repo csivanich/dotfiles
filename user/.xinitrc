@@ -34,5 +34,3 @@ then
 else
 	exec i3
 fi
-
-[ -n "$(which clipit)" ] && clipit &
