@@ -25,8 +25,11 @@ popup_during_fullscreen smart
 workspace_auto_back_and_forth yes
 
 for_window [class="Xfce4-notifyd"] floating enable
+for_window [class="jetbrains-idea-ce"] floading disable
+for_window [class="feh"] floating enable
 
 exec --no-startup-id clipit
+exec --no-startup-id [ $(which compton) ] && compton -CGb
 
 # Move the current workspace to other outputs
 bindsym $mod+k move workspace to output right
@@ -97,6 +100,7 @@ bindsym $mod+9 workspace 9: Firefox
 bindsym $mod+0 workspace 10: Chromium
 bindsym $mod+m workspace m: Music
 bindsym $mod+x workspace x: Xchat
+bindsym $mod+y workspace y: YouTube
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1: Terminal
@@ -111,6 +115,7 @@ bindsym $mod+Shift+9 move container to workspace 9: Firefox
 bindsym $mod+Shift+0 move container to workspace 10: Chromium
 bindsym $mod+Shift+m move container to workspace m: Music
 bindsym $mod+Shift+x move container to workspace x: Xchat
+bindsyn $mod+Shift+y move container to workspace y: YouTube
 
 
 # reload the configuration file
