@@ -1,6 +1,3 @@
-# Username for agnoster theme
-DEFAULT_USER="$USER"
-
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
