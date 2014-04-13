@@ -1,0 +1,14 @@
+[
+    {
+        "link" : {
+            "~/.vim" : "vim/vim",
+            "~/.vimrc" : "vim/vimrc"
+        }
+    },
+    {
+        "link" : {
+            "~/.zshrc" : "zsh/zshrc",
+            "~/.oh-my-zsh" : "zsh/oh-my-zsh"  
+        }
+    }
+]

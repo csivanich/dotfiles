@@ -4,8 +4,8 @@
 
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DOTBOT_DIR="libs/github/dotbot"
-DOTBOT="dotbot"
+DOTBOT="/bin/dotbot"
 
 CONFIG="install.conf.json"
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT}" -d "${BASEDIR}" -c "${CONFIG}" $@
+python2 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT}" -d "${BASEDIR}" -c "${CONFIG}" $@
