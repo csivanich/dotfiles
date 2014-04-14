@@ -8,7 +8,12 @@
     {
         "link" : {
             "~/.zshrc" : "zsh/zshrc",
-            "~/.oh-my-zsh" : "zsh/oh-my-zsh"  
+            "~/.oh-my-zsh" : "zsh/oh-my-zsh"
+        }
+    },
+    {
+        "link" : {
+            "~/.i3" : "i3"
         }
     }
 ]
