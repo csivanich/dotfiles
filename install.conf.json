@@ -1,6 +1,11 @@
 [
     {
         "link" : {
+            "~/.compton.conf" : "compton/compton.conf"
+        }
+    },
+    {
+        "link" : {
             "~/.vim" : "vim/vim",
             "~/.vimrc" : "vim/vimrc"
         }
