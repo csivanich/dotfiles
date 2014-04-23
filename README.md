@@ -76,6 +76,7 @@ Submodules
 -----
 
 #### General:
+- [dotbot](https://github.com/anishathalye/dotbot)
 - [solarized](https://github.com/altercation/solarized)
 
 #### Zsh:
@@ -114,4 +115,12 @@ git submodules init
 git submodules update
 ```
 
-With releases 2.0+ supporting [dotbot](https://github.com/anishathalye/dotbot) installs simply run `install.sh` from the **dotfiles** folder and resolve each issue until all the files have linked. Moving the original files is recommended, `mv <config file> <config file>.bak` will do the trick.
+With releases 2.0+ supporting [dotbot](https://github.com/anishathalye/dotbot) installs simply run `install.sh` from the **dotfiles** folder and resolve each issue until all the files have linked.
+
+Moving the original files is recommended,
+
+```
+mv <config file> <config file>.bak
+```
+
+should do the trick.
