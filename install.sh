@@ -8,4 +8,8 @@ DOTBOT="/bin/dotbot"
 
 CONFIG="install.conf.json"
 
-python2 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT}" -d "${BASEDIR}" -c "${CONFIG}" $@
+# Ensure those systems using python2/3 get the correct version
+PYTHON="python"
+[ $(which python2) ] && PYTHON="python2"
+
+$PYTHON "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT}" -d "${BASEDIR}" -c "${CONFIG}" $@
