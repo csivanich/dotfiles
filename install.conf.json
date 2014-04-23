@@ -1,6 +1,11 @@
 [
     {
         "link" : {
+            "~/.fonts" : "fonts"
+        }
+    },
+    {
+        "link" : {
             "~/.Xresources" : "x/Xresources",
             "~/.xinitrc" : "x/xinitrc"
         }
