@@ -1,11 +1,13 @@
 dotfiles
 ========
 
-Configuration repository containing my customized home folder dotfiles, many using Git submodules.
+Configuration repository containing my configurations, many using Git submodules.
 
-I was tired of having a bunch of configurations across all my machines, especially when trying to keep all the plugins and extras up to date. So I got fed up and started this. It's not perfect (yet!), but it's a great starting point for any Linux config.
+I was tired of having a bunch of configurations across all my machines, especially when trying to keep all the plugins and extras up to date. So I got fed up and threw them on GitHub. It's not perfect (yet!), but it's a great starting point for any Linux config.
 
-These are based from an Arch Linux system running i3wm and Compton, however most of the files should be usable on their own. 
+These configurations are based from an Arch Linux system running i3wm and Compton + xterm/zsh, however most of the files should be usable on their own.
+
+Releases 2.0+ provide automated install support using [dotbot](https://github.com/anishathalye/dotbot). See **Install** for instructions.
 
 Contents
 -----
@@ -18,6 +20,7 @@ Contents
 - Autostarts (if installed):
   - [Compton](https://github.com/chjj/compton)
   - [Clipit](http://sourceforge.net/projects/gtkclipit/)
+  - (Disabled by default) Xautolock running `lock`
 - Improved window movement between workspaces (\$mod+j/k)
 - Named/numbered workspaces, each with switch and move bindings
 - Top hidden bar
@@ -109,12 +112,6 @@ git clone https://github.com/csivanich/dotfiles.git
 cd dotfiles
 git submodules init
 git submodules update
-
 ```
 
-The easiest way to install everything is to move the dotfiles you wish to replace and link in the new versions:
-
-```
-mv <config> <config>.old
-ln -sv path/to/dotfiles/user/.* . 
-```
+With releases 2.0+ supporting [dotbot](https://github.com/anishathalye/dotbot) installs simply run `install.sh` from the **dotfiles** folder and resolve each issue until all the files have linked. Moving the original files is recommended, `mv <config file> <config file>.bak` will do the trick.
