@@ -1,7 +1,9 @@
 [
     {
         "link" : {
-            "~/.fonts" : "fonts"
+            "~/.fonts" : "fonts",
+            "~/.aliases" : "other/aliases",
+            "~/.zsh-update" : "other/zsh-update"
         }
     },
     {
