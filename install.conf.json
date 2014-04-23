@@ -1,0 +1,37 @@
+[
+    {
+        "link" : {
+            "~/.fonts" : "fonts",
+            "~/.aliases" : "other/aliases",
+            "~/.zsh-update" : "other/zsh-update"
+        }
+    },
+    {
+        "link" : {
+            "~/.Xresources" : "x/Xresources",
+            "~/.xinitrc" : "x/xinitrc"
+        }
+    },
+    {
+        "link" : {
+            "~/.compton.conf" : "compton/compton.conf"
+        }
+    },
+    {
+        "link" : {
+            "~/.vim" : "vim/vim",
+            "~/.vimrc" : "vim/vimrc"
+        }
+    },
+    {
+        "link" : {
+            "~/.zshrc" : "zsh/zshrc",
+            "~/.oh-my-zsh" : "zsh/oh-my-zsh"
+        }
+    },
+    {
+        "link" : {
+            "~/.i3" : "i3"
+        }
+    }
+]
