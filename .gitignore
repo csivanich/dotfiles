@@ -1,0 +1,25 @@
+#files for git to ignore
+
+#Anything ending with a tilde
+*~
+
+#Anything ending with a .class
+
+*.class
+
+#Vim temp files
+
+*.swp
+*.swo
+
+#Workbench backup files
+*.bak
+
+*.log*
+
+*.orig
+
+*.old
+
+#PHP Storm Files
+.idea
