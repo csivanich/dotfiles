@@ -54,4 +54,4 @@
 	url = https://github.com/tpope/vim-markdown.git
 [submodule "libs/github/dotbot"]
 	path = libs/github/dotbot
-	url = https://github.com/anishathalye/dotbot.git
+	url = https://github.com/csivanich/dotbot.git
