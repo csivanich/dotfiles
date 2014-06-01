@@ -111,8 +111,8 @@ OR
 
 git clone https://github.com/csivanich/dotfiles.git
 cd dotfiles
-git submodules init
-git submodules update
+git submodule init
+git submodule update
 ```
 
 With releases 2.0+ supporting [dotbot](https://github.com/anishathalye/dotbot) installs simply run `install.sh` from the **dotfiles** folder and resolve each issue until all the files have linked.
