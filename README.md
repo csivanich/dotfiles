@@ -32,6 +32,7 @@ Contents
 - Default WM is `i3`
 - Custom color scheme loosely based on solarized dark
 - Xclock tweaks because why not?
+- NVIDIA scrolling tweaks when nvidia-settings is installed
 
 #### Xterm Configuration
 
