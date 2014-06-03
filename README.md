@@ -125,3 +125,24 @@ mv <config file> <config file>.bak
 ```
 
 should do the trick.
+
+Update
+-----
+
+Go into the dotfiles repo
+
+```
+cd path/to/dotfiles
+```
+
+Pull the newest files (can be done with rebase, fetch & merge as well)
+
+```
+git pull
+```
+
+Update the submodules, if necessary
+
+```
+git submodule update
+```
