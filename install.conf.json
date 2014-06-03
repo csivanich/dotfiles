@@ -1,13 +1,13 @@
 [
     {
-        "meta" : {
-            "title" : "Other",
-            "description" : "Files which don't fit anywhere else"
-        },
         "link" : {
             "~/.fonts" : "fonts",
             "~/.aliases" : "other/aliases",
             "~/.zsh-update" : "other/zsh-update"
+        },
+        "meta" : {
+            "title" : "Other",
+            "description" : "Files which don't fit anywhere else"
         }
     },
     {
