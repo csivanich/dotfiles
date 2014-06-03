@@ -1,5 +1,5 @@
 alias phplint="find -name '*.php' | xargs -n1 php -l"
 alias war="jar -cvvf "
-alias rsync="rsync -avh --progress"
+alias rsync="rsync -avhP"
 alias s="systemctl suspend"
 alias b="brightness"
