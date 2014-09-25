@@ -3,7 +3,7 @@
 # Automated installer for csivanich/dotfiles using dotbot (anishathalye/dotbot)
 
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-DOTBOT_DIR="libs/github/dotbot"
+DOTBOT_DIR="/libs/github/dotbot"
 DOTBOT="/bin/dotbot"
 
 CONFIG="install.conf.json"
@@ -12,4 +12,4 @@ CONFIG="install.conf.json"
 PYTHON="python"
 [ $(which python2) ] && PYTHON="python2"
 
-$PYTHON "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT}" -d "${BASEDIR}" -c "${CONFIG}" $@
+$PYTHON "${BASEDIR}${DOTBOT_DIR}${DOTBOT}" -d "${BASEDIR}" -c "${CONFIG}" $@
