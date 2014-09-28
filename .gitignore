@@ -1,4 +1,5 @@
 #files for git to ignore
+zsh-update
 
 #Anything ending with a tilde
 *~
