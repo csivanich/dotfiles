@@ -12,6 +12,15 @@
     },
     {
         "meta" : {
+            "title" : "Dunst",
+            "description" : "Dunst notification settings"
+        },
+        "link" : {
+            "~/.config/dunst/dunstrc" : "dunst/dunstrc"
+        }
+    },
+    {
+        "meta" : {
             "title" : "X Resources",
             "description" : "Xresources and xinitrc"
         },
