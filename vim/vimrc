@@ -82,3 +82,9 @@ let g:rbpt_colorpairs = [
     \ ]
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
+
+" JFLex support
+augroup filetype
+    au BufRead,BufNewFile *.flex,*.jflex,*.jlex    set filetype=jflex
+augroup END
+    au Syntax jflex    so ~/.vim/syntax/jflex.vim
