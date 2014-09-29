@@ -32,6 +32,7 @@ exec --no-startup-id [ $(which clipit) ] && clipit
 exec --no-startup-id [ $(which compton) ] && compton -b
 exec --no-startup-id [ $(which nitrogen) ] && nitrogen --restore
 exec --no-startup-id [ $(which dunst) ] && dunst &
+exec --no-startup-id [ $(which connman-notify) ] && connman-notify &
 #exec --no-startup-id [ $(which xautolock) ] && xautolock -time 10 -locker lock
 
 # Move the current workspace to other outputs
