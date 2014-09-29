@@ -26,7 +26,8 @@
         },
         "link" : {
             "~/.Xresources" : "x/Xresources",
-            "~/.xinitrc" : "x/xinitrc"
+            "~/.xinitrc" : "x/xinitrc",
+            "~/.xbindkeysrc" : "x/xbindkeysrc"
         }
     },
     {
