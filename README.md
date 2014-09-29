@@ -100,6 +100,7 @@ Submodules
 - [rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)
 - [taglist.vim](https://github.com/vim-scripts/taglist.vim.git)
   - [ctags](http://ctags.sourceforge.net/)(>= 5.0)
+- [jflex.vim](jflex.de/vim.html)
 
 Install
 -----
