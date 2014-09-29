@@ -63,5 +63,11 @@
         "link" : {
             "~/.i3" : "i3"
         }
+    },
+    {
+        "clean" : ["~"],
+        "meta" : {
+            "title" : "Clean symlinks which have moved"
+        }
     }
 ]
