@@ -33,6 +33,7 @@ Contents
 - Custom color scheme loosely based on solarized dark
 - Xclock tweaks because why not?
 - NVIDIA scrolling tweaks when nvidia-settings is installed
+- Xbindkeys for volume and brightness controls
 
 #### Xterm Configuration
 
