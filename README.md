@@ -61,6 +61,7 @@ Contents
 - Numbered lines
 - Global highlighting of search matches
 - Case insensitive search
+- Autocompletion
 - Mouse support
 - 80 line marker and auto line breaks
 - TAB toggles Taglist
@@ -102,6 +103,8 @@ Submodules
 - [taglist.vim](https://github.com/vim-scripts/taglist.vim.git)
   - [ctags](http://ctags.sourceforge.net/)(>= 5.0)
 - [jflex.vim](jflex.de/vim.html)
+- [automplpop](http://www.vim.org/scripts/script.php?script_id=1879)
+- [vim-l9](https://github.com/eparreno/vim-l9)
 
 Install
 -----
