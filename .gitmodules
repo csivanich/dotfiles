@@ -55,3 +55,6 @@
 [submodule "libs/github/dotbot"]
 	path = libs/github/dotbot
 	url = https://github.com/csivanich/dotbot.git
+[submodule "libs/github/vim-l9"]
+	path = libs/github/vim-l9
+	url = https://github.com/eparreno/vim-l9.git
