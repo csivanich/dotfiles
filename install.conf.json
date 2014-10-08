@@ -2,8 +2,7 @@
     {
         "link" : {
             "~/.fonts" : "fonts",
-            "~/.aliases" : "other/aliases",
-            "~/.zsh-update" : "other/zsh-update"
+            "~/.aliases" : "other/aliases"
         },
         "meta" : {
             "title" : "Other",
