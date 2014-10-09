@@ -4,11 +4,8 @@
 "pamixer --decrease 5 && notify-send -u low 'Volume Decreased' "Now set to $(pamixer --get-volume)" -t 5"
     XF86AudioLowerVolume
 
-"pamixer --mute && notify-send -u low 'Audio Muted' "Now set to $(pamixer --get-volume)" -t 5"
-    XF86AudioMute
-
 "light -A 2%"
-    XF86KbdBrightnessUp
+    XF86MonBrightnessUp
 
 "light -U 2%"
-    XF86KbdBrightnessDown
+    XF86MonBrightnessDown

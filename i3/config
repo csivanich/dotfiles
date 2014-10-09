@@ -33,6 +33,8 @@ exec --no-startup-id [ $(which compton) ] && compton -b
 exec --no-startup-id [ $(which nitrogen) ] && nitrogen --restore
 exec --no-startup-id [ $(which dunst) ] && dunst &
 exec --no-startup-id [ $(which connman-notify) ] && connman-notify &
+exec --no-startup-id [ $(which synsei) ] && synsei load default
+exec --no-startup-id [ $(which xbindkeys) ] && xbindkeys
 #exec --no-startup-id [ $(which xautolock) ] && xautolock -time 10 -locker lock
 
 # Move the current workspace to other outputs
@@ -93,7 +95,7 @@ bindsym $mod+a focus parent
 
 # switch to workspace
 bindsym $mod+1 workspace 1: Terminal
-bindsym $mod+2 workspace 2
+bindsym $mod+2 workspace 2: Mosh
 bindsym $mod+3 workspace 3: Virtualbox
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5: VNC
@@ -108,7 +110,7 @@ bindsym $mod+y workspace y: YouTube
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1: Terminal
-bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+2 move container to workspace 2: Mosh
 bindsym $mod+Shift+3 move container to workspace 3: Virtualbox
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5: VNC
