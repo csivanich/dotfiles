@@ -41,11 +41,11 @@ Contents
 
 #### Xterm Configuration
 
-- Sauce Code Powerline font (see submodules) - size 10 regular
+- Inconsolata for Powerline font - size 12 regular
 - 256 color mode enabled
 - UTF8 enabled
 - 4096 lines saved
-- Nothing else that special
+- Custom colors from (/u/vegetable_human)[https://www.reddit.com/r/unixporn/comments/2kivlg/dwm_laptop_rice/]
 
 #### Zshrc Configuration
 - Oh-my-zsh plugin (see submodules)
@@ -54,7 +54,7 @@ Contents
 - Aliases file
 - Completion waiting dots
 - Custom $PATH
-- \$EDITOR is `vim`
+- $EDITOR is `vim`
 
 #### Vim Configuration
 - 4 spaced tabs

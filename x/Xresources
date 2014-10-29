@@ -2,8 +2,9 @@
 !
 xterm*VT100.geometry:     80x25
 !xterm*faceName:			  Terminess Powerline:style=Regular
-xterm*faceName:           Sauce Code Powerline:style=Regular
-xterm*faceSize:           10
+!xterm*faceName:           Sauce Code Powerline:style=Regular
+xterm*faceName:           Inconsolata for Powerline
+xterm*faceSize:           12
 xterm*termName:	          xterm-256color
 ! xterm*font:              -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
 xterm*dynamicColors:      true
@@ -19,80 +20,37 @@ xterm*scrollTtyOutput:    true
 ! xterm*multiScroll:        true
 ! xterm*toolBar:            false
 
-! solarized color overrides --------------------------------------------------
-! Many colors from https://kuler.adobe.com/2014-Trends-color-theme-3429908
-!
-#define black		#1A1B21
-#define darkGray	#32343B
-#define brown		#8A7265
-#define darkBrown	#2B2321
-#define red			#D8403A
-#define lightRed 	#F0695E
-#define lightBlue	#BECDF0
-#define white		#ECEEE1
-#define cream		#FDCD8D
-#define green		#44BD2B
-#define lightGreen	#B9F0D0
-#define lightYellow #F0E49D
-#define lightBrown	#BAA061
-! From solarized
-#define violet		#6C71C4
-#define base1		#93A1A1
-
 *background:				darkBrown
 *foreground:				white
 *fadeColor:					darkGray
 *pointerColorBackground:	white
 *pointerColorForeground:	black
-! Color of hostname background
-*color0:					darkGray
-! Color of git branch background
-*color3:					brown
-! Color of current directory
-*color4:					cream
-! Color of some highlighted things
-*color6:					base1
-! Color of execulables files
-*color10:					lightYellow
-! Color of directories
-*color12:					lightRed
-! Color of links
-*color14:					lightBlue
-! Color of some highlights
-*color8:					cream
-
-! xclock ---------------------------------------------------------------------
-!
-xclock*update:            1
-xclock*analog:            false
-xclock*Foreground:        white
-xclock*background:        black
 
 ! experimental new colors
 *foreground:    #ddeedd
 *background:    #131D24
 
- !black
- !*color0:    #25374A
- !*color8:    #3A526B
- !!red
- !*color1:    #BD4A4A
- !*color9:    #CC6666
- !!green
- !*color2:    #B7CE42
- !*color10:   #BDE077
- !!yellow
- !*color3:    #FEA63C
- !*color11:   #FFE863
- !!blue
- !*color4:    #66AABB
- !*color12:   #AACCBB
- !!magenta
- !*color5:    #F26B9E
- !*color13:   #ff5879
- !!cyan
- !*color6:    #72AD8C
- !*color14:   #9FE3BC
- !!white
- !*color7:    #DDEEDD
- !*color15:   #FFFFFF
+!black
+*color0:    #25374A
+*color8:    #3A526B
+!red
+*color1:    #BD4A4A
+*color9:    #CC6666
+!green
+*color2:    #B7CE42
+*color10:   #BDE077
+!yellow
+*color3:    #FEA63C
+*color11:   #FFE863
+!blue
+*color4:    #66AABB
+*color12:   #AACCBB
+!magenta
+*color5:    #F26B9E
+*color13:   #ff5879
+!cyan
+*color6:    #72AD8C
+*color14:   #9FE3BC
+!white
+*color7:    #DDEEDD
+*color15:   #FFFFFF
