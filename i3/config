@@ -172,7 +172,7 @@ bar {
         separator #666666
 
         # Class             Border  BG      Text
-        focused_workspace   #d89a14 #c88a04 #ffffff
+        focused_workspace   #528896 #66aabb #ffffff
         active_workspace    #333333 #5f676a #ffffff
         inactive_workspace  #333333 #222222 #888888
         urgent_workspace    #2f343a #900000 #ffffff
