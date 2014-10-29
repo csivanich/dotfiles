@@ -84,7 +84,6 @@ Submodules
 
 #### General:
 - [dotbot](https://github.com/anishathalye/dotbot)
-- [solarized](https://github.com/altercation/solarized)
 
 #### Zsh:
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)

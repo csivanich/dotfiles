@@ -28,9 +28,6 @@
 [submodule "libs/github/powerline-fonts"]
 	path = libs/github/powerline-fonts
 	url = https://github.com/Lokaltog/powerline-fonts.git
-[submodule "libs/github/solarized"]
-	path = libs/github/solarized
-	url = https://github.com/altercation/solarized.git
 [submodule "libs/github/oh-my-zsh"]
 	path = libs/github/oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
