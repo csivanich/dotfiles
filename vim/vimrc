@@ -7,8 +7,12 @@ execute pathogen#infect()
 
 " Default options
 " https://wiki.archlinux.org/index.php/vim/.vimrc
-colorscheme gruvbox
-" solarized
+" colorscheme gruvbox
+" colorscheme solarized
+colorscheme molokai
+let g:molokai_original = 1
+let g:rehash256 = 1
+
 set background=dark
 set tabstop=4
 set shiftwidth=4
