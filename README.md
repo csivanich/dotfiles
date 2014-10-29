@@ -20,11 +20,15 @@ Contents
 - Autostarts (if installed):
   - [Compton](https://github.com/chjj/compton)
   - [Clipit](http://sourceforge.net/projects/gtkclipit/)
+  - [Nitrogen](http://projects.l3ib.org/nitrogen/)
+  - [Dunst](http://knopwob.org/dunst/index.html)
+  - [Connman-Notify](https://github.com/wavexx/connman-notify)
+  - [Synsei](https://github.com/csivanich/synsei)
+  - [Xbindkeys](http://www.nongnu.org/xbindkeys/xbindkeys.html)
   - (Disabled by default) Xautolock running `lock`
-- Improved window movement between workspaces (\$mod+j/k)
+- Improved window movement between outputs (\$mod+j/k)
 - Named/numbered workspaces, each with switch and move bindings
 - Top hidden bar
-- WIP colors
 
 #### X11 Configuration
 
