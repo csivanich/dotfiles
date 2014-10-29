@@ -53,8 +53,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/usr/bin/core_perl:/opt/java/bin:$HOME/bin"
-
 test -d "/usr/bin/vendor_perl" && PATH="$PATH:/usr/bin/vendor_perl"
 # export MANPATH="/usr/local/man:$MANPATH"
 
