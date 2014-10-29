@@ -64,3 +64,6 @@
 [submodule "libs/github/molokai"]
 	path = libs/github/molokai
 	url = https://github.com/tomasr/molokai.git
+[submodule "libs/github/rust.vim"]
+	path = libs/github/rust.vim
+	url = https://github.com/wting/rust.vim

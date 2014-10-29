@@ -102,6 +102,7 @@ Submodules
 - [php.vim](https://github.com/StanAngeloff/php.vim)
 - [powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
 - [rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)
+- [rust.vim](https://github.com/wting/rust.vim)
 - [syntastic](https://github.com/scrooloose/syntastic)
 - [taglist.vim](https://github.com/vim-scripts/taglist.vim.git)
 - [vim-airline](https://github.com/bling/vim-airline)
