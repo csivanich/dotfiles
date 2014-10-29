@@ -53,27 +53,32 @@ Contents
 - \$EDITOR is `vim`
 
 #### Vim Configuration
-- Global config base
-- Tons of plugins through Pathogen
-- Gruvbox theme
-- Dark background
 - 4 spaced tabs
-- Numbered lines
-- Global highlighting of search matches
-- Case insensitive search
-- Autocompletion
-- Mouse support
 - 80 line marker and auto line breaks
+- Autocompletion always on
+- Case insensitive search
+- Dark background
+- Global config base
+- Global highlighting of search matches
+- Gruvbox theme
+- Mouse support
+- NERDTree Configuration
+- Numbered lines
+- Rainbow Parentheses Configuration
 - TAB toggles Taglist
+- Tons of plugins through Pathogen
 - Trailing whitespace highlighting
-- Airline Configuration
+
+##### Airline Configuration
     - Powerline font support
     - UTF-8 encoding enabled
     - Status line always shown
-- NERDTree Configuration
-    - Removed arrows which have issues with Powerline fonts
-- Rainbow Parentheses Configuration
-    - Auto starts
+
+Dependencies
+-----
+
+#### Vim:
+- [ctags](http://ctags.sourceforge.net/)(>= 5.0)
 
 Submodules
 -----
@@ -86,29 +91,29 @@ Submodules
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 #### Vim:
+- [ack.vim](https://github.com/mileszs/ack.vim)
+- [automplpop](http://www.vim.org/scripts/script.php?script_id=1879)
+- [ctrlp.vim](https://github.com/kien/ctrlp.vim)
+- [cup.vim](https://github.com/vim-scripts/cup.vim)
 - [gruvbox](https://github.com/morhetz/gruvbox)
+- [jflex.vim](jflex.de/vim.html)
+- [molokai](https://github.com/tomasr/molokai)
 - [nerdtree](https://github.com/scrooloose/nerdtree)
+- [php.vim](https://github.com/StanAngeloff/php.vim)
+- [powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
+- [rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)
 - [syntastic](https://github.com/scrooloose/syntastic)
+- [taglist.vim](https://github.com/vim-scripts/taglist.vim.git)
 - [vim-airline](https://github.com/bling/vim-airline)
-  - [powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
+- [vim-l9](https://github.com/eparreno/vim-l9)
+- [vim-markdown](https://github.com/tpope/vim-markdown)
 - [vim-pathogen](https://github.com/tpope/vim-pathogen)
 - [vim-sensible](https://github.com/tpope/vim-sensible)
 - [vim-signify](https://github.com/mhinz/vim-signify)
-- [vim-markdown](https://github.com/tpope/vim-markdown)
-- [php.vim](https://github.com/StanAngeloff/php.vim)
-- [ack.vim](https://github.com/mileszs/ack.vim)
-- [ctrlp.vim](https://github.com/kien/ctrlp.vim)
-- [rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)
-- [taglist.vim](https://github.com/vim-scripts/taglist.vim.git)
-  - [ctags](http://ctags.sourceforge.net/)(>= 5.0)
-- [jflex.vim](jflex.de/vim.html)
-- [automplpop](http://www.vim.org/scripts/script.php?script_id=1879)
-- [vim-l9](https://github.com/eparreno/vim-l9)
 
 Install
 -----
-
 First clone the repo:
 ```
 git clone https://github.com/csivanich/dotfiles.git --recursive

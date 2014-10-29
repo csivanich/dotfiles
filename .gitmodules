@@ -58,3 +58,9 @@
 [submodule "libs/github/vim-l9"]
 	path = libs/github/vim-l9
 	url = https://github.com/eparreno/vim-l9.git
+[submodule "libs/github/cup.vim"]
+	path = libs/github/cup.vim
+	url = https://github.com/vim-scripts/cup.vim.git
+[submodule "libs/github/molokai"]
+	path = libs/github/molokai
+	url = https://github.com/tomasr/molokai.git

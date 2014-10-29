@@ -87,4 +87,7 @@ let g:rbpt_loadcmd_toggle = 0
 augroup filetype
     au BufRead,BufNewFile *.flex,*.jflex,*.jlex    set filetype=jflex
 augroup END
-    au Syntax jflex    so ~/.vim/syntax/jflex.vim
+    au Syntax jflex    so ~/.vim/syntax/jflex.vimrc
+
+" Java Cup support
+autocmd BufNewFile,BufRead *.cup setf cup
