@@ -69,11 +69,6 @@ Contents
 - Tons of plugins through Pathogen
 - Trailing whitespace highlighting
 
-##### Airline Configuration
-    - Powerline font support
-    - UTF-8 encoding enabled
-    - Status line always shown
-
 Dependencies
 -----
 
