@@ -60,7 +60,6 @@ Contents
 
 #### Vim Configuration
 - 4 spaced tabs
-- 80 line marker and auto line breaks
 - Autocompletion always on
 - Case insensitive search
 - Dark background
