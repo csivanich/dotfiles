@@ -1,0 +1,9 @@
+[user]
+	email = csivanich@gmail.com
+	name = Chris Sivanich
+[core]
+	editor = vim
+[push]
+	default = matching
+[color]
+	ui = true

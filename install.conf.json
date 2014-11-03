@@ -2,7 +2,8 @@
     {
         "link" : {
             "~/.fonts" : "fonts",
-            "~/.aliases" : "other/aliases"
+            "~/.aliases" : "other/aliases",
+            "~/.gitconfig": "other/gitconfig"
         },
         "meta" : {
             "title" : "Other",
