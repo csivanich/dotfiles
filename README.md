@@ -34,10 +34,10 @@ Contents
 
 #### X11 Configuration
 
-- Merges user configuration on top of solarized at startup
-- Default WM is `i3`
+- Caps Lock remapped to Escape
 - Custom color scheme loosely based on solarized dark
-- Xclock tweaks because why not?
+- Default WM is `i3`
+- Merges user configuration on top of solarized at startup
 - NVIDIA scrolling tweaks when nvidia-settings is installed
 - Xbindkeys for volume and brightness controls
 
