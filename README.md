@@ -48,7 +48,7 @@ Contents
 - 256 color mode enabled
 - UTF8 enabled
 - 4096 lines saved
-- Custom colors from (/u/vegetable_human)[https://www.reddit.com/r/unixporn/comments/2kivlg/dwm_laptop_rice/]
+- Custom colors from [/u/vegetable_human](https://www.reddit.com/r/unixporn/comments/2kivlg/dwm_laptop_rice/)
 
 #### Zshrc Configuration
 - Oh-my-zsh plugin (see submodules)
