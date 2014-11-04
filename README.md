@@ -27,6 +27,7 @@ Contents
   - [Connman-Notify](https://github.com/wavexx/connman-notify)
   - [Synsei](https://github.com/csivanich/synsei)
   - [Xbindkeys](http://www.nongnu.org/xbindkeys/xbindkeys.html)
+  - [Unclutter](http://ftp.x.org/contrib/utilities/unclutter-8.README)
   - (Disabled by default) Xautolock running `lock`
 - Improved window movement between outputs (\$mod+j/k)
 - Named/numbered workspaces, each with switch and move bindings
