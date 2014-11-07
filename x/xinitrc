@@ -4,11 +4,9 @@
 #
 # Executed by startx (run your window manager from here)
 
-SOLARIZED=$HOME/dotfiles/libs/github/solarized/xresources/solarized
 XRESOURCES=$HOME/.Xresources
 export LANG=en_US.utf8
 
-[ -r $SOLARIZED ] && xrdb -merge $SOLARIZED
 [ -r $XRESOURCES ] && xrdb -merge $XRESOURCES
 [ $(which nvidia-settings) ] && nvidia-settings -a InitialPixmapPlacement=2
 
