@@ -64,3 +64,6 @@
 [submodule "libs/github/rust.vim"]
 	path = libs/github/rust.vim
 	url = https://github.com/wting/rust.vim
+[submodule "libs/github/colorizer.git"]
+	path = libs/github/colorizer.git
+	url = https://github.com/lilydjwg/colorizer.git
