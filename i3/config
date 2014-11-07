@@ -203,8 +203,13 @@ bar {
 
 #ffaf00 yellow
 
+#border     - titlebar border color (NA)
+#backgr     - window border
+#text       - titlebar text color (NA)
+#indicator  - layout type indicator
+
 # class                 border  backgr. text    indicator
-client.focused          #4c7899 #5f676a #ffffff #ffaf00
-client.focused_inactive #333333 #5a5242 #ffffff #d89a14
-client.unfocused        #333333 #222222 #888888 #d89a14
+client.focused          #4c7899 #2e9ef4 #ffffff #ffffff
+client.focused_inactive #333333 #222222 #ffffff #888888
+client.unfocused        #333333 #222222 #888888 #888888
 client.urgent           #2f343a #900000 #ffffff #900000
