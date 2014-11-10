@@ -92,7 +92,7 @@ Submodules
 
 #### Vim:
 - [ack.vim](https://github.com/mileszs/ack.vim)
-- [automplpop](http://www.vim.org/scripts/script.php?script_id=1879)
+- [colorizer](https://github.com/lilydjwg/colorizer)
 - [ctrlp.vim](https://github.com/kien/ctrlp.vim)
 - [cup.vim](https://github.com/vim-scripts/cup.vim)
 - [gruvbox](https://github.com/morhetz/gruvbox)
@@ -106,6 +106,7 @@ Submodules
 - [syntastic](https://github.com/scrooloose/syntastic)
 - [taglist.vim](https://github.com/vim-scripts/taglist.vim.git)
 - [vim-airline](https://github.com/bling/vim-airline)
+- [vim-automplpop](http://www.vim.org/scripts/script.php?script_id=1879)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [vim-l9](https://github.com/eparreno/vim-l9)
 - [vim-markdown](https://github.com/tpope/vim-markdown)
@@ -115,21 +116,17 @@ Submodules
 
 Install
 -----
-First clone the repo:
+First clone the repo and its submodules:
+
 ```
-git clone https://github.com/csivanich/dotfiles.git --recursive
-
-OR
-
 git clone https://github.com/csivanich/dotfiles.git
 cd dotfiles
-git submodule init
-git submodule update
+git submodule update --init --recursive
 ```
 
 With releases 2.0+ supporting [dotbot](https://github.com/anishathalye/dotbot) installs simply run `install.sh` from the **dotfiles** folder and resolve each issue until all the files have linked.
 
-Moving the original files is recommended,
+Backing up your original files is recommended,
 
 ```
 mv <config file> <config file>.bak
