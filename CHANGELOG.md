@@ -1,6 +1,20 @@
 Changelog
 -----
 
+#### 3.1 - i3 colorscheme and keybinding update
+
+- Added VIM keybindings to window movement
+- Added colorizer.git for vim
+- Added git annex aliases
+- Added gitconfig
+- Added unclutter support - mouse disappears after 1 second
+- Remapped Caps Lock to Esc, sorted changes to X
+- Removed 80 line marker and auto return
+- Removed old solarized references
+- Updated README fixed link
+- Updated github libraries
+- Updated i3 colors to new blue theme
+
 #### 3.0 - Vim and X colorscheme updated
 
 - Added CHANGELOG
