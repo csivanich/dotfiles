@@ -28,6 +28,7 @@ for_window [class="Xfce4-notifyd"] floating enable
 for_window [class="jetbrains-idea-ce"] floading disable
 for_window [class="feh"] floating enable
 
+# TODO move some of these to xinitrc.d
 exec --no-startup-id [ $(which clipit) ] && clipit
 exec --no-startup-id [ $(which compton) ] && compton -b
 exec --no-startup-id [ $(which nitrogen) ] && nitrogen --restore
@@ -39,8 +40,8 @@ exec --no-startup-id [ $(which unclutter) ] && unclutter -jitter 10 -idle 1 &
 #exec --no-startup-id [ $(which xautolock) ] && xautolock -time 10 -locker lock
 
 # Move the current workspace to other outputs
-# bindsym $mod+k move workspace to output right
-# bindsym $mod+j move workspace to output left
+bindsym $mod+bracketright move workspace to output right
+bindsym $mod+bracketleft move workspace to output left
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -84,10 +85,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+b split h
+bindsym $mod+bar split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+minus split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
