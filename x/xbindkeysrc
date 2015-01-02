@@ -9,3 +9,6 @@
 
 "light -U 2%"
     XF86MonBrightnessDown
+
+"xset dpms force standby"
+    XF86Display
