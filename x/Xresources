@@ -20,8 +20,6 @@ xterm*scrollTtyOutput:    true
 ! xterm*multiScroll:        true
 ! xterm*toolBar:            false
 
-*background:				darkBrown
-*foreground:				white
 *fadeColor:					darkGray
 *pointerColorBackground:	white
 *pointerColorForeground:	black
@@ -54,3 +52,10 @@ xterm*scrollTtyOutput:    true
 !white
 *color7:    #DDEEDD
 *color15:   #FFFFFF
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintslight
+

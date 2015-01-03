@@ -28,7 +28,6 @@ for_window [class="Xfce4-notifyd"] floating enable
 for_window [class="jetbrains-idea-ce"] floading disable
 for_window [class="feh"] floating enable
 
-# TODO move some of these to xinitrc.d
 exec --no-startup-id [ $(which clipit) ] && clipit
 exec --no-startup-id [ $(which compton) ] && compton -b
 exec --no-startup-id [ $(which nitrogen) ] && nitrogen --restore

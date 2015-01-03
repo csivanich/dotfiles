@@ -8,7 +8,7 @@ XRESOURCES=$HOME/.Xresources
 export LANG=en_US.utf8
 
 [ -r $XRESOURCES ] && xrdb -merge $XRESOURCES
-[ $(which nvidia-settings) ] && nvidia-settings -a InitialPixmapPlacement=2
+[ $(which nvidia-settings 2>&1 >/dev/null) ] && nvidia-settings -a InitialPixmapPlacement=2
 
 setxkbmap -option caps:escape
 
