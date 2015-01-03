@@ -1,6 +1,14 @@
 Changelog
 -----
 
+#### 4.0 - Zsh configuration rebuild
+
+- Updated VIM-like keybindings in i3
+- Minor changes
+- Rebuilt zshrc
+- Removed oh-my-zsh
+- Set projector key to blank screen
+
 #### 3.1 - i3 colorscheme and keybinding update
 
 - Added VIM keybindings to window movement
