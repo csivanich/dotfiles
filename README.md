@@ -28,7 +28,6 @@ Contents
   - [Synsei](https://github.com/csivanich/synsei)
   - [Xbindkeys](http://www.nongnu.org/xbindkeys/xbindkeys.html)
   - [Unclutter](http://ftp.x.org/contrib/utilities/unclutter-8.README)
-  - (Disabled by default) Xautolock running `lock`
 - Improved window movement between outputs (\$mod+j/k)
 - Named/numbered workspaces, each with switch and move bindings
 - Top hidden bar
@@ -36,9 +35,7 @@ Contents
 #### X11 Configuration
 
 - Caps Lock remapped to Escape
-- Custom color scheme loosely based on solarized dark
 - Default WM is `i3`
-- Merges user configuration on top of solarized at startup
 - NVIDIA scrolling tweaks when nvidia-settings is installed
 - Xbindkeys for volume and brightness controls
 
@@ -113,6 +110,7 @@ Submodules
 - [vim-pathogen](https://github.com/tpope/vim-pathogen)
 - [vim-sensible](https://github.com/tpope/vim-sensible)
 - [vim-signify](https://github.com/mhinz/vim-signify)
+- [vim-latex](https://github.com/lervag/vim-latex)
 
 Install
 -----

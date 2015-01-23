@@ -64,3 +64,6 @@
 [submodule "libs/github/colorizer.git"]
 	path = libs/github/colorizer.git
 	url = https://github.com/lilydjwg/colorizer.git
+[submodule "libs/github/vim-latex.git"]
+	path = libs/github/vim-latex.git
+	url = https://github.com/lervag/vim-latex.git
