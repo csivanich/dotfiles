@@ -55,7 +55,12 @@ if [ ! -d $HOME/.cache/zsh ]; then
     mkdir $HOME/.cache/zsh -p
 fi
 
+# Add perl path if found
 test -d "/usr/bin/vendor_perl" && PATH="$PATH:/usr/bin/vendor_perl"
+
+# Add local bin if found
+test -d "$HOME/bin" && PATH="$PATH:$HOME/bin"
+
 setopt autopushd pushdsilent pushdtohome
 
 ## Remove duplicate entries
