@@ -63,7 +63,7 @@ Contents
 - Dark background
 - Global config base
 - Global highlighting of search matches
-- Molokai theme
+- Gruvbox theme
 - Mouse support
 - NERDTree Configuration
 - Numbered lines
