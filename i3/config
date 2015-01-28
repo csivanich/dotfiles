@@ -152,10 +152,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -185,7 +185,7 @@ bar {
         separator #666666
 
         # Class             Border  BG      Text
-        focused_workspace   #528896 #66aabb #ffffff
+        focused_workspace   #f9ea52 #ffaf00 #ffffff
         active_workspace    #333333 #5f676a #ffffff
         inactive_workspace  #333333 #222222 #888888
         urgent_workspace    #2f343a #900000 #ffffff
@@ -202,6 +202,7 @@ bar {
 
 
 #ffaf00 yellow
+#f9ea52 light yellow
 
 #border     - titlebar border color (NA)
 #backgr     - window border
@@ -209,7 +210,7 @@ bar {
 #indicator  - layout type indicator
 
 # class                 border  backgr. text    indicator
-client.focused          #4c7899 #2e9ef4 #ffffff #ffffff
+client.focused          #f9ea52 #ffaf00 #000000 #ffffff
 client.focused_inactive #333333 #222222 #ffffff #888888
 client.unfocused        #333333 #222222 #888888 #888888
 client.urgent           #2f343a #900000 #ffffff #900000
