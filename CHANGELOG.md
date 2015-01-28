@@ -1,13 +1,25 @@
 Changelog
 -----
 
+#### 4.1 - Tweaks and vim colorscheme change
+
+- Added $home/bin support
+- Added pigz alias for parallel gzip if installed
+- Added vim-latex
+- Altered ls alias
+- Changed theme back to Gruvbox
+- Fixed leftover omz install configuration
+- Fixed vim keybindings in resize mode
+- Removed netrwhist
+- Updated xterm fonts to size 14
+
 #### 4.0 - Zsh configuration rebuild
 
-- Updated VIM-like keybindings in i3
 - Minor changes
 - Rebuilt zshrc
 - Removed oh-my-zsh
 - Set projector key to blank screen
+- Updated VIM-like keybindings in i3
 
 #### 3.1 - i3 colorscheme and keybinding update
 
@@ -133,3 +145,4 @@ Changelog
 - Updated solarized submodule to valid commit
 - Updated submodules
 - i3 config addition
+
