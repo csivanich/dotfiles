@@ -95,14 +95,31 @@ _p_divider(){
 # text background divider_bg
 _p_success(){
     if [ $? -ne 0 ]; then
-        echo -n "%F{$1}%K{$2} ! %k%f"
+        echo -n "%F{$1}%K{$2}"
+        echo -n " ! "
+        echo -n "%f%k"
+        _p_divider $2 $3
+    fi
+}
+
+_p_nick(){
+    if [ -n "$nick" ]; then
+        echo -n "%F{$1}%K{$2}"
+        echo -n " $nick "
+        echo -n "%f%k"
         _p_divider $2 $3
     fi
 }
 
 # text background divider_bg
 _p_main(){
-    echo -n "%F{$1}%K{$2} %n@%M %k%f"
+    if [ -n "$nick" ]; then
+        echo -n "%F{$4}%K{$2}"
+        echo -n " ($nick)"
+    fi
+    echo -n "%F{$1}%K{$2}"
+    echo -n " %n@%M "
+    echo -n "%k%f"
     _p_divider $2 $3
 }
 
@@ -140,7 +157,7 @@ _p_git_color(){
 _p(){
     #           text    background  divider_bg
     _p_success  "red"   "white"     "black"
-    _p_main     "white" "black"     "blue"
+    _p_main     "white" "black"     "blue"      "green"
     _p_location "black" "blue"      "$(_p_git_color)"
     _p_git      "black" "$(_p_git_color)"   "$reset_color"
     echo -n " "
