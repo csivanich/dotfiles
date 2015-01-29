@@ -53,8 +53,7 @@
             "title" : "Zsh"
         },
         "link" : {
-            "~/.zshrc" : "zsh/zshrc",
-            "~/.oh-my-zsh" : "zsh/oh-my-zsh"
+            "~/.zshrc" : "zsh/zshrc"
         }
     },
     {
