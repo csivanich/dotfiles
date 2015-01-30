@@ -53,7 +53,8 @@
             "title" : "Zsh"
         },
         "link" : {
-            "~/.zshrc" : "zsh/zshrc"
+            "~/.zshrc" : "zsh/zshrc",
+            "~/.zsh.d/zsh-syntax-highlighting.zsh" : "zsh/zsh-syntax-highlighting.zsh"
         }
     },
     {

@@ -1,8 +1,6 @@
 # zsh configuration
 # Based on https://github.com/slashbeast/things/blob/master/configs/DOTzshrc
 
-DOTFILES_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -38,10 +36,11 @@ setopt hist_ignore_space
 #stty -ixon
 setopt noflowcontrol
 
-# Enable syntax highlighting if installed
-test -r /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Enable dirstack
+if [ ! -d $HOME/.cache/zsh ]; then
+    mkdir $HOME/.cache/zsh -p
+fi
+
 DIRSTACKFILE="$HOME/.cache/zsh/dirs"
 if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
     dirstack=( ${(f)"$(< $DIRSTACKFILE)"} )
@@ -53,9 +52,6 @@ chpwd() {
 }
 
 DIRSTACKSIZE=20
-if [ ! -d $HOME/.cache/zsh ]; then
-    mkdir $HOME/.cache/zsh -p
-fi
 
 # Add perl path if found
 test -d "/usr/bin/vendor_perl" && PATH="$PATH:/usr/bin/vendor_perl"
@@ -167,3 +163,7 @@ _p(){
 
 setopt PROMPT_SUBST
 PROMPT='$(_p)'
+
+for i in $HOME/.zsh.d/*; do;
+    test -r "$i" && source "$i"
+done

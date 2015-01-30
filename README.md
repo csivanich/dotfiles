@@ -3,7 +3,7 @@ dotfiles
 
 Configuration repository containing my configurations, many using Git submodules.
 
-![Screenshot](https://imgur.com/TkOMF4v.png)
+![Screenshot](https://i.imgur.com/PSfDDXv.png)
 
 I was tired of having a bunch of configurations across all my machines, especially when trying to keep all the plugins and extras up to date. So I got fed up and threw them on GitHub. It's not perfect (yet!), but it's a great starting point for any Linux config.
 
@@ -41,20 +41,21 @@ Contents
 
 #### Xterm Configuration
 
-- Inconsolata for Powerline font - size 12 regular
 - 256 color mode enabled
-- UTF8 enabled
 - 4096 lines saved
-- Custom colors from [/u/vegetable_human](https://www.reddit.com/r/unixporn/comments/2kivlg/dwm_laptop_rice/)
+- Custom colorscheme
+- Inconsolata for Powerline font - size 14 regular
+- UTF8 enabled
 
-#### Zshrc Configuration
-- Oh-my-zsh plugin (see submodules)
-    - Git plugin enabled
-    - Agnoster theme
-- Aliases file
-- Completion waiting dots
-- Custom $PATH
+#### Zsh Configuration
+
 - $EDITOR is `vim`
+- Aliases file
+- Custom $PATH
+- Custom prompt with git support
+- Scripts folder (~/.zsh.d)
+- Syntax highlighting
+- Work-in-progress
 
 #### Vim Configuration
 - 4 spaced tabs
@@ -85,10 +86,11 @@ Submodules
 - [dotbot](https://github.com/anishathalye/dotbot)
 
 #### Zsh:
-- [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 #### Vim:
 - [ack.vim](https://github.com/mileszs/ack.vim)
+- [aglist.vim]()
 - [colorizer](https://github.com/lilydjwg/colorizer)
 - [ctrlp.vim](https://github.com/kien/ctrlp.vim)
 - [cup.vim](https://github.com/vim-scripts/cup.vim)
@@ -106,11 +108,11 @@ Submodules
 - [vim-automplpop](http://www.vim.org/scripts/script.php?script_id=1879)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [vim-l9](https://github.com/eparreno/vim-l9)
+- [vim-latex](https://github.com/lervag/vim-latex)
 - [vim-markdown](https://github.com/tpope/vim-markdown)
 - [vim-pathogen](https://github.com/tpope/vim-pathogen)
 - [vim-sensible](https://github.com/tpope/vim-sensible)
 - [vim-signify](https://github.com/mhinz/vim-signify)
-- [vim-latex](https://github.com/lervag/vim-latex)
 
 Install
 -----
@@ -150,5 +152,11 @@ git pull
 Update the submodules, if necessary
 
 ```
-git submodule update
+git submodule update --init --recursive
+```
+
+Update any dotbot symlinks
+
+```
+./install.sh
 ```
