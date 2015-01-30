@@ -1,6 +1,8 @@
 # zsh configuration
 # Based on https://github.com/slashbeast/things/blob/master/configs/DOTzshrc
 
+DOTFILES_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
