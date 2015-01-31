@@ -3,11 +3,11 @@ Changelog
 
 #### 4.2 - ~/.zsh.d/\* script support
 
-Added full ~/.zsh.d/\* script support and added syntax highlighting
-Added optional "$nick" section to zsh prompt
-Added zsh-syntax-highlighting and updated submodules
-Added zsh-syntax-highlighting plugin and added DOTFILES_DIR
-Removed dead link
+- Added full ~/.zsh.d/\* script support and added syntax highlighting
+- Added optional "$nick" section to zsh prompt
+- Added zsh-syntax-highlighting and updated submodules
+- Added zsh-syntax-highlighting plugin and added DOTFILES_DIR
+- Removed dead link
 
 #### 4.1 - Tweaks and vim colorscheme change
 
