@@ -73,6 +73,13 @@ Contents
 - Tons of plugins through Pathogen
 - Trailing whitespace highlighting
 
+#### Tmux Configuration
+ - Enhanced clipboard support
+ - Mouse support
+ - Ctrl+a prefix
+ - Simplified split window bindings
+ - Vim main keybindings
+
 Dependencies
 -----
 

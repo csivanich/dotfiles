@@ -54,7 +54,8 @@
         },
         "link" : {
             "~/.zshrc" : "zsh/zshrc",
-            "~/.zsh.d/zsh-syntax-highlighting.zsh" : "zsh/zsh-syntax-highlighting.zsh"
+            "~/.zsh.d/zsh-syntax-highlighting.zsh" : "zsh/zsh-syntax-highlighting.zsh",
+            "~/.tmux.conf" : "tmux/tmux.conf"
         }
     },
     {
