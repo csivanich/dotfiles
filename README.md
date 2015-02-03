@@ -3,7 +3,7 @@ dotfiles
 
 Configuration repository containing my configurations, many using Git submodules.
 
-![Screenshot](https://i.imgur.com/PSfDDXv.png)
+![Screenshot](https://i.imgur.com/xRBt7xx.png)
 
 I was tired of having a bunch of configurations across all my machines, especially when trying to keep all the plugins and extras up to date. So I got fed up and threw them on GitHub. It's not perfect (yet!), but it's a great starting point for any Linux config.
 
