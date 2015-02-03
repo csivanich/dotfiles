@@ -1,0 +1,1 @@
+../../libs/github/ze-best-zsh-config/.zsh/bindkeys.zsh

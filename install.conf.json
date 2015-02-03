@@ -55,7 +55,8 @@
         "link" : {
             "~/.zshrc" : "zsh/zshrc",
             "~/.zsh.d/zsh-syntax-highlighting.zsh" : "zsh/zsh-syntax-highlighting.zsh",
-            "~/.tmux.conf" : "tmux/tmux.conf"
+            "~/.tmux.conf" : "tmux/tmux.conf",
+            "~/.zsh.d/bindkeys.zsh" : "zsh/zsh.d/bindkeys.zsh"
         }
     },
     {
