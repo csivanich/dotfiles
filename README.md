@@ -98,7 +98,6 @@ Submodules
 
 #### Vim:
 - [ack.vim](https://github.com/mileszs/ack.vim)
-- [aglist.vim]()
 - [colorizer](https://github.com/lilydjwg/colorizer)
 - [ctrlp.vim](https://github.com/kien/ctrlp.vim)
 - [cup.vim](https://github.com/vim-scripts/cup.vim)
@@ -111,6 +110,7 @@ Submodules
 - [rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)
 - [rust.vim](https://github.com/wting/rust.vim)
 - [syntastic](https://github.com/scrooloose/syntastic)
+- [taglist.vim](https://github.com/vim-scripts/taglist.vim)
 - [taglist.vim](https://github.com/vim-scripts/taglist.vim.git)
 - [vim-airline](https://github.com/bling/vim-airline)
 - [vim-automplpop](http://www.vim.org/scripts/script.php?script_id=1879)
