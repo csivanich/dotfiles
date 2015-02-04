@@ -1,174 +1,19 @@
-# zsh configuration
-# Based on https://github.com/slashbeast/things/blob/master/configs/DOTzshrc
+#!/usr/bin/env zsh
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-ALIAS_FILE=$HOME/.aliases
-test -r "$ALIAS_FILE" && source $ALIAS_FILE
+# Zsh configuration
 
-# Vim as default editor
-export EDITOR='vim'
+# With help from these sources:
+# https://github.com/slashbeast/things/blob/master/configs/DOTzshrc
+# https://github.com/spicycode/ze-best-zsh-config
+# http://zanshin.net/2013/02/02/zsh-configuration-from-the-ground-up/
 
-# Compilation flags
-export ARCHFLAGS="-arch x86_64"
-
-autoload -U compinit promptinit colors
+autoload -U compinit promptinit colors vcs_info
 colors
 compinit
 promptinit
 
-setopt completealiases
-setopt HIST_IGNORE_DUPS
-SAVEHIST=1000
-HISTFILE=~/.zsh_history
-
-zstyle ':completion:*' menu select
-
-# Ignore lines prefixed with '#'.
-setopt interactivecomments
-
-# Ignore duplicate in history.
-setopt hist_ignore_dups
-
-# Prevent record in history entry if preceding them with at least one space
-setopt hist_ignore_space
-
-# Nobody need flow control anymore. Troublesome feature.
-#stty -ixon
-setopt noflowcontrol
-
-# Enable dirstack
-if [ ! -d $HOME/.cache/zsh ]; then
-    mkdir $HOME/.cache/zsh -p
-fi
-
-DIRSTACKFILE="$HOME/.cache/zsh/dirs"
-if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
-    dirstack=( ${(f)"$(< $DIRSTACKFILE)"} )
-    [[ -d $dirstack[1] ]] && cd $dirstack[1]
-fi
-
-chpwd() {
-    print -l $PWD ${(u)dirstack} >$DIRSTACKFILE
-}
-
-DIRSTACKSIZE=20
-
-# Add perl path if found
-test -d "/usr/bin/vendor_perl" && PATH="$PATH:/usr/bin/vendor_perl"
-
-# Add local bin if found
-test -d "$HOME/bin" && PATH="$PATH:$HOME/bin"
-
-setopt autopushd pushdsilent pushdtohome
-
-## Remove duplicate entries
-setopt pushdignoredups
-
-### This reverts the +/- operators.
-setopt pushdminus
-
-# Colors
-red='\e[0;31m'
-RED='\e[1;31m'
-green='\e[0;32m'
-GREEN='\e[1;32m'
-yellow='\e[0;33m'
-YELLOW='\e[1;33m'
-blue='\e[0;34m'
-BLUE='\e[1;34m'
-purple='\e[0;35m'
-PURPLE='\e[1;35m'
-cyan='\e[0;36m'
-CYAN='\e[1;36m'
-NC='\e[0m'
-
-
-# divider background
-_p_divider(){
-    echo -n "%K{$2}%F{$1}$DIVIDER%f%k"
-}
-
-# text background divider_bg
-_p_success(){
-    if [ $? -ne 0 ]; then
-        echo -n "%F{$1}%K{$2}"
-        echo -n " ! "
-        echo -n "%f%k"
-        _p_divider $2 $3
-    fi
-}
-
-_p_nick(){
-    if [ -n "$nick" ]; then
-        echo -n "%F{$1}%K{$2}"
-        echo -n " $nick "
-        echo -n "%f%k"
-        _p_divider $2 $3
-    fi
-}
-
-# text background divider_bg
-_p_main(){
-    if [ -n "$nick" ]; then
-        echo -n "%F{$4}%K{$2}"
-        echo -n " ($nick)"
-    fi
-    echo -n "%F{$1}%K{$2}"
-    echo -n " %n@%M "
-    echo -n "%k%f"
-    _p_divider $2 $3
-}
-
-# text background divider_bg
-_p_location(){
-    echo -n "%F{$1}%K{$2} %~ %k%f"
-    _p_divider $2 $3
-}
-
-# text background divider_bg
-_p_git(){
-    git rev-parse --abbrev-ref HEAD > /dev/null 2>&1
-    if [ $? -eq 0 ]; then
-        echo -n "%F{$1}%K{$2} $BRANCH "
-        git rev-parse --abbrev-ref HEAD | tr -d '\n'
-        echo -n " %f%k"
-        _p_divider $2 $3
-    fi
-}
-
-_p_git_color(){
-    git diff --name-only > /dev/null 2>&1
-    if [ $? -ne 0 ]; then
-        echo "$reset_color"
-        return
-    else
-        if [ -z "$(git diff --name-only)" ]; then
-            echo "green"
-        else
-            echo "yellow"
-        fi
-    fi
-}
-
-_p(){
-    DIVIDER="${DIVIDER:-}"
-    BRANCH="${BRANCH:-}"
-
-    #           text    background  divider_bg
-    _p_success  "red"   "white"     "black"
-    _p_main     "white" "black"     "blue"      "green"
-    _p_location "black" "blue"      "$(_p_git_color)"
-    _p_git      "black" "$(_p_git_color)"   "$reset_color"
-    echo -n " "
-}
-
-setopt PROMPT_SUBST
-PROMPT='$(_p)'
+test -r $HOME/.aliases && source $HOME/.aliases
 
 for i in $HOME/.zsh.d/*; do;
     test -r "$i" && source "$i"
 done
-
-bindkey -v

@@ -94,7 +94,7 @@ Submodules
 
 #### Zsh:
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-- [ze-best-zsh-config](https://github.com/spicycode/ze-best-zsh-config)
+- [z](https://github.com/rupa/z)
 
 #### Vim:
 - [ack.vim](https://github.com/mileszs/ack.vim)

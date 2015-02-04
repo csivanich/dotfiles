@@ -17,6 +17,13 @@
         },
         "link" : {
             "~/.config/dunst/dunstrc" : "dunst/dunstrc"
+        },
+
+        "meta" : {
+            "title" : "Tmux"
+        },
+        "link" : {
+            "~/.tmux.conf" : "tmux/tmux.conf"
         }
     },
     {
@@ -53,10 +60,12 @@
             "title" : "Zsh"
         },
         "link" : {
-            "~/.zshrc" : "zsh/zshrc",
+            "~/.zsh.d/bindkeys.zsh" : "zsh/bindings.zsh",
+            "~/.zsh.d/exports.zsh" : "zsh/exports.zsh",
+            "~/.zsh.d/prompt.zsh" : "zsh/prompt.zsh",
+            "~/.zsh.d/z.sh" : "zsh/z.sh",
             "~/.zsh.d/zsh-syntax-highlighting.zsh" : "zsh/zsh-syntax-highlighting.zsh",
-            "~/.tmux.conf" : "tmux/tmux.conf",
-            "~/.zsh.d/bindkeys.zsh" : "zsh/zsh.d/bindkeys.zsh"
+            "~/.zshrc" : "zsh/zshrc"
         }
     },
     {
