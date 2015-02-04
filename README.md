@@ -1,15 +1,13 @@
 dotfiles
 ========
 
-Configuration repository containing my configurations, many using Git submodules.
-
 ![Screenshot](https://i.imgur.com/xRBt7xx.png)
 
 I was tired of having a bunch of configurations across all my machines, especially when trying to keep all the plugins and extras up to date. So I got fed up and threw them on GitHub. It's not perfect (yet!), but it's a great starting point for any Linux config.
 
-These configurations are based from an Arch Linux system running i3wm and Compton + xterm/zsh, however most of the files should be usable on their own.
+These configurations are based from an Arch Linux system running i3wm and compton + xterm/zsh, however most of the files should be usable without dependencies on the others.
 
-Releases 2.0+ provide automated install support using [dotbot](https://github.com/anishathalye/dotbot). See **Install** for instructions.
+Releases 2.0+ provide automated install support using my fork of [dotbot](https://github.com/anishathalye/dotbot). See **Install** for instructions.
 
 Contents
 -----
@@ -19,23 +17,25 @@ Contents
 - $mod set to Win key
 - DejaVu Sans Mono 10 font
 - 1px borders
-- Autostarts (if installed):
-  - [Compton](https://github.com/chjj/compton)
-  - [Clipit](http://sourceforge.net/projects/gtkclipit/)
-  - [Nitrogen](http://projects.l3ib.org/nitrogen/)
-  - [Dunst](http://knopwob.org/dunst/index.html)
-  - [Connman-Notify](https://github.com/wavexx/connman-notify)
-  - [Synsei](https://github.com/csivanich/synsei)
-  - [Xbindkeys](http://www.nongnu.org/xbindkeys/xbindkeys.html)
-  - [Unclutter](http://ftp.x.org/contrib/utilities/unclutter-8.README)
-- Improved window movement between outputs (\$mod+j/k)
+- Improved window movement between outputs (\$mod+\[ and \])
 - Named/numbered workspaces, each with switch and move bindings
 - Top hidden bar
+- Optionally autostarts (if installed):
+  - [Clipit](http://sourceforge.net/projects/gtkclipit/)
+  - [Compton](https://github.com/chjj/compton)
+  - [Connman-Notify](https://github.com/wavexx/connman-notify)
+  - [Dunst](http://knopwob.org/dunst/index.html)
+  - [Nitrogen](http://projects.l3ib.org/nitrogen/)
+  - [Synsei](https://github.com/csivanich/synsei)
+  - [Unclutter](http://ftp.x.org/contrib/utilities/unclutter-8.README)
+  - [Xbindkeys](http://www.nongnu.org/xbindkeys/xbindkeys.html)
 
 #### X11 Configuration
 
 - Caps Lock remapped to Escape
+- DPI set to 96
 - Default WM is `i3`
+- Font antialiasing and rgb hinting
 - NVIDIA scrolling tweaks when nvidia-settings is installed
 - Xbindkeys for volume and brightness controls
 
@@ -74,9 +74,9 @@ Contents
 - Trailing whitespace highlighting
 
 #### Tmux Configuration
+ - Ctrl+a prefix
  - Enhanced clipboard support
  - Mouse support
- - Ctrl+a prefix
  - Simplified split window bindings
  - Vim main keybindings
 
@@ -124,47 +124,39 @@ Submodules
 
 Install
 -----
-First clone the repo and its submodules:
+Clone the repo and its submodules, then install links.
+The install **will not** override any configs by default.
 
+```sh
+git clone https://github.com/csivanich/dotfiles.git && \
+cd dotfiles && \
+git submodule update --init --recursive && \
+./install.sh
 ```
-git clone https://github.com/csivanich/dotfiles.git
-cd dotfiles
-git submodule update --init --recursive
-```
 
-With releases 2.0+ supporting [dotbot](https://github.com/anishathalye/dotbot) installs simply run `install.sh` from the **dotfiles** folder and resolve each issue until all the files have linked.
-
-Backing up your original files is recommended,
+If errors occur due to existing files, move them and try again:
 
 ```
 mv <config file> <config file>.bak
 ```
 
-should do the trick.
+The install can be retried with `./install.sh`
 
 Update
 -----
 
-Go into the dotfiles repo
+Included is an `./update.sh` script which fetches and rebases upstream changes, updates submodules and installs the new configs.
 
-```
-cd path/to/dotfiles
-```
-
-Pull the newest files (can be done with rebase, fetch & merge as well)
-
-```
-git pull
+```sh
+cd /path/to/dotfiles
+./update.sh
 ```
 
-Update the submodules, if necessary
+Or if you don't trust my scripts (why should you?), you can update manually:
 
-```
-git submodule update --init --recursive
-```
-
-Update any dotbot symlinks
-
-```
-./install.sh
+```sh
+git fetch -vp # Update refs
+git rebase origin/master # Bring in new changes
+git submodule update --init --recursive # Update submodules
+./install.sh # Install new configs and clean old ones
 ```

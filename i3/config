@@ -29,12 +29,12 @@ for_window [class="jetbrains-idea-ce"] floading disable
 
 exec --no-startup-id [ $(which clipit) ] && clipit
 exec --no-startup-id [ $(which compton) ] && compton -b
-exec --no-startup-id [ $(which nitrogen) ] && nitrogen --restore
-exec --no-startup-id [ $(which dunst) ] && dunst &
 exec --no-startup-id [ $(which connman-notify) ] && connman-notify &
+exec --no-startup-id [ $(which dunst) ] && dunst &
+exec --no-startup-id [ $(which nitrogen) ] && nitrogen --restore
 exec --no-startup-id [ $(which synsei) ] && synsei load default
-exec --no-startup-id [ $(which xbindkeys) ] && xbindkeys
 exec --no-startup-id [ $(which unclutter) ] && unclutter -jitter 10 -idle 1 &
+exec --no-startup-id [ $(which xbindkeys) ] && xbindkeys
 #exec --no-startup-id [ $(which xautolock) ] && xautolock -time 10 -locker lock
 
 # Move the current workspace to other outputs
