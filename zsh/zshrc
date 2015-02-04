@@ -20,6 +20,8 @@ promptinit
 
 setopt completealiases
 setopt HIST_IGNORE_DUPS
+SAVEHIST=1000
+HISTFILE=~/.zsh_history
 
 zstyle ':completion:*' menu select
 
@@ -168,3 +170,5 @@ PROMPT='$(_p)'
 for i in $HOME/.zsh.d/*; do;
     test -r "$i" && source "$i"
 done
+
+bindkey -v
