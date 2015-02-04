@@ -30,6 +30,29 @@ Contents
   - [Unclutter](http://ftp.x.org/contrib/utilities/unclutter-8.README)
   - [Xbindkeys](http://www.nongnu.org/xbindkeys/xbindkeys.html)
 
+#### Tmux Configuration
+ - Ctrl+a prefix
+ - Enhanced clipboard support
+ - Mouse support
+ - Simplified split window bindings
+ - Vim main keybindings
+
+#### Vim Configuration
+- 4 spaced tabs
+- Autocompletion always on
+- Case insensitive search
+- Dark background
+- Global config base
+- Global highlighting of search matches
+- Gruvbox theme
+- Mouse support
+- NERDTree Configuration
+- Numbered lines
+- Rainbow Parentheses Configuration
+- TAB toggles Taglist
+- Tons of plugins through Pathogen
+- Trailing whitespace highlighting
+
 #### X11 Configuration
 
 - Caps Lock remapped to Escape
@@ -56,29 +79,6 @@ Contents
 - Scripts folder (~/.zsh.d)
 - Syntax highlighting
 - Work-in-progress
-
-#### Vim Configuration
-- 4 spaced tabs
-- Autocompletion always on
-- Case insensitive search
-- Dark background
-- Global config base
-- Global highlighting of search matches
-- Gruvbox theme
-- Mouse support
-- NERDTree Configuration
-- Numbered lines
-- Rainbow Parentheses Configuration
-- TAB toggles Taglist
-- Tons of plugins through Pathogen
-- Trailing whitespace highlighting
-
-#### Tmux Configuration
- - Ctrl+a prefix
- - Enhanced clipboard support
- - Mouse support
- - Simplified split window bindings
- - Vim main keybindings
 
 Dependencies
 -----
