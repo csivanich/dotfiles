@@ -3,20 +3,20 @@ Changelog
 
 #### 4.3 - Zsh modularization and improved configuration
 
-Added dh alias
-Added improved keybindings to zsh
-Added tmux configuration
-Added update script
-Added vim-autocomplpop as a submodule
-Added working history and better key bindings
-Fixed incorrectly quoted string
-Modularized zsh configuration, removed and integrated ze-best-zsh
-Removed feh from floating whitelist
-Updated image
-Updated many files with small tweaks. See body.
-Updated README to have sorted categories
-Updated update script to work better with non master branches
-Updated zshrc for prompt customization and small optimization
+- Added dh alias
+- Added improved keybindings to zsh
+- Added tmux configuration
+- Added update script
+- Added vim-autocomplpop as a submodule
+- Added working history and better key bindings
+- Fixed incorrectly quoted string
+- Modularized zsh configuration, removed and integrated ze-best-zsh
+- Removed feh from floating whitelist
+- Updated image
+- Updated many files with small tweaks. See body.
+- Updated README to have sorted categories
+- Updated update script to work better with non master branches
+- Updated zshrc for prompt customization and small optimization
 
 #### 4.2 - ~/.zsh.d/\* script support
 
