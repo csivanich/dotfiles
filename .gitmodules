@@ -76,3 +76,6 @@
 [submodule "libs/github/vim-autocomplpop"]
 	path = libs/github/vim-autocomplpop
 	url = https://github.com/othree/vim-autocomplpop.git
+[submodule "libs/github/vim-autoclose"]
+	path = libs/github/vim-autoclose
+	url = https://github.com/Townk/vim-autoclose.git
