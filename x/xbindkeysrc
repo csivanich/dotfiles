@@ -1,9 +1,3 @@
-"pamixer --increase 5 && notify-send -u low 'Volume Increased' "Now set to $(pamixer --get-volume)" -t 5"
-    XF86AudioRaiseVolume
-
-"pamixer --decrease 5 && notify-send -u low 'Volume Decreased' "Now set to $(pamixer --get-volume)" -t 5"
-    XF86AudioLowerVolume
-
 "light -A 2%"
     XF86MonBrightnessUp
 

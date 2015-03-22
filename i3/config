@@ -52,11 +52,11 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+space exec dmenu_run
+# bindsym $mod+space exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
 
 # Change window focus with VIM-style keybindings
 bindsym $mod+h focus left
@@ -108,38 +108,40 @@ bindsym $mod+d focus child
 # switch to workspace
 bindsym $mod+1 workspace 1: Terminal
 bindsym $mod+2 workspace 2: Mosh
-bindsym $mod+3 workspace 3: Virtualbox
+bindsym $mod+3 workspace 3:
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5: VNC
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8: Keep
+bindsym $mod+8 workspace 8:
 bindsym $mod+9 workspace 9: Firefox
 bindsym $mod+0 workspace 10: Chromium
 bindsym $mod+m workspace m: Music
-bindsym $mod+x workspace x: Xchat
-bindsym $mod+y workspace y: YouTube
+bindsym $mod+c workspace Calendar
+bindsym $mod+t workspace Trello
+bindsym $mod+i workspace Inbox
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1: Terminal
 bindsym $mod+Shift+2 move container to workspace 2: Mosh
-bindsym $mod+Shift+3 move container to workspace 3: Virtualbox
+bindsym $mod+Shift+3 move container to workspace 3:
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5: VNC
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8: Keep
+bindsym $mod+Shift+8 move container to workspace 8:
 bindsym $mod+Shift+9 move container to workspace 9: Firefox
 bindsym $mod+Shift+0 move container to workspace 10: Chromium
 bindsym $mod+Shift+m move container to workspace m: Music
-bindsym $mod+Shift+x move container to workspace x: Xchat
-bindsyn $mod+Shift+y move container to workspace y: YouTube
+bindsym $mod+Shift+c move container to workspace Calendar
+bindsym $mod+Shift+t move container to workspace Trello
+bindsym $mod+Shift+i move container to workspace Inbox
 
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Ctrl+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
