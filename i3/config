@@ -35,6 +35,7 @@ exec --no-startup-id [ $(which nitrogen) ] && nitrogen --restore
 exec --no-startup-id [ $(which synsei) ] && synsei load default
 exec --no-startup-id [ $(which unclutter) ] && unclutter -jitter 10 -idle 1 &
 exec --no-startup-id [ $(which xbindkeys) ] && xbindkeys
+exec --no-startup-id [ $(which redshift) ] && redshift
 #exec --no-startup-id [ $(which xautolock) ] && xautolock -time 10 -locker lock
 
 # Move the current workspace to other outputs
@@ -116,10 +117,11 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8:
 bindsym $mod+9 workspace 9: Firefox
 bindsym $mod+0 workspace 10: Chromium
-bindsym $mod+m workspace m: Music
+bindsym $mod+m workspace M: Music
 bindsym $mod+c workspace Calendar
 bindsym $mod+t workspace Trello
 bindsym $mod+i workspace Inbox
+bindsym $mod+b workspace B: Reading
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1: Terminal
@@ -132,10 +134,11 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8:
 bindsym $mod+Shift+9 move container to workspace 9: Firefox
 bindsym $mod+Shift+0 move container to workspace 10: Chromium
-bindsym $mod+Shift+m move container to workspace m: Music
+bindsym $mod+Shift+m move container to workspace M: Music
 bindsym $mod+Shift+c move container to workspace Calendar
 bindsym $mod+Shift+t move container to workspace Trello
 bindsym $mod+Shift+i move container to workspace Inbox
+bindsym $mod+Shift+b move container to workspace B: Reading
 
 
 # reload the configuration file
