@@ -1,6 +1,17 @@
 Changelog
 -----
 
+#### 4.4 - Vim plugins and workspace tweaks
+
+- Added new i3 aliases
+- Added vim-auto-save (auto saving)
+- Added vim-autoclose (auto bracket closing)
+- Fixed whitespace in bindings
+- Removed some broken xkeybindings
+- Updated compton configuration to disable window fading
+- Updated i3 workplace names
+- Updated vim .gitignore to ignore 'spell' folder and custom dict
+
 #### 4.3 - Zsh modularization and improved configuration
 
 - Added dh alias
