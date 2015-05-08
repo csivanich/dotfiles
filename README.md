@@ -113,6 +113,7 @@ Submodules
 - [taglist.vim](https://github.com/vim-scripts/taglist.vim)
 - [taglist.vim](https://github.com/vim-scripts/taglist.vim.git)
 - [vim-airline](https://github.com/bling/vim-airline)
+- [vim-auto-save](https://github.com/vim-scripts/vim-auto-save)
 - [vim-autoclose](https://github.com/Townk/vim-autoclose.git)
 - [vim-automplpop](http://www.vim.org/scripts/script.php?script_id=1879)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)

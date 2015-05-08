@@ -95,3 +95,15 @@ augroup END
 
 " Java Cup support
 autocmd BufNewFile,BufRead *.cup setf cup
+
+" vim-auto-save config
+" https://github.com/vim-scripts/vim-auto-save
+" Enable auto saving at startup (can use :AutoSaveToggle otherwise)
+let g:auto_save = 1
+"
+" Don't save while in insert mode
+let g:auto_save_in_insert_mode = 0
+"
+" This plugin changes vim's updatetime option.
+" If it breaks things, uncomment this
+"let g:auto_save_no_updatetime = 1
