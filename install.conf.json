@@ -64,6 +64,7 @@
             "~/.zsh.d/exports.zsh" : "zsh/exports.zsh",
             "~/.zsh.d/prompt.zsh" : "zsh/prompt.zsh",
             "~/.zsh.d/setopt.zsh" : "zsh/setopt.zsh",
+            "~/.zsh.d/colored_man.zsh" : "zsh/colored_man.zsh",
             "~/.zsh.d/z.sh" : "zsh/z.sh",
             "~/.zsh.d/zsh-syntax-highlighting.zsh" : "zsh/zsh-syntax-highlighting.zsh",
             "~/.zshrc" : "zsh/zshrc"
