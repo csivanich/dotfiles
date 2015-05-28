@@ -11,6 +11,7 @@ export LANG=en_US.utf8
 [ $(which nvidia-settings 2>&1 >/dev/null) ] && nvidia-settings -a InitialPixmapPlacement=2
 [ $(which xscreensaver 2>&1 >/dev/null) ] && xscreensaver -no-splash &
 [ $(which xss-lock 2>&1 >/dev/null ) ] && xss-lock -- xscreensaver-command -lock
+[ -r $HOME/.screenlayout/default.sh ] && $HOME/.screenlayout/default.sh
 
 setxkbmap -option caps:escape
 
