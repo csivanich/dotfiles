@@ -30,6 +30,7 @@ set autoindent
 " set textwidth=79
 set ruler
 set mouse=a
+set relativenumber
 syntax on
 filetype plugin indent on
 set colorcolumn=+1        " highlight column after 'textwidth'
