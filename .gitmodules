@@ -79,3 +79,6 @@
 [submodule "libs/github/vim-autoclose"]
 	path = libs/github/vim-autoclose
 	url = https://github.com/Townk/vim-autoclose.git
+[submodule "libs/github/vim-auto-save"]
+	path = libs/github/vim-auto-save
+	url = https://github.com/vim-scripts/vim-auto-save.git
