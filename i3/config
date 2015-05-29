@@ -114,14 +114,13 @@ bindsym $mod+4 workspace 4: Okta
 bindsym $mod+5 workspace 5: VNC
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8:
+bindsym $mod+8 workspace 8: Steam
 bindsym $mod+9 workspace 9: Firefox
 bindsym $mod+0 workspace 10: Chromium
 bindsym $mod+m workspace M: Music
 bindsym $mod+c workspace Calendar
 bindsym $mod+t workspace Trello
 bindsym $mod+i workspace Inbox
-bindsym $mod+b workspace B: Reading
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1: Terminal
@@ -131,15 +130,13 @@ bindsym $mod+Shift+4 move container to workspace 4: Okta
 bindsym $mod+Shift+5 move container to workspace 5: VNC
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8:
+bindsym $mod+Shift+8 move container to workspace 8: Steam
 bindsym $mod+Shift+9 move container to workspace 9: Firefox
 bindsym $mod+Shift+0 move container to workspace 10: Chromium
 bindsym $mod+Shift+m move container to workspace M: Music
 bindsym $mod+Shift+c move container to workspace Calendar
 bindsym $mod+Shift+t move container to workspace Trello
 bindsym $mod+Shift+i move container to workspace Inbox
-bindsym $mod+Shift+b move container to workspace B: Reading
-
 
 # reload the configuration file
 bindsym $mod+Shift+r reload
