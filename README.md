@@ -159,5 +159,5 @@ Or if you don't trust my scripts (why should you?), you can update manually:
 git fetch -vp # Update refs
 git rebase origin/master # Bring in new changes
 git submodule update --init --recursive # Update submodules
-./install.sh # Install new configs and clean old ones
+python2 libs/github/dotbot/bin/dotbot -d ./ -c install.conf.json # Install/clean links
 ```
