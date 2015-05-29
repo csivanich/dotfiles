@@ -18,8 +18,7 @@
     separator_color = frame
     startup_notification = true
     dmenu = "/usr/bin/dmenu -p dunst: -nb #FFFFFF -nf #000000 -sb #94DBFF -sf #000000"
-    browser = /home/knopwob/bin/url_dispatcher
-
+    browser = /usr/bin/chromium
 
 [frame]
     width = 3
@@ -27,9 +26,9 @@
 
 [shortcuts]
     close = ctrl+space
-    close_all = ctrl+shift+space
+    close_all = ctrl+shift+period
     history = ctrl+grave
-    context = ctrl+shift+period
+    context = ctrl+shift+space
 
 [urgency_low]
     background = "#ffffff"
