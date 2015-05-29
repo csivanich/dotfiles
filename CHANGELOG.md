@@ -1,6 +1,19 @@
 Changelog
 -----
 
+#### 4.5 - Xscreensaver/ssh-agent support, workspace tweaks, module fix
+
+ - Added colorization to the man pages
+ - Added i3 workspace 4 as Okta
+ - Added i3 workspace 8 for steam
+ - Added tmux sessions and attach aliases
+ - Fixed vim-auto-save git module
+ - Removed external IP checking in tmux statusbar
+ - Updated dunst browser to chromium, close and context shortcuts
+ - Updated tmux prefix to Ctrl-w
+ - Updated vim config to use 'relativenumber' for sidebar line numbers
+ - Updated xinitrc to enable xscreensaver and start ssh-agent
+
 #### 4.4 - Vim plugins and workspace tweaks
 
 - Added new i3 aliases
