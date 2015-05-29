@@ -111,7 +111,6 @@ Submodules
 - [rust.vim](https://github.com/wting/rust.vim)
 - [syntastic](https://github.com/scrooloose/syntastic)
 - [taglist.vim](https://github.com/vim-scripts/taglist.vim)
-- [taglist.vim](https://github.com/vim-scripts/taglist.vim.git)
 - [vim-airline](https://github.com/bling/vim-airline)
 - [vim-auto-save](https://github.com/vim-scripts/vim-auto-save)
 - [vim-autoclose](https://github.com/Townk/vim-autoclose.git)
