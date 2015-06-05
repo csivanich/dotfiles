@@ -108,3 +108,8 @@ let g:auto_save_in_insert_mode = 0
 " This plugin changes vim's updatetime option.
 " If it breaks things, uncomment this
 "let g:auto_save_no_updatetime = 1
+
+" Set up crosshair, toggle with \c in normal mode
+:hi CursorLine cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
+:hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
+:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>

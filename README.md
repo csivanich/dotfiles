@@ -41,6 +41,7 @@ Contents
 - 4 spaced tabs
 - Autocompletion always on
 - Case insensitive search
+- Cursor crosshair
 - Dark background
 - Global config base
 - Global highlighting of search matches
