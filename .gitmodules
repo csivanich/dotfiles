@@ -82,3 +82,6 @@
 [submodule "libs/github/vim-auto-save"]
 	path = libs/github/vim-auto-save
 	url = https://github.com/vim-scripts/vim-auto-save.git
+[submodule "libs/github/emmet-vim"]
+	path = libs/github/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
