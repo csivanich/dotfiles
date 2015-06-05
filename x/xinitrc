@@ -9,10 +9,10 @@ export LANG=en_US.utf8
 
 [ -r $XRESOURCES ] && xrdb -merge $XRESOURCES
 [ $(which nvidia-settings 2>&1 >/dev/null) ] && nvidia-settings -a InitialPixmapPlacement=2
-[ $(which xscreensaver 2>&1 >/dev/null) ] && xscreensaver -no-splash &
+[ $(which xscreensaver 2>&1 >/dev/null) ] && xscreensaver &
 [ $(which xss-lock 2>&1 >/dev/null ) ] && xss-lock -- xscreensaver-command -lock
 [ $(which ssh-agent) ] && eval $(ssh-agent)
-[ -r $HOME/.screenlayout/default.sh ] && $HOME/.screenlayout/default.sh
+[ -x $HOME/.screenlayout/default.sh ] && $HOME/.screenlayout/default.sh
 
 setxkbmap -option caps:escape
 
