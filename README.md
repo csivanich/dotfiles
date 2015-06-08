@@ -68,7 +68,7 @@ Contents
 - 256 color mode enabled
 - 4096 lines saved
 - Custom colorscheme
-- Inconsolata for Powerline font - size 14 regular
+- Source Code for Powerline (Sauce Code) font - size 14 regular
 - UTF8 enabled
 
 #### Zsh Configuration
