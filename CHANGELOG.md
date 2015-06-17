@@ -1,6 +1,22 @@
 Changelog
 -----
 
+#### 4.6 - Xinit additions, tmux tweaks
+
+ - Added arandr screen setting at X start
+ - Added crosshair to vim
+ - Added emmet-vim plugin
+ - Added local ruby bin to the PATH if found
+ - Added vim-ansible-yaml plugin
+ - Fixed contradictory statement
+ - Fixed duplicate taglist.vim link
+ - Fixed xinitrc check for default screenlayout and xscreensaver command
+ - Removed extra whitespace
+ - Updated base font size to 12pt
+ - Updated font back to Inconsolata
+ - Updated ssh-agent to check for install before run
+ - Updated tmux split pane to _ so it requires a shift like |
+
 #### 4.5 - Xscreensaver/ssh-agent support, workspace tweaks, module fix
 
  - Added colorization to the man pages

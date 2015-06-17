@@ -1,0 +1,10 @@
+---
+
+# Ansible playbook to install github.com/csivanich/dotfiles
+- name: local
+  hosts: all
+  tasks:
+  - name: Install i3wm
+    pacman: pkg=i3 state=latest
+
+# vim:ft=ansible:

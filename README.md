@@ -15,7 +15,7 @@ Contents
 #### i3 Configuration
 
 - $mod set to Win key
-- DejaVu Sans Mono 10 font
+- Inconsolata 12pt font
 - 1px borders
 - Improved window movement between outputs (\$mod+\[ and \])
 - Named/numbered workspaces, each with switch and move bindings
@@ -56,10 +56,12 @@ Contents
 
 #### X11 Configuration
 
+- Autostarts ssh-agent
 - Caps Lock remapped to Escape
 - DPI set to 96
 - Default WM is `i3`
 - Font antialiasing and rgb hinting
+- Loads default screenlayout
 - NVIDIA scrolling tweaks when nvidia-settings is installed
 - Xbindkeys for volume and brightness controls
 
