@@ -1,5 +1,14 @@
 [
     {
+        "meta" : {
+            "title" : "Local bin files",
+            "description" : "Scripts to be added to local ~/bin/"
+        },
+        "link" : {
+            "~/bin/dux" : "/home/chris/dotfiles/libs/github/dux/dux.py"
+        }
+    },
+    {
         "link" : {
             "~/.fonts" : "fonts",
             "~/.aliases" : "other/aliases",
@@ -60,11 +69,12 @@
             "title" : "Zsh"
         },
         "link" : {
+            "~/.zsh.d/000-dux.zsh" : "zsh/000-dux.zsh",
             "~/.zsh.d/bindkeys.zsh" : "zsh/bindings.zsh",
+            "~/.zsh.d/colored_man.zsh" : "zsh/colored_man.zsh",
             "~/.zsh.d/exports.zsh" : "zsh/exports.zsh",
             "~/.zsh.d/prompt.zsh" : "zsh/prompt.zsh",
             "~/.zsh.d/setopt.zsh" : "zsh/setopt.zsh",
-            "~/.zsh.d/colored_man.zsh" : "zsh/colored_man.zsh",
             "~/.zsh.d/z.sh" : "zsh/z.sh",
             "~/.zsh.d/zsh-syntax-highlighting.zsh" : "zsh/zsh-syntax-highlighting.zsh",
             "~/.zshrc" : "zsh/zshrc"
