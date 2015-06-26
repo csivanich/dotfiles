@@ -68,12 +68,14 @@ _p_git_color(){
 
 # files_changed insertions deletions
 _p_git_diffs(){
-    if [ $IS_GIT -eq 0 ];then
+    if [[ "$IS_GIT" == "0" ]];then
         i=$(git diff --shortstat)
         changes=$(echo "$i" | awk '{print $1}')
         additions=$(echo "$i" | awk '{print $4}')
         deletions=$(echo "$i" | awk '{print $6}')
-        echo "%F{$1}~$changes%f %F{$2}+$additions%f %F{$3}-$deletions%f"
+        if [ "$changes" -gt "0" ]; then
+            echo "%F{$1}~$changes%f %F{$2}+$additions%f %F{$3}-$deletions%f"
+        fi
     fi
 }
 
