@@ -72,6 +72,14 @@
     },
     {
         "meta" : {
+            "title" : "$HOME/bin"
+        },
+        "link" : {
+            "~/bin/dux" : "./libs/github/dux/dux.py"
+        }
+    },
+    {
+        "meta" : {
             "title" : "i3"
         },
         "link" : {
