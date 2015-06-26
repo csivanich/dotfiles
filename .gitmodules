@@ -91,3 +91,6 @@
 [submodule "libs/github/vim-ruby"]
 	path = libs/github/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule "libs/github/dux"]
+	path = libs/github/dux
+	url = https://github.com/csivanich/dux
