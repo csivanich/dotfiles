@@ -47,13 +47,13 @@ set laststatus=2
 " Start if no file opened
 "autocmd vimenter * if !argc() | NERDTree | endif
 " Assign command to TAB
-"map <TAB> :NERDTreeToggle<CR>
+map <TAB> :NERDTreeToggle<CR>
 " Fix encoding issues surrounding arrows
 " (https://superuser.com/questions/387777/what-could-cause-strange-characters-in-vim)
 let g:NERDTreeDirArrows=0
 
 " Taglist toggle
-map <TAB> :Tlist<CR>
+"map <TAB> :Tlist<CR>
 
 " Trailing whitespace highlighting
 " http://vim.wikia.com/wiki/Highlight_unwanted_spaces
