@@ -13,29 +13,29 @@ colorscheme gruvbox
 " let g:molokai_original = 1
 " let g:rehash256 = 1
 
-set background=dark
-set tabstop=4
-set shiftwidth=4
-set smarttab
-set expandtab
-set showcmd
-set number
-set showmatch
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
-set backspace=2
-set autoindent
+syntax on
+filetype plugin indent on
+
 " set textwidth=79
-set ruler
+set autoindent
+set background=dark
+set backspace=2
+set colorcolumn=+1        " highlight column after 'textwidth'
+set expandtab
+set hlsearch
+set ignorecase
+set incsearch
 set mouse=a
 set number
 set nocompatible
 set relativenumber
-syntax on
-filetype plugin indent on
-set colorcolumn=+1        " highlight column after 'textwidth'
+set ruler
+set shiftwidth=4
+set showcmd
+set showmatch
+set smartcase
+set smarttab
+set tabstop=4
 
 " Airline options
 " https://github.com/bling/vim-airline
