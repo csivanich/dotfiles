@@ -125,6 +125,7 @@ Submodules
 - [vim-latex](https://github.com/lervag/vim-latex)
 - [vim-markdown](https://github.com/tpope/vim-markdown)
 - [vim-pathogen](https://github.com/tpope/vim-pathogen)
+- [vim-ruby](https://github.com/vim-ruby/vim-ruby)
 - [vim-sensible](https://github.com/tpope/vim-sensible)
 - [vim-signify](https://github.com/mhinz/vim-signify)
 

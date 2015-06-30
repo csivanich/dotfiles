@@ -88,3 +88,6 @@
 [submodule "libs/github/vim-ansible-yaml"]
 	path = libs/github/vim-ansible-yaml
 	url = git://github.com/chase/vim-ansible-yaml.git
+[submodule "libs/github/vim-ruby"]
+	path = libs/github/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git

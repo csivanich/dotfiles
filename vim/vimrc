@@ -30,6 +30,8 @@ set autoindent
 " set textwidth=79
 set ruler
 set mouse=a
+set number
+set nocompatible
 set relativenumber
 syntax on
 filetype plugin indent on
@@ -113,3 +115,8 @@ let g:auto_save_in_insert_mode = 0
 :hi CursorLine cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
 :hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
 :nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+
+" Setting compiler for Ruby
+" https://github.com/vim-ruby/vim-ruby/wiki/VimRubySupport
+autocmd FileType ruby compiler ruby
+au FileType ruby setl sw=2 ts=2 sts=2 et
