@@ -4,7 +4,7 @@ xterm*VT100.geometry:     80x25
 !xterm*faceName:			  Terminess Powerline:style=Regular
 !xterm*faceName:           Sauce Code Powerline:style=Regular
 xterm*faceName:           Inconsolata for Powerline
-xterm*faceSize:           13
+xterm*faceSize:           14
 xterm*termName:	          xterm-256color
 ! xterm*font:              -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
 xterm*dynamicColors:      true
@@ -25,33 +25,33 @@ xterm*scrollTtyOutput:    true
 *pointerColorForeground:	black
 
 ! experimental new colors
-*foreground:    #ddeedd
-*background:    #29211c
+*foreground:    #DDDDDD
+*background:    #1c1c1c
 
 !black
-*color0:    #29211c
-*color8:    #3A526B
+*color0:    #1c1c1c
+*color8:    #656565
 !red
 *color1:    #d83712
 *color9:    #c34022
 !green
-*color2:    #BDE477
+*color2:    #91e44b
 *color10:   #B7CE42
 !yellow
-*color3:    #e1ba44
-*color11:   #FFE863
+*color3:    #FFE863
+*color11:   #e1ba44
 !blue
-*color4:    #5dceba
-*color12:   #AACCBB
+*color4:    #858585
+*color12:   #c2c2c2
 !magenta
 *color5:    #e86700
-*color13:   #ff5879
+*color13:   #e89859
 !cyan
-*color6:    #72AD8C
-*color14:   #9FE3BC
+*color6:    #ADADAD
+*color14:   #DCDCDC
 !white
 *color7:    #FFFFFF
-*color15:   #DDEEDD
+*color15:   #CFCFCF
 
 Xft.dpi: 96
 Xft.antialias: true

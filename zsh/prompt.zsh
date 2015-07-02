@@ -89,8 +89,8 @@ _p(){
 
     #           text    background  divider_bg
     #_p_success  "red"   "white"     "white"
-    _p_main     "blue" "black"     "blue"  "yellow"
-    _p_location "cyan" "black"      "cyan"
+    _p_main     "blue" "black"     "blue"  "green"
+    _p_location "magenta" "black"      "magenta"
     _p_git      "$(_p_git_color)" "black" "$(_p_git_color)"
     echo -n " "
 }

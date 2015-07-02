@@ -18,7 +18,8 @@ set $mod Mod4
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-font pango:DejaVu Sans Mono 10
+# font pango:DejaVu Sans Mono 10
+font pango:Sauce Code for Powerline 10
 
 new_window 1pixel
 popup_during_fullscreen smart
@@ -181,29 +182,17 @@ bar {
     status_command i3status
 
     colors {
-        background #29211c
+        background #1c1c1c
         statusline #ffffff
-        separator #666666
+        separator #656565
 
         # Class             Border  BG      Text
-        focused_workspace   #888888 #5dceba #ffffff
+        focused_workspace   #888888 #1c1c1c #91e44b
         active_workspace    #333333 #5f676a #ffffff
         inactive_workspace  #333333 #222222 #888888
-        urgent_workspace    #2f343a #900000 #ffffff
+        urgent_workspace    #2f343a #e86700 #ffffff
     }
 }
-# Colors
-#2e9ef4 Light Blue
-#4c7899 Blue
-#285577 Dark Blue
-#
-#5f676a Light Gray
-#333333 Gray
-#484e50 Dark Gray
-
-
-#ffaf00 yellow
-#f9ea52 light yellow
 
 #border     - titlebar border color (NA)
 #backgr     - window border
@@ -211,7 +200,7 @@ bar {
 #indicator  - layout type indicator
 
 # class                 border  backgr. text    indicator
-client.focused          #f9ea52 #ffaf00 #000000 #ffffff
+client.focused          #DDDDDD #91e44b #000000 #ffffff
 client.focused_inactive #333333 #222222 #ffffff #888888
 client.unfocused        #333333 #222222 #888888 #888888
-client.urgent           #2f343a #900000 #ffffff #900000
+client.urgent           #222222 #e86700 #ffffff #e86700
