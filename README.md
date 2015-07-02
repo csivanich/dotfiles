@@ -128,6 +128,7 @@ Submodules
 - [vim-ruby](https://github.com/vim-ruby/vim-ruby)
 - [vim-sensible](https://github.com/tpope/vim-sensible)
 - [vim-signify](https://github.com/mhinz/vim-signify)
+- [vim-unimpared](https://github.com/tpope/vim-unimpaired)
 
 Install
 -----

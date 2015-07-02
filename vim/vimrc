@@ -120,3 +120,10 @@ let g:auto_save_in_insert_mode = 0
 " https://github.com/vim-ruby/vim-ruby/wiki/VimRubySupport
 autocmd FileType ruby compiler ruby
 au FileType ruby setl sw=2 ts=2 sts=2 et
+
+" Moving lines up and down with the arrow keys. As inspired by June 15' SF Vim
+" meetup and http://codingfearlessly.com/2012/08/21/vim-putting-arrows-to-use/
+nmap <Up> [e
+nmap <Down> ]e
+vmap <Up> [egv
+vmap <Down> ]egv

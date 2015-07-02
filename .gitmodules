@@ -94,3 +94,6 @@
 [submodule "libs/github/dux"]
 	path = libs/github/dux
 	url = https://github.com/csivanich/dux
+[submodule "libs/github/vim-unimpaired"]
+	path = libs/github/vim-unimpaired
+	url = git@github.com:tpope/vim-unimpaired.git
