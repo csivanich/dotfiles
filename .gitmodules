@@ -97,3 +97,6 @@
 [submodule "libs/github/vim-unimpaired"]
 	path = libs/github/vim-unimpaired
 	url = git@github.com:tpope/vim-unimpaired.git
+[submodule "libs/github/gundo.vim"]
+	path = libs/github/gundo.vim
+	url = git@github.com:sjl/gundo.vim.git

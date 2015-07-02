@@ -106,6 +106,7 @@ Submodules
 - [ctrlp.vim](https://github.com/kien/ctrlp.vim)
 - [cup.vim](https://github.com/vim-scripts/cup.vim)
 - [gruvbox](https://github.com/morhetz/gruvbox)
+- [gundo.vim](https://github.com/sjl/gundo.vim/)
 - [jflex.vim](jflex.de/vim.html)
 - [molokai](https://github.com/tomasr/molokai)
 - [nerdtree](https://github.com/scrooloose/nerdtree)
