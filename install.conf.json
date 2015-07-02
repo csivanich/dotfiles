@@ -85,7 +85,7 @@
             "title" : "$HOME/bin"
         },
         "link" : {
-            "~/bin/dux" : "./libs/github/dux/dux.py"
+            "~/bin/dux" : "libs/github/dux/dux.py"
         }
     },
     {
