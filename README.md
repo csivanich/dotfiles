@@ -32,6 +32,7 @@ Contents
   - [Xbindkeys](http://www.nongnu.org/xbindkeys/xbindkeys.html)
 
 #### Tmux Configuration
+ - Autostarts with [Dux](https://github.com/csivanich/dux)
  - Ctrl+a prefix
  - Enhanced clipboard support
  - Mouse support
