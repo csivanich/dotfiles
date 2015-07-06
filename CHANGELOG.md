@@ -1,6 +1,22 @@
 Changelog
 -----
 
+#### 5.0 - Major new color scheme, Dux integration
+
+- **MAJOR NEW COLOR SCHEME**
+- Added dstat alias
+- Added Dux note to README
+- Added Dux support
+- Added gundo.vim and assigned to TAB
+- Added images of different tags
+- Added tclip alias to copy tmux buffer to clipboard
+- Added vim-ruby and correct spacing for Ruby in vim
+- Added vim-unimpaired and arrow up/down line movements
+- Updated libraries to most current versions
+- Updated screenshot, tweaked green, fixed prompt bug
+- Updated submodules
+- Updated vimrc set statements to be sorted
+
 #### 4.6 - Xinit additions, tmux tweaks
 
  - Added arandr screen setting at X start

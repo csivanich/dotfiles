@@ -1,8 +1,7 @@
 dotfiles
 ========
 
-![Screenshot](http://i.imgur.com/E3iXftU.png)
-[(Old Screenshot)](https://i.imgur.com/xRBt7xx.png)
+![Screenshot](https://raw.githubusercontent.com/csivanich/dotfiles/master/libs/images/5_0.png)
 
 I was tired of having a bunch of configurations across all my machines, especially when trying to keep all the plugins and extras up to date. So I got fed up and threw them on GitHub. It's not perfect (yet!), but it's a great starting point for any Linux config.
 
@@ -16,7 +15,7 @@ Contents
 #### i3 Configuration
 
 - $mod set to Win key
-- Inconsolata 12pt font
+- Sauce Code for Powerline font - size 10 regular
 - 1px borders
 - Improved window movement between outputs (\$mod+\[ and \])
 - Named/numbered workspaces, each with switch and move bindings
@@ -32,7 +31,6 @@ Contents
   - [Xbindkeys](http://www.nongnu.org/xbindkeys/xbindkeys.html)
 
 #### Tmux Configuration
- - Autostarts with [Dux](https://github.com/csivanich/dux)
  - Ctrl+a prefix
  - Enhanced clipboard support
  - Mouse support
@@ -71,8 +69,9 @@ Contents
 
 - 256 color mode enabled
 - 4096 lines saved
+- Autostarts tmux with `dux` script
 - Custom colorscheme
-- Source Code for Powerline (Sauce Code) font - size 14 regular
+- Iconsolata for Powerline font - size 14 regular
 - UTF8 enabled
 
 #### Zsh Configuration
@@ -98,8 +97,9 @@ Submodules
 - [dotbot](https://github.com/anishathalye/dotbot)
 
 #### Zsh:
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+- [dux](https://github.com/csivanich/dux)
 - [z](https://github.com/rupa/z)
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 #### Vim:
 - [ack.vim](https://github.com/mileszs/ack.vim)
