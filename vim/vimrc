@@ -133,3 +133,6 @@ vmap <Down> ]egv
 
 " Gundo config http://sjl.bitbucket.org/gundo.vim/
 nnoremap <TAB> :GundoToggle<CR>
+
+" Ctrlp options
+let g:ctrlp_working_path_mode = 'ca'
