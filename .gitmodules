@@ -100,3 +100,6 @@
 [submodule "libs/github/gundo.vim"]
 	path = libs/github/gundo.vim
 	url = https://github.com/sjl/gundo.vim.git
+[submodule "libs/github/vim-signature"]
+	path = libs/github/vim-signature
+	url = https://github.com/kshenoy/vim-signature.git

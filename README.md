@@ -46,6 +46,7 @@ Contents
 - Global config base
 - Global highlighting of search matches
 - Gruvbox theme
+- Marks in gutter
 - Mouse support
 - NERDTree Configuration
 - Numbered lines
@@ -129,6 +130,7 @@ Submodules
 - [vim-pathogen](https://github.com/tpope/vim-pathogen)
 - [vim-ruby](https://github.com/vim-ruby/vim-ruby)
 - [vim-sensible](https://github.com/tpope/vim-sensible)
+- [vim-signature](https://github.com/kshenoy/vim-signature)
 - [vim-signify](https://github.com/mhinz/vim-signify)
 - [vim-unimpared](https://github.com/tpope/vim-unimpaired)
 
