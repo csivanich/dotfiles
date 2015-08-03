@@ -96,6 +96,7 @@ Submodules
 
 #### General:
 - [dotbot](https://github.com/anishathalye/dotbot)
+- [glacier-cli](https://github.com/csivanich/glacier-cli)
 
 #### Zsh:
 - [dux](https://github.com/csivanich/dux)

@@ -103,3 +103,6 @@
 [submodule "libs/github/vim-signature"]
 	path = libs/github/vim-signature
 	url = https://github.com/kshenoy/vim-signature.git
+[submodule "libs/github/glacier-cli"]
+	path = libs/github/glacier-cli
+	url = https://github.com/csivanich/glacier-cli.git

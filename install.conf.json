@@ -5,7 +5,8 @@
             "description" : "Scripts to be added to local ~/bin/"
         },
         "link" : {
-            "~/bin/dux" : "libs/github/dux/dux.py"
+            "~/bin/dux" : "libs/github/dux/dux.py",
+            "~/bin/glacier" : "libs/github/glacier-cli/glacier.py"
         }
     },
     {
