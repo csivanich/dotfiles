@@ -25,6 +25,8 @@ set expandtab
 set hlsearch
 set ignorecase
 set incsearch
+set list
+set listchars=eol:¬,tab:>-,trail:•,extends:>,precedes:<
 set mouse=a
 set number
 set nocompatible
