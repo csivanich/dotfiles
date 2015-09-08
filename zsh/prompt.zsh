@@ -83,9 +83,9 @@ _p(){
     git diff --shortstat > /dev/null 2>&1
     IS_GIT=$?
 
-    DIVIDER="${DIVIDER:-}"
-    DIVIDER2="${DIVIDER2:-}"
-    BRANCH="${BRANCH:-}"
+    DIVIDER=""
+    DIVIDER2=""
+    BRANCH=""
 
     #           text    background  divider_bg
     #_p_success  "red"   "white"     "white"
