@@ -55,7 +55,7 @@ set laststatus=2
 let g:NERDTreeDirArrows=0
 
 " Taglist toggle
-"map <TAB> :Tlist<CR>
+:nnoremap <Leader>t :Tlist<CR>
 
 " Taglist latex support
 " https://caffeinatedcode.wordpress.com/2009/11/16/simple-latex-ctags-and-taglist/
