@@ -13,7 +13,8 @@
         "link" : {
             "~/.fonts" : "fonts",
             "~/.aliases" : "other/aliases",
-            "~/.gitconfig": "other/gitconfig"
+            "~/.gitconfig": "other/gitconfig",
+            "~/.ctags" : "other/ctags"
         },
         "meta" : {
             "title" : "Other",

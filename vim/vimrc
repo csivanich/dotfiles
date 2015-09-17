@@ -57,6 +57,10 @@ let g:NERDTreeDirArrows=0
 " Taglist toggle
 "map <TAB> :Tlist<CR>
 
+" Taglist latex support
+" https://caffeinatedcode.wordpress.com/2009/11/16/simple-latex-ctags-and-taglist/
+let tlist_tex_settings = 'latex;l:labels;s:sections;t:subsections;u:subsubsections'
+
 " Trailing whitespace highlighting
 " http://vim.wikia.com/wiki/Highlight_unwanted_spaces
 highlight ExtraWhitespace ctermbg=red guibg=red
