@@ -2,11 +2,11 @@
 source /etc/vimrc
 
 " Start pathogen
-" https://github.com/tpope/vim-pathogen
+" "https://github.com/tpope/vim-pathogen"
 execute pathogen#infect()
 
 " Default options
-" https://wiki.archlinux.org/index.php/vim/.vimrc
+" "https://wiki.archlinux.org/index.php/vim/.vimrc"
 colorscheme gruvbox
 " colorscheme solarized
 " colorscheme molokai
@@ -126,7 +126,7 @@ autocmd BufNewFile,BufRead *.tex :inoremap ii \textit{
 " End LaTeX
 
 " Airline options
-" https://github.com/bling/vim-airline
+" "https://github.com/bling/vim-airline"
 let g:airline_powerline_fonts = 1
 set encoding=utf-8
 set laststatus=2
@@ -137,18 +137,18 @@ set laststatus=2
 " Assign command to TAB
 "map <TAB> :NERDTreeToggle<CR>
 " Fix encoding issues surrounding arrows
-" (https://superuser.com/questions/387777/what-could-cause-strange-characters-in-vim)
+" "https://superuser.com/questions/387777/what-could-cause-strange-characters-in-vim"
 let g:NERDTreeDirArrows=0
 
 " Taglist toggle
 :nnoremap <Leader>t :Tlist<CR>
 
 " Taglist latex support
-" https://caffeinatedcode.wordpress.com/2009/11/16/simple-latex-ctags-and-taglist/
+" "https://caffeinatedcode.wordpress.com/2009/11/16/simple-latex-ctags-and-taglist/"
 let tlist_tex_settings = 'latex;l:labels;s:sections;t:subsections;u:subsubsections'
 
 " Trailing whitespace highlighting
-" http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+" "http://vim.wikia.com/wiki/Highlight_unwanted_spaces"
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
@@ -191,7 +191,7 @@ augroup END
 " Java Cup support
 autocmd BufNewFile,BufRead *.cup setf cup
 
-" https://github.com/vim-scripts/vim-auto-save
+" "https://github.com/vim-scripts/vim-auto-save"
 " Enable auto saving at startup (can use :AutoSaveToggle otherwise)
 let g:auto_save = 1
 "
@@ -203,13 +203,13 @@ let g:auto_save_in_insert_mode = 0
 " If it breaks things, uncomment this
 "let g:auto_save_no_updatetime = 1
 
-" Set up crosshair, toggle with \c in normal mode
+" Set up crosshair, toggle with <leader>c in normal mode
 :hi CursorLine cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
 :hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
 :nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 " Setting compiler for Ruby
-" https://github.com/vim-ruby/vim-ruby/wiki/VimRubySupport
+" "https://github.com/vim-ruby/vim-ruby/wiki/VimRubySupport"
 autocmd FileType ruby compiler ruby
 au FileType ruby setl sw=2 ts=2 sts=2 et
 
@@ -217,13 +217,13 @@ au FileType ruby setl sw=2 ts=2 sts=2 et
 au FileType yaml setl sw=2 ts=2 sts=2 et
 
 " Moving lines up and down with the arrow keys. As inspired by June 15' SF Vim
-" meetup and http://codingfearlessly.com/2012/08/21/vim-putting-arrows-to-use/
+" meetup and "http://codingfearlessly.com/2012/08/21/vim-putting-arrows-to-use/"
 nmap <Up> [e
 nmap <Down> ]e
 vmap <Up> [egv
 vmap <Down> ]egv
 
-" Gundo config http://sjl.bitbucket.org/gundo.vim/
+" Gundo config "http://sjl.bitbucket.org/gundo.vim/"
 nnoremap <TAB> :GundoToggle<CR>
 
 " Ctrlp options
