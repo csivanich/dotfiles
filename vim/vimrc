@@ -39,6 +39,92 @@ set smartcase
 set smarttab
 set tabstop=4
 
+" Leader (space) mappings:
+" So much thanks to Steve Losh's "Learn Vimscript the Hard Way"
+" "http://learnvimscriptthehardway.stevelosh.com/chapters/06.html"
+" "http://learnvimscriptthehardway.stevelosh.com/chapters/07.html"
+
+" Space leader
+nnoremap <space> <nop>
+let mapleader=" "
+
+nnoremap <leader>l >>
+nnoremap <leader>h <<
+
+" ev - _E_dit _V_im config
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+" sv - _S_ource _V_im config
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" p - Duplicate line
+nnoremap <leader>p yyp
+
+" gst - Open Git status
+nnoremap <leader>gst :Gstatus<cr>
+
+" gco - Open Git commit
+nnoremap <leader>gco :Gcommit<cr>
+
+" c - _C_lear the current search
+nnoremap <leader>cl :noh<cr>
+
+" sp - _SP_elling fix with first result
+nnoremap <leader>sp z=1<cr><cr>
+
+" Custom Selectors
+" More thanks to Steve Losh's "Learn Vimscript the Hard Way"
+" "http://learnvimscriptthehardway.stevelosh.com/chapters/15.html"
+
+" Inside _P_arentheses
+onoremap p i(
+
+" Inside curly breaces
+onoremap o i{
+
+" In Insert mode jk or kj escape to Normal mode
+inoremap jk <esc>
+inoremap kj <esc>
+
+" Insert mode jj moves left, kk moves right
+inoremap jj <esc>i
+inoremap kk <esc>lli
+
+" Begin LaTeX
+autocmd BufNewFile,BufRead *.tex :set filetype=tex
+autocmd BufNewFile,BufRead *.tex :set spell
+
+" il - _I_tem _L_ist
+autocmd BufNewFile,BufRead *.tex :nnoremap <leader>il o\begin{itemize}<cr>\item <cr>\end{itemize}<esc>kA
+
+" el - _E_numerated _L_ist
+autocmd BufNewFile,BufRead *.tex :nnoremap <leader>el o\begin{enumerate}<cr>\item <cr>\end{enumerate}<esc>kA
+
+" vb - _V_er_B_atim
+autocmd BufNewFile,BufRead *.tex :nnoremap <leader>vb o\begin{verbatim}<cr><cr>\end{verbatim}<esc>kA
+
+" li - _L_ist _I_tem
+" NOTE: trailing whitespace is intentional
+autocmd BufNewFile,BufRead *.tex :nnoremap <leader>li o\item 
+
+" s - _S_ection
+autocmd BufNewFile,BufRead *.tex :nnoremap <leader>s o\section{}<esc>i
+
+" ss - _S_ub _S_ection
+autocmd BufNewFile,BufRead *.tex :nnoremap <leader>ss o\subsection{}<esc>i
+
+" sss - _S_ub _S_ub _S_ection
+autocmd BufNewFile,BufRead *.tex :nnoremap <leader>sss o\subsubsection{}<esc>i
+
+" bf - _B_old _F_ont (Normal and Insert mode)
+autocmd BufNewFile,BufRead *.tex :nnoremap <leader>bf i\textbf{<esc>Eli}<esc>
+autocmd BufNewFile,BufRead *.tex :inoremap bf \textbf{
+
+" it - _I_talicize _F_ont (Normal and Insert mode)
+autocmd BufNewFile,BufRead *.tex :nnoremap <leader>it i\textit{<esc>Eli}<esc>
+autocmd BufNewFile,BufRead *.tex :inoremap ii \textit{
+" End LaTeX
+
 " Airline options
 " https://github.com/bling/vim-airline
 let g:airline_powerline_fonts = 1
