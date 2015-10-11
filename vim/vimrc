@@ -1,10 +1,19 @@
 " Include default global config
 source /etc/vimrc
 
-" Start pathogen
+" Vimscript file settings ---------------------- {{{
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
+
+" Pathogen -------------------------------- {{{
 " "https://github.com/tpope/vim-pathogen"
 execute pathogen#infect()
+" }}}
 
+" Main options and settings --------------------- {{{
 " Default options
 " "https://wiki.archlinux.org/index.php/vim/.vimrc"
 colorscheme gruvbox
@@ -15,6 +24,10 @@ colorscheme gruvbox
 
 syntax on
 filetype plugin indent on
+
+" Space leader
+nnoremap <space> <nop>
+let mapleader=" "
 
 " set textwidth=79
 set autoindent
@@ -39,40 +52,34 @@ set smartcase
 set smarttab
 set tabstop=4
 
-" Leader (space) mappings:
+" Trailing whitespace highlighting -------------- {{{
+" "http://vim.wikia.com/wiki/Highlight_unwanted_spaces"
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+" }}}
+" }}}
+
+" Global Mappings -------------------------------------- {{{
 " So much thanks to Steve Losh's "Learn Vimscript the Hard Way"
 " "http://learnvimscriptthehardway.stevelosh.com/chapters/06.html"
 " "http://learnvimscriptthehardway.stevelosh.com/chapters/07.html"
 
-" Space leader
-nnoremap <space> <nop>
-let mapleader=" "
+" Insert Mode ----------------------------------- {{{
+" jj/kk moves left/right ----------------- {{{
+inoremap jj <esc>i
+inoremap kk <esc>lli
+" }}}
+" jk/kj as Escape ------------------------------- {{{
+inoremap jk <esc>
+inoremap kj <esc>
+" }}}
+" }}}
 
-nnoremap <leader>l >>
-nnoremap <leader>h <<
-
-" ev - _E_dit _V_im config
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-
-" sv - _S_ource _V_im config
-nnoremap <leader>sv :source $MYVIMRC<cr>
-
-" p - Duplicate line
-nnoremap <leader>p yyp
-
-" gst - Open Git status
-nnoremap <leader>gst :Gstatus<cr>
-
-" gco - Open Git commit
-nnoremap <leader>gco :Gcommit<cr>
-
-" c - _C_lear the current search
-nnoremap <leader>cl :noh<cr>
-
-" sp - _SP_elling fix with first result
-nnoremap <leader>sp z=1<cr><cr>
-
-" Custom Selectors
+" Selectors ------------------------------------- {{{
 " More thanks to Steve Losh's "Learn Vimscript the Hard Way"
 " "http://learnvimscriptthehardway.stevelosh.com/chapters/15.html"
 
@@ -81,16 +88,140 @@ onoremap p i(
 
 " Inside curly breaces
 onoremap o i{
+" }}}
 
-" In Insert mode jk or kj escape to Normal mode
-inoremap jk <esc>
-inoremap kj <esc>
+" Normal Mode ----------------------------------- {{{
+" Arrow Key Line Movement ----------------------- {{{
+" Moving lines up and down with the arrow keys. As inspired by June 15' SF Vim
+" meetup and "http://codingfearlessly.com/2012/08/21/vim-putting-arrows-to-use/"
+nmap <Up> [e
+nmap <Down> ]e
+vmap <Up> [egv
+vmap <Down> ]egv
+" }}}
+" Crosshair ------------------------------------- {{{
+" Set up crosshair, toggle with <leader>c in normal mode
+:hi CursorLine cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
+:hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
+:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+" }}}
+" Git ------------------------------------------- {{{
+" gst - Open Git status
+nnoremap <leader>gst :Gstatus<cr>
 
-" Insert mode jj moves left, kk moves right
-inoremap jj <esc>i
-inoremap kk <esc>lli
+" gco - Open Git commit
+nnoremap <leader>gco :Gcommit<cr>
+" }}}
+" Left/Right Shift ------------------------------ {{{
+nnoremap <leader>l >>
+nnoremap <leader>h <<
+" }}}
+" Other ----------------------------------------- {{{
+" p - Duplicate line
+nnoremap <leader>p yyp
 
-" Begin LaTeX
+" c - _C_lear the current search
+nnoremap <leader>cl :noh<cr>
+
+" sp - _SP_elling fix with first result
+nnoremap <leader>sp z=1<cr><cr>
+
+" <space><space> - toggles fold
+nnoremap <leader><space> za
+" }}}
+" Taglist Toggle -------------------------------- {{{
+:nnoremap <Leader>t :Tlist<CR>
+" }}}
+" Vimrc ----------------------------------------- {{{
+" ev - _E_dit _V_im config
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+" sv - _S_ource _V_im config
+nnoremap <leader>sv :source $MYVIMRC<cr>
+" }}}
+" }}}
+
+" }}}
+
+" Plugins --------------------------------------- {{{
+" Airline --------------------------------------- {{{
+" "https://github.com/bling/vim-airline"
+let g:airline_powerline_fonts = 1
+set encoding=utf-8
+set laststatus=2
+" }}}
+" Ctrlp ----------------------------------------- {{{
+let g:ctrlp_working_path_mode = 'ca'
+" }}}
+" Gundo ----------------------------------------- {{{
+" "http://sjl.bitbucket.org/gundo.vim/"
+nnoremap <TAB> :GundoToggle<CR>
+" }}}
+" NERDTree -------------------------------------- {{{
+" Start if no file opened
+"autocmd vimenter * if !argc() | NERDTree | endif
+" Assign command to TAB
+"map <TAB> :NERDTreeToggle<CR>
+" Fix encoding issues surrounding arrows
+" "https://superuser.com/questions/387777/what-could-cause-strange-characters-in-vim"
+let g:NERDTreeDirArrows=0
+" }}}
+" RainbowParentheses ---------------------------- {{{
+" Auto enable rainbow parentheses
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
+" }}}
+" Taglist --------------------------------------- {{{
+" "https://caffeinatedcode.wordpress.com/2009/11/16/simple-latex-ctags-and-taglist/"
+let tlist_tex_settings = 'latex;l:labels;s:sections;t:subsections;u:subsubsections'
+" }}}
+" Vim-auto-save --------------------------------- {{{
+" "https://github.com/vim-scripts/vim-auto-save"
+" Enable auto saving at startup (can use :AutoSaveToggle otherwise)
+let g:auto_save = 1
+
+" Don't save while in insert mode
+let g:auto_save_in_insert_mode = 0
+
+" This plugin changes vim's updatetime option.
+" If it breaks things, uncomment this
+"let g:auto_save_no_updatetime = 1
+" }}}
+" }}}
+
+" Languages ------------------------------------- {{{
+" Java Cup -------------------------------------- {{{
+autocmd BufNewFile,BufRead *.cup setf cup
+" }}}
+" JFLex ----------------------------------------- {{{
+augroup filetype
+    au BufRead,BufNewFile *.flex,*.jflex,*.jlex    set filetype=jflex
+augroup END
+    au Syntax jflex    so ~/.vim/syntax/jflex.vimrc
+" }}}
+" LaTeX ----------------------------------------- {{{
 autocmd BufNewFile,BufRead *.tex :set filetype=tex
 autocmd BufNewFile,BufRead *.tex :set spell
 
@@ -123,108 +254,14 @@ autocmd BufNewFile,BufRead *.tex :inoremap bf \textbf{
 " it - _I_talicize _F_ont (Normal and Insert mode)
 autocmd BufNewFile,BufRead *.tex :nnoremap <leader>it i\textit{<esc>Eli}<esc>
 autocmd BufNewFile,BufRead *.tex :inoremap ii \textit{
-" End LaTeX
-
-" Airline options
-" "https://github.com/bling/vim-airline"
-let g:airline_powerline_fonts = 1
-set encoding=utf-8
-set laststatus=2
-
-" NERDTree Options
-" Start if no file opened
-"autocmd vimenter * if !argc() | NERDTree | endif
-" Assign command to TAB
-"map <TAB> :NERDTreeToggle<CR>
-" Fix encoding issues surrounding arrows
-" "https://superuser.com/questions/387777/what-could-cause-strange-characters-in-vim"
-let g:NERDTreeDirArrows=0
-
-" Taglist toggle
-:nnoremap <Leader>t :Tlist<CR>
-
-" Taglist latex support
-" "https://caffeinatedcode.wordpress.com/2009/11/16/simple-latex-ctags-and-taglist/"
-let tlist_tex_settings = 'latex;l:labels;s:sections;t:subsections;u:subsubsections'
-
-" Trailing whitespace highlighting
-" "http://vim.wikia.com/wiki/Highlight_unwanted_spaces"
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-
-" Auto enable rainbow parentheses
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-let g:rbpt_colorpairs = [
-    \ ['brown',       'RoyalBlue3'],
-    \ ['Darkblue',    'SeaGreen3'],
-    \ ['darkgray',    'DarkOrchid3'],
-    \ ['darkgreen',   'firebrick3'],
-    \ ['darkcyan',    'RoyalBlue3'],
-    \ ['darkred',     'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['brown',       'firebrick3'],
-    \ ['gray',        'RoyalBlue3'],
-    \ ['black',       'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['Darkblue',    'firebrick3'],
-    \ ['darkgreen',   'RoyalBlue3'],
-    \ ['darkcyan',    'SeaGreen3'],
-    \ ['darkred',     'DarkOrchid3'],
-    \ ['red',         'firebrick3'],
-    \ ]
-let g:rbpt_max = 16
-let g:rbpt_loadcmd_toggle = 0
-
-" JFLex support
-augroup filetype
-    au BufRead,BufNewFile *.flex,*.jflex,*.jlex    set filetype=jflex
-augroup END
-    au Syntax jflex    so ~/.vim/syntax/jflex.vimrc
-
-" Java Cup support
-autocmd BufNewFile,BufRead *.cup setf cup
-
-" "https://github.com/vim-scripts/vim-auto-save"
-" Enable auto saving at startup (can use :AutoSaveToggle otherwise)
-let g:auto_save = 1
-"
-" Don't save while in insert mode
-let g:auto_save_in_insert_mode = 0
-" vim-auto-save config
-"
-" This plugin changes vim's updatetime option.
-" If it breaks things, uncomment this
-"let g:auto_save_no_updatetime = 1
-
-" Set up crosshair, toggle with <leader>c in normal mode
-:hi CursorLine cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
-:hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
-:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
-
-" Setting compiler for Ruby
+" }}}
+" Ruby --------------------- {{{
 " "https://github.com/vim-ruby/vim-ruby/wiki/VimRubySupport"
 autocmd FileType ruby compiler ruby
 au FileType ruby setl sw=2 ts=2 sts=2 et
-
+" }}}
+" YAML ------------------------------------------ {{{
 " Set YAML to correct indentation
 au FileType yaml setl sw=2 ts=2 sts=2 et
-
-" Moving lines up and down with the arrow keys. As inspired by June 15' SF Vim
-" meetup and "http://codingfearlessly.com/2012/08/21/vim-putting-arrows-to-use/"
-nmap <Up> [e
-nmap <Down> ]e
-vmap <Up> [egv
-vmap <Down> ]egv
-
-" Gundo config "http://sjl.bitbucket.org/gundo.vim/"
-nnoremap <TAB> :GundoToggle<CR>
-
-" Ctrlp options
-let g:ctrlp_working_path_mode = 'ca'
+" }}}
+" }}}
