@@ -69,10 +69,6 @@ autocmd BufWinLeave * call clearmatches()
 " "http://learnvimscriptthehardway.stevelosh.com/chapters/07.html"
 
 " Insert Mode ----------------------------------- {{{
-" jj/kk moves left/right ----------------- {{{
-inoremap jj <esc>i
-inoremap kk <esc>lli
-" }}}
 " jk/kj as Escape ------------------------------- {{{
 inoremap jk <esc>
 inoremap kj <esc>
@@ -237,6 +233,7 @@ autocmd BufNewFile,BufRead *.tex :nnoremap <leader>vb o\begin{verbatim}<cr><cr>\
 " li - _L_ist _I_tem
 " NOTE: trailing whitespace is intentional
 autocmd BufNewFile,BufRead *.tex :nnoremap <leader>li o\item 
+autocmd BufNewFile,BufRead *.tex :inoremap <leader><leader> <esc>o\item 
 
 " s - _S_ection
 autocmd BufNewFile,BufRead *.tex :nnoremap <leader>s o\section{}<esc>i
@@ -254,6 +251,9 @@ autocmd BufNewFile,BufRead *.tex :inoremap bf \textbf{
 " it - _I_talicize _F_ont (Normal and Insert mode)
 autocmd BufNewFile,BufRead *.tex :nnoremap <leader>it i\textit{<esc>Eli}<esc>
 autocmd BufNewFile,BufRead *.tex :inoremap ii \textit{
+" }}}
+" Markdown -------------------------------------- {{{
+autocmd BufNewFile,BufRead *.md :inoremap <leader><leader> <esc>o- 
 " }}}
 " Ruby --------------------- {{{
 " "https://github.com/vim-ruby/vim-ruby/wiki/VimRubySupport"
