@@ -1,6 +1,33 @@
 Changelog
 -----
 
+#### 5.1 - Vim LaTeX mappings, config optimizations
+
+- Added glacier-cli scripts
+- Added helper xinitrc functions
+- Added json alias
+- Added LaTeX support to CTags
+- Added <leader><leader> LaTeX to insert new \item
+- Added listchars configuration to vim
+- Added Vim-Jinja2-Syntax
+- Added vim-signature
+- Changed redshift to redshift-gtk
+- Fixed incorrect tmux conf format
+- Fixed issue with linking of dux.py
+- Improved i3 startup format, added VPN workspace
+- Made zshrc executable
+- Remapped <Leader>t to open CTags
+- Updated all github libraries to newest commits
+- Updated Ctrlp to only search for files below the working directory
+- Updated divider to not automatically reset
+- Updated dstat alias to use better IO stats
+- Updated tmux mouse config for ver 2.1+
+- Updated tmux right corner time format
+- Updated vim <leader> to <space>, better LaTeX cmds
+- Updated vimrc to make links more obvious
+- Updated vimrc with better organization and folding
+- Updated YAML indentation to use 2 spaces
+
 #### 5.0 - Major new color scheme, Dux integration
 
 - **MAJOR NEW COLOR SCHEME**
