@@ -106,3 +106,6 @@
 [submodule "libs/github/glacier-cli"]
 	path = libs/github/glacier-cli
 	url = https://github.com/csivanich/glacier-cli.git
+[submodule "libs/github/Vim-Jinja2-Syntax"]
+	path = libs/github/Vim-Jinja2-Syntax
+	url = https://github.com/Glench/Vim-Jinja2-Syntax.git
