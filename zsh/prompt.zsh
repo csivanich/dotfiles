@@ -72,9 +72,9 @@ _is_slow(){
 # Ex: (master)
 _p_git(){
     if _is_git && ! _is_slow; then
-        _p_fk $1 $2 "("
-        git rev-parse --abbrev-ref HEAD | tr -d '\n'
-        _p_fk $1 $2 ") "
+        _p_fk $C_BLUE $2 "${BRANCH}["
+        _p_fk $1 $2 "$(git rev-parse --abbrev-ref HEAD | tr -d '\n')"
+        _p_fk $C_BLUE $2 "]"
     fi
 }
 
