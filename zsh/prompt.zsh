@@ -104,8 +104,10 @@ _p_git_diffs(){
         deletions=$(echo "$i" | awk '{print $6}')
 
         if [ "$changes" -gt 0 ]; then
-            _p_f $1 "~$changes "
-            _p_f $2 "+$additions "
+            _p_f $2 "+$additions"
+            _p_space
+            _p_f $1 "~$changes"
+            _p_space
             _p_f $3 "-$deletions"
         fi
     fi
