@@ -141,9 +141,8 @@ _p_color_init(){
     C_FG=$C_BLACK
 
     # Setup the constants we'll need
-    DIVIDER=""
-    DIVIDER2=""
-    BRANCH=""
+    DIVIDER=${DIVIDER:-":"}
+    BRANCH=${BRANCH:-""}
 }
 
 # Left side of prompt
@@ -155,7 +154,6 @@ _p(){
     _p_main $C_GREEN
     _p_space
     _p_location
-    _p_space
     _p_divider
     _p_space
 }
