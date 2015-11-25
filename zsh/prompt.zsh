@@ -186,7 +186,8 @@ _p(){
 # Right side of prompt
 _p_right(){
     _p_color_init
-    _p_git "$(_p_git_color)" "black" "$(_p_git_color)"
+    _p_git "$(_p_git_color)" $C_BLACK "$(_p_git_color)"
+    _p_space
     _p_git_diffs $C_YELLOW $C_GREEN $C_RED
 }
 
