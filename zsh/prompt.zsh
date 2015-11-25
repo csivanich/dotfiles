@@ -105,9 +105,9 @@ _p_git_diffs(){
         deletions=$(echo "$i" | awk '{print $6}')
 
         if [ "$changes" -gt 0 ]; then
-            _p_f $2 "+$additions"
+            _p_f $1 "+$additions"
             _p_space
-            _p_f $1 "~$changes"
+            _p_f $2 "~$changes"
             _p_space
             _p_f $3 "-$deletions"
         fi
@@ -189,7 +189,7 @@ _p_right(){
     _p_color_init
     _p_git $C_BLUE $C_MAGENTA
     _p_space
-    _p_git_diffs $C_YELLOW $C_GREEN $C_RED
+    _p_git_diffs $C_GREEN $C_YELLOW $C_RED
 }
 
 setopt PROMPT_SUBST
