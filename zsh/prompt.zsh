@@ -6,13 +6,6 @@ _p_divider(){
     _p_fk ${1:-$C_BG} ${2:-$C_FG} $DIVIDER
 }
 
-# XXX broken
-_p_success(){
-    if [ $? -ne 0 ]; then
-        _p_fk $1 $2 " ! "
-    fi
-}
-
 # prints $nick if set
 _p_nick(){
     if [ -n "$nick" ]; then
