@@ -157,20 +157,21 @@ _p_color_init(){
     C_GREEN="green"
     C_MAGENTA="magenta"
     C_RED="red"
+    C_WHITE="white"
     C_YELLOW="yellow"
 
     C_BG=$C_MAGENTA
     C_FG=$C_BLACK
-}
-
-# Left side of prompt
-_p(){
-    _p_color_init
 
     # Setup the constants we'll need
     DIVIDER=""
     DIVIDER2=""
     BRANCH=""
+}
+
+# Left side of prompt
+_p(){
+    _p_color_init
 
     # Generate the prompt
     _p_space
