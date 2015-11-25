@@ -31,7 +31,7 @@ _short_user(){
 # Ex: c@theta
 _p_main(){
     _p_fk $C_BG $C_FG "$(_short_user)@"
-    _p_fk $1 $C_FG "%M"
+    _p_fk ${1:-$C_BG} $C_FG "%M"
 }
 
 _p_location(){
