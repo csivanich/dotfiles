@@ -111,27 +111,34 @@ _p_git_diffs(){
     fi
 }
 
+# Wrapper of shift which ensures that
+# shift is not operating on $# == 0
+alias _safe_shift='1=0 && shift'
+
 # prints text with given back and foreground
 _p_fk(){
     f=$1
     k=$2
-    shift
-    shift
+    _safe_shift
+    _safe_shift
     _p_f $f $(_p_k $k $*)
+    unset f k
 }
 
 # prints text with given background
 _p_k(){
-    echo -n "%K{$1}"
-    shift
-    echo -n "$*%k"
+    v=$1
+    _safe_shift
+    echo -n "%K{$v}$*%k"
+    unset v
 }
 
 # prints text with given foreground
 _p_f(){
-    echo -n "%F{$1}"
-    shift
-    echo -n "$*%f"
+    v=$1
+    _safe_shift
+    echo -n "%F{$v}$*%f"
+    unset v
 }
 
 # prints a space with correct foreground color
