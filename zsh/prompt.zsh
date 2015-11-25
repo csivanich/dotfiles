@@ -26,6 +26,8 @@ _short_user(){
 }
 
 # displays first character of username and host
+# optionally colors the @host with given color
+# _p_main [host color]
 # Ex: c@theta
 _p_main(){
     _p_fk $C_BG $C_FG "$(_short_user)@"
