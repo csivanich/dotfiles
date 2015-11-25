@@ -103,7 +103,7 @@ _p_git_diffs(){
         additions=$(echo "$i" | awk '{print $4}')
         deletions=$(echo "$i" | awk '{print $6}')
 
-        if [ "$changes" -gt "0" ]; then
+        if [ "$changes" -gt 0 ]; then
             _p_f $1 "~$changes "
             _p_f $2 "+$additions "
             _p_f $3 "-$deletions"
