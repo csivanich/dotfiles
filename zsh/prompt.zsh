@@ -1,104 +1,160 @@
 #!/usr/env zsh
 
-# divider background
+# prints divider
+# _p_divider [bg] [fg]
 _p_divider(){
-    echo -n "%K{$2}%F{$1}$DIVIDER%f%k"
-    echo -n "%K{$1}%F{$2}$DIVIDER%f%k"
+    _p_fk ${1:-$C_BG} ${2:-$C_FG} $DIVIDER
 }
 
-# text background divider_bg
+# XXX broken
 _p_success(){
     if [ $? -ne 0 ]; then
-        echo -n "%F{$1}%K{$2}"
-        echo -n " ! "
-        echo -n "%f%k"
-        _p_divider $2 $3
+        _p_fk $1 $2 " ! "
     fi
 }
 
+# prints $nick if set
 _p_nick(){
     if [ -n "$nick" ]; then
-        echo -n "%F{$1}%K{$2}"
-        echo -n " $nick "
-        echo -n "%f%k"
-        _p_divider $2 $3
+        _p_fk $1 $2 " $nick "
     fi
 }
 
-# text background divider_bg
+# prints first character of current username
+_short_user(){
+    printf "$USER" | cut -c1
+}
+
+# displays first character of username and host
+# Ex: c@theta
 _p_main(){
-    if [ -n "$nick" ]; then
-        echo -n "%F{$4}%K{$2}"
-        echo -n " $nick"
-    fi
-    echo -n "%F{$1}%K{$2}"
-    echo -n " %n@%M "
-    echo -n "%k%f"
-    _p_divider $2 $3
+    _p_fk $C_BG $C_FG "$(_short_user)@"
+    _p_fk $1 $C_FG "%M"
 }
 
-# text background divider_bg
 _p_location(){
-    echo -n "%F{$1}%K{$2} %~ %k%f"
-    _p_divider $2 $3
+    _p_k $C_FG "%F{$C_BG}%~%f"
 }
 
-# text background divider_bg
+# Caches status of current directory after first call
+# Use this if you need to know if the cwd is a git repo
+# Ex: _is_git && echo "In a git repo" || echo "No repo here"
+_is_git(){
+    if [[ -z "$_IS_GIT" ]]; then
+        git rev-parse --is-inside-work-tree > /dev/null 2>&1
+        export _IS_GIT="$?"
+    fi
+
+    return $_IS_GIT
+}
+
+# prints git branch name
+# Ex: (master)
 _p_git(){
-    if [ $IS_GIT -eq 0 ]; then
-        echo -n "%F{$1}%K{$2} $BRANCH "
+    if _is_git; then
+        _p_fk $1 $2 "("
         git rev-parse --abbrev-ref HEAD | tr -d '\n'
-        echo -n " %f%k"
-        _p_divider $2 $3
+        _p_fk $1 $2 ") "
     fi
 }
 
+# prints color name for git usage
+# if not in git $reset_color
+# if in clean git repo green
+# if in dirty git repo yellow
 _p_git_color(){
-    if [ $IS_GIT -ne 0 ]; then
-        echo "$reset_color"
+    if ! _is_git; then
+        echo -n "$reset_color"
         return
     else
         if [ -z "$(git diff --name-only)" ]; then
-            echo "green"
+            echo -n "$C_GREEN"
         else
-            echo "yellow"
+            echo -n "$C_YELLOW"
         fi
     fi
 }
 
 # files_changed insertions deletions
 _p_git_diffs(){
-    if [[ "$IS_GIT" == "0" ]];then
+    if _is_git;then
         i=$(git diff --shortstat)
         changes=$(echo "$i" | awk '{print $1}')
         additions=$(echo "$i" | awk '{print $4}')
         deletions=$(echo "$i" | awk '{print $6}')
+
         if [ "$changes" -gt "0" ]; then
-            echo "%F{$1}~$changes%f %F{$2}+$additions%f %F{$3}-$deletions%f"
+            _p_f $1 "~$changes "
+            _p_f $2 "+$additions "
+            _p_f $3 "-$deletions"
         fi
     fi
 }
 
-_p(){
-    git diff --shortstat > /dev/null 2>&1
-    IS_GIT=$?
+# prints text with given back and foreground
+_p_fk(){
+    f=$1
+    k=$2
+    shift
+    shift
+    _p_f $f $(_p_k $k $*)
+}
 
+# prints text with given background
+_p_k(){
+    echo -n "%K{$1}"
+    shift
+    echo -n "$*%k"
+}
+
+# prints text with given foreground
+_p_f(){
+    echo -n "%F{$1}"
+    shift
+    echo -n "$*%f"
+}
+
+# prints a space with correct foreground color
+_p_space(){
+    _p_k $C_FG " "
+}
+
+# loads color variables
+_p_color_init(){
+    C_RED="red"
+    C_YELLOW="yellow"
+    C_GREEN="green"
+    C_MAGENTA="magenta"
+    C_BLACK="black"
+
+    C_BG=$C_MAGENTA
+    C_FG=$C_BLACK
+}
+
+# Left side of prompt
+_p(){
+    _p_color_init
+
+    # Setup the constants we'll need
     DIVIDER=""
     DIVIDER2=""
     BRANCH=""
 
-    #           text    background  divider_bg
-    #_p_success  "red"   "white"     "white"
-    _p_main     "blue" "black"     "blue"  "green"
-    _p_location "magenta" "black"      "magenta"
-    _p_git      "$(_p_git_color)" "black" "$(_p_git_color)"
-    echo -n " "
+    # Generate the prompt
+    _p_space
+    _p_main $C_GREEN
+    _p_space
+    _p_location
+    _p_space
+    _p_divider
+    _p_space
 }
 
+# Right side of prompt
 _p_right(){
-    git diff --shortstat > /dev/null 2>&1
-    IS_GIT=$?
-    _p_git_diffs "yellow" "green" "red"
+    _p_color_init
+    _p_git "$(_p_git_color)" "black" "$(_p_git_color)"
+    _p_git_diffs $C_YELLOW $C_GREEN $C_RED
 }
 
 setopt PROMPT_SUBST
