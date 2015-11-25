@@ -121,11 +121,12 @@ _p_space(){
 
 # loads color variables
 _p_color_init(){
-    C_RED="red"
-    C_YELLOW="yellow"
+    C_BLACK="black"
+    C_BLUE="blue"
     C_GREEN="green"
     C_MAGENTA="magenta"
-    C_BLACK="black"
+    C_RED="red"
+    C_YELLOW="yellow"
 
     C_BG=$C_MAGENTA
     C_FG=$C_BLACK
