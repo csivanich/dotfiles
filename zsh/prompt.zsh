@@ -38,22 +38,40 @@ _p_location(){
     _p_k $C_FG "%F{$C_BG}%~%f"
 }
 
+_timestamp(){
+    date +%s
+}
+
 # Caches status of current directory after first call
 # Use this if you need to know if the cwd is a git repo
 # Ex: _is_git && echo "In a git repo" || echo "No repo here"
 _is_git(){
     if [[ -z "$_IS_GIT" ]]; then
+        # Run a check for a git repo, if it takes over
+        # a second, mark this directory as slow
+        start=$(_timestamp)
         git rev-parse --is-inside-work-tree > /dev/null 2>&1
-        export _IS_GIT="$?"
+        _IS_GIT="$?"
+        stop=$(_timestamp)
+        if [ $((stop - start)) -gt 1 ];then
+            _IS_SLOW=1
+        fi
     fi
 
     return $_IS_GIT
 }
 
+# Use this if you need to know if the cwd is slow (NFS, etc)
+# Uses _IS_SLOW to hold value, is set by _is_git
+# Ex: _is_slow && do_something_conservative || do_something_expensive
+_is_slow(){
+    test "$_IS_SLOW" -eq 1
+}
+
 # prints git branch name
 # Ex: (master)
 _p_git(){
-    if _is_git; then
+    if _is_git && ! _is_slow; then
         _p_fk $1 $2 "("
         git rev-parse --abbrev-ref HEAD | tr -d '\n'
         _p_fk $1 $2 ") "
