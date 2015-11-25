@@ -71,7 +71,7 @@ _is_slow(){
 # prints git branch name
 # _p_git <border color> <branch name color>
 # Ex: (master)
-_p_git(){
+_p_git_branch(){
     if _is_git && ! _is_slow; then
         _p_fk $1 $C_FG "${BRANCH}["
         _p_fk $2 $C_FG "$(git rev-parse --abbrev-ref HEAD | tr -d '\n')"
@@ -187,7 +187,7 @@ _p(){
 # Right side of prompt
 _p_right(){
     _p_color_init
-    _p_git $C_BLUE $C_MAGENTA
+    _p_git_branch $C_BLUE $C_MAGENTA
     _p_space
     _p_git_diffs $C_GREEN $C_YELLOW $C_RED
 }
