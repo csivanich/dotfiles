@@ -83,21 +83,21 @@ _p_git(){
 # if in clean git repo green
 # if in dirty git repo yellow
 _p_git_color(){
-    if ! _is_git; then
-        echo -n "$reset_color"
-        return
-    else
+    if _is_git && ! _is_slow; then
         if [ -z "$(git diff --name-only)" ]; then
             echo -n "$C_GREEN"
         else
             echo -n "$C_YELLOW"
         fi
+    else
+        echo -n "$reset_color"
+        return
     fi
 }
 
 # files_changed insertions deletions
 _p_git_diffs(){
-    if _is_git;then
+    if _is_git && ! _is_slow;then
         i=$(git diff --shortstat)
         changes=$(echo "$i" | awk '{print $1}')
         additions=$(echo "$i" | awk '{print $4}')
