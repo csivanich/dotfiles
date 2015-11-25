@@ -24,37 +24,34 @@ xterm*scrollTtyOutput:    true
 *pointerColorBackground:	white
 *pointerColorForeground:	black
 
-! experimental new colors
-*foreground:    #DDDDDD
-*background:    #1c1c1c
+! Color-scheme : Relic Dark
+! Author       : stark <stark@openmailbox.org>
+! Source       : http://dotshare.it/dots/1039/
 
-!black
-*color0:    #1c1c1c
-*color8:    #656565
-!red
-*color1:    #d83712
-*color9:    #c34022
-!green
-*color2:    #91e44b
-*color10:   #B7CE42
-!yellow
-*color3:    #FFE863
-*color11:   #e1ba44
-!blue
-*color4:    #858585
-*color12:   #c2c2c2
-!magenta
-*color5:    #e86700
-*color13:   #e89859
-!cyan
-*color6:    #ADADAD
-*color14:   #DCDCDC
-!white
-*color7:    #FFFFFF
-*color15:   #CFCFCF
+*background: #1D2426
+*foreground: #8FA388
 
-Xft.dpi: 96
-Xft.antialias: true
-Xft.rgba: rgb
-Xft.hinting: true
-Xft.hintstyle: hintslight
+! Alternate foreground
+!*foreground: #AB9C71
+
+*cursorColor: #BE5E1E
+
+*color0: #1D2426
+! #39474A
+*color1:  #986345
+*color2:  #788249
+*color3:  #9B6A46
+*color4:  #3E5951
+*color5:  #B9924A
+*color6:  #5d796a
+*color7:  #977D5E
+*color8:  #4C5F63
+*color9:  #B07350
+*color10: #869151
+*color11: #AF6B42
+*color12: #567A6E
+*color13: #D69D55
+*color14: #668574
+*color15: #AB9C71
+
+! vim: ft=xdefaults
