@@ -211,6 +211,9 @@ let g:auto_save_in_insert_mode = 0
 " Java Cup -------------------------------------- {{{
 autocmd BufNewFile,BufRead *.cup setf cup
 " }}}
+" Jinja ----------------------------------------- {{{
+autocmd BufRead,BufNewFile *.j2 :set filetype=jinja
+" }}}
 " JFLex ----------------------------------------- {{{
 augroup filetype
     au BufRead,BufNewFile *.flex,*.jflex,*.jlex    set filetype=jflex
