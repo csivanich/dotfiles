@@ -123,7 +123,7 @@ _p_f(){
 # prints a space with correct foreground color
 # caches generated space string for increased 'performance' lol
 _p_space(){
-    test $_p_space_cache || export _p_space_cache=$(_p_k $C_FG " ")
+    test $_p_space_cache || export _p_space_cache="$(_p_k $C_FG ' ')"
     echo -n "$_p_space_cache"
 }
 
