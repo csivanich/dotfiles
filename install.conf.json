@@ -74,6 +74,7 @@
             "~/.zsh.d/000-dux.zsh" : "zsh/000-dux.zsh",
             "~/.zsh.d/bindkeys.zsh" : "zsh/bindings.zsh",
             "~/.zsh.d/colored_man.zsh" : "zsh/colored_man.zsh",
+            "~/.zsh.d/escp" : "zsh/escp",
             "~/.zsh.d/exports.zsh" : "zsh/exports.zsh",
             "~/.zsh.d/prompt.zsh" : "zsh/prompt.zsh",
             "~/.zsh.d/setopt.zsh" : "zsh/setopt.zsh",
