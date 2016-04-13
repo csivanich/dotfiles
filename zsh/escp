@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# Changes directory to root of current git directory, if currently in one
+# escp [dir-on-fail]
+escp(){
+    if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]];then
+        echo "$0 [dir-on-fail]"
+        return 1
+    fi
+
+    dof="${1:-$(pwd)}"
+
+    if [ -e ./.git ];then
+        return 0
+    fi
+
+    if [[ "$(pwd)" == "/" ]];then
+        cd "$dof"
+        return 1
+    fi
+
+    cd ../
+
+    $0 "$dof"
+}
