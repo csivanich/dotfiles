@@ -102,6 +102,10 @@ bindsym $mod+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+Ctrl+space floating toggle
 
+# sticky the focused container on top
+# requires i3 4.11+
+bindsym $mod+Shift+s sticky toggle
+
 # focus the parent container
 bindsym $mod+a focus parent
 
