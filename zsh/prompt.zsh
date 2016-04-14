@@ -147,9 +147,6 @@ _p_color_init(){
 
 # Left side of prompt
 _p(){
-    _p_color_init
-
-    # Generate the prompt
     _p_space
     _p_main $C_GREEN
     _p_space
@@ -160,12 +157,12 @@ _p(){
 
 # Right side of prompt
 _p_right(){
-    _p_color_init
     _p_git_branch $C_BLUE $C_MAGENTA
     _p_space
     _p_git_diffs $C_GREEN $C_YELLOW $C_RED
 }
 
+_p_color_init
 setopt PROMPT_SUBST
 PROMPT='$(_p)'
 RPROMPT='$(_p_right)'
