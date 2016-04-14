@@ -43,7 +43,7 @@ _is_git(){
         # Run a check for a git repo, if it takes over
         # a second, mark this directory as slow
         start=$(_timestamp)
-        git rev-parse --is-inside-work-tree > /dev/null 2>&1
+        git rev-parse --abbrev-ref HEAD >/dev/null 2>&1 && git rev-parse --is-inside-work-tree > /dev/null 2>&1
         _IS_GIT="$?"
         stop=$(_timestamp)
         if [ $((stop - start)) -gt 1 ];then
