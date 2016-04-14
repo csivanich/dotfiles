@@ -127,7 +127,7 @@ bindsym $mod+m workspace M: Music
 bindsym $mod+c workspace Calendar
 bindsym $mod+t workspace Trello
 bindsym $mod+i workspace Inbox
-bindsym $mod+v workspace VPN
+bindsym $mod+v workspace VM
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1: Terminal
@@ -144,7 +144,7 @@ bindsym $mod+Shift+m move container to workspace M: Music
 bindsym $mod+Shift+c move container to workspace Calendar
 bindsym $mod+Shift+t move container to workspace Trello
 bindsym $mod+Shift+i move container to workspace Inbox
-bindsym $mod+Shift+v move container to workspace VPN
+bindsym $mod+Shift+v move container to workspace VM
 
 # reload the configuration file
 bindsym $mod+Shift+r reload
