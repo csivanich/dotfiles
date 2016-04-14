@@ -15,6 +15,7 @@ Changelog
 - Renamed i3 VPN workspace to VM
 - Updated CHANGELOG README image
 - Updated color scheme
+- Updated github libraries
 - Updated zsh to exit after dux exits
 - Updated zsh-syntax-highlighting for v5.2+ support
 
