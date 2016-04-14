@@ -1,6 +1,21 @@
 Changelog
 -----
 
+#### 5.2 - Prompt optimization, color update
+
+Added escp function (PR #4)
+Added i3 $mod+Shift+s to toggle stickyness
+Added jinja2 filetype detection
+Added new prompt (PR #5)
+Added override ability for prompt, changed to ':'
+Added play alias for running ansible playbooks
+Added ridiculous cache for generated space string
+Fixed whitespace on ls alias
+Renamed i3 VPN workspace to VM
+Updated color scheme
+Updated zsh to exit after dux exits
+Updated zsh-syntax-highlighting for v5.2+ support
+
 #### 5.1 - Vim LaTeX mappings, config optimizations
 
 - Added glacier-cli scripts

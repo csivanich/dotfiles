@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-![Screenshot](https://raw.githubusercontent.com/csivanich/dotfiles/master/libs/images/5_0.png)
+![Screenshot](https://raw.githubusercontent.com/csivanich/dotfiles/master/libs/images/5_2.png)
 
 I was tired of having a bunch of configurations across all my machines, especially when trying to keep all the plugins and extras up to date. So I got fed up and threw them on GitHub. It's not perfect (yet!), but it's a great starting point for any Linux config.
 
