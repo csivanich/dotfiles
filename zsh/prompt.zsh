@@ -157,9 +157,22 @@ _p(){
 
 # Right side of prompt
 _p_right(){
+    _p_jobs $C_RED $C_MAGENTA
+    _p_space
     _p_git_branch $C_BLUE $C_MAGENTA
     _p_space
     _p_git_diffs $C_GREEN $C_YELLOW $C_RED
+}
+
+# Inspired by https://github.com/dekz/prompt/blob/master/prompt.zsh#L141
+_p_jobs(){
+    _jobs=$(jobs -l | wc -l | tr -d '\n')
+
+    if [[ "${_jobs}" -gt 0 ]]; then
+        _p_f ${1:-C_RED} "{"
+        _p_f ${2:-C_MAGENTA} "$_jobs"
+        _p_f ${1:-C_RED} "}"
+    fi
 }
 
 _p_color_init
