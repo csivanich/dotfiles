@@ -82,14 +82,18 @@ Contents
 - Custom $PATH
 - Custom prompt with git support
 - Scripts folder (~/.zsh.d)
+- `ssh-agent` auto start
 - Syntax highlighting
 - Work-in-progress
 
-Dependencies
+Optional Dependencies
 -----
 
 #### Vim:
 - [ctags](http://ctags.sourceforge.net/)(>= 5.0)
+
+#### Zsh:
+- [ssh-agent](https://en.wikipedia.org/wiki/Ssh-agent)
 
 Submodules
 -----
