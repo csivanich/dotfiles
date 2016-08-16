@@ -76,6 +76,7 @@
             "~/.zsh.d/colored_man.zsh" : "zsh/colored_man.zsh",
             "~/.zsh.d/escp" : "zsh/escp",
             "~/.zsh.d/exports.zsh" : "zsh/exports.zsh",
+            "~/.zsh.d/functions.sh" : "zsh/functions.sh",
             "~/.zsh.d/prompt.zsh" : "zsh/prompt.zsh",
             "~/.zsh.d/setopt.zsh" : "zsh/setopt.zsh",
             "~/.zsh.d/ssh-reload.sh" : "zsh/ssh-reload.sh",
