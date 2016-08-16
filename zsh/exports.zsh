@@ -5,6 +5,9 @@
 # Default editor is vim
 export EDITOR='vim'
 
+# Default terminal is xterm
+export TERMINAL=xterm
+
 # Stock Arch Linux
 export ARCHFLAGS="-arch x86_64"
 
