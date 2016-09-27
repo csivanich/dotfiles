@@ -109,3 +109,6 @@
 [submodule "libs/github/Vim-Jinja2-Syntax"]
 	path = libs/github/Vim-Jinja2-Syntax
 	url = https://github.com/Glench/Vim-Jinja2-Syntax.git
+[submodule "libs/github/cleanroom"]
+	path = libs/github/cleanroom
+	url = https://github.com/csivanich/cleanroom

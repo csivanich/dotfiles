@@ -99,6 +99,7 @@ Submodules
 -----
 
 #### General:
+- [cleanroom](https://github.com/csivanich/cleanroom)
 - [dotbot](https://github.com/anishathalye/dotbot)
 - [glacier-cli](https://github.com/csivanich/glacier-cli)
 
