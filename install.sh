@@ -12,4 +12,7 @@ CONFIG="install.conf.json"
 PYTHON="python"
 [ $(which python2) ] && PYTHON="python2"
 
+test -d $HOME/.zsh.d || mkdir $HOME/.zsh.d
+test -d $HOME/bin || mkdir $HOME/bin
+
 $PYTHON "${BASEDIR}${DOTBOT_DIR}${DOTBOT}" -d "${BASEDIR}" -c "${CONFIG}" $@
