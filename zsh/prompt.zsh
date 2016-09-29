@@ -18,13 +18,23 @@ _short_user(){
     printf "$USER" | cut -c1
 }
 
+# displays full or shortened (host of host.domain.blah)
+# defaults to full, shortened when $_P_HOSTNAME_SHORT is set
+_hostname(){
+    if [[ -n "$_P_HOSTNAME_SHORT" ]];then
+        printf "$(echo $HOST | cut -d '.' -f1)"
+    else
+        printf '%s' '%M'
+    fi
+}
+
 # displays first character of username and host
 # optionally colors the @host with given color
 # _p_main [host color]
 # Ex: c@theta
 _p_main(){
     _p_fk $C_BG $C_FG "$(_short_user)@"
-    _p_fk ${1:-$C_BG} $C_FG "%M"
+    _p_fk ${1:-$C_BG} $C_FG "$(_hostname)"
 }
 
 _p_location(){
