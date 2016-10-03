@@ -155,6 +155,10 @@ _p_color_init(){
     BRANCH=${BRANCH:-""}
 }
 
+_p_ruby(){
+    find . -maxdepth 1 -name "*.rb" -o -name "*.gem" &>/dev/null && _p_fk "${1:-$C_RED}" "${2:-$C_FG}" "($(ruby --version | cut -d ' ' -f 2))"
+}
+
 # Left side of prompt
 _p(){
     _p_space
@@ -172,6 +176,7 @@ _p_right(){
     _p_git_branch $C_BLUE $C_MAGENTA
     _p_space
     _p_git_diffs $C_GREEN $C_YELLOW $C_RED
+    _p_ruby
 }
 
 # Inspired by https://github.com/dekz/prompt/blob/master/prompt.zsh#L141
