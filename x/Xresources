@@ -28,30 +28,36 @@ xterm*scrollTtyOutput:    true
 ! Author       : stark <stark@openmailbox.org>
 ! Source       : http://dotshare.it/dots/1039/
 
-*background: #1D2426
-*foreground: #8FA388
+*background: #282a36
+*foreground: #f8f8f2
 
 ! Alternate foreground
 !*foreground: #AB9C71
 
-*cursorColor: #BE5E1E
+*cursorColor: #44475a
 
-*color0: #1D2426
-! #39474A
-*color1:  #986345
-*color2:  #788249
-*color3:  #9B6A46
-*color4:  #3E5951
-*color5:  #B9924A
-*color6:  #5d796a
-*color7:  #977D5E
-*color8:  #4C5F63
-*color9:  #B07350
-*color10: #869151
-*color11: #AF6B42
-*color12: #567A6E
-*color13: #D69D55
-*color14: #668574
-*color15: #AB9C71
-
+! Black + DarkGrey
+*color0:  #282a36
+*color8:  #555753
+! DarkRed + Red
+*color1:  #ff5555
+*color9:  #ff8d8d
+! DarkGreen + Green
+*color2:  #50fa7b
+*color10: #43b560
+! DarkYellow + Yellow
+*color3:  #ffc123
+*color11: #f1fa8c
+! DarkBlue + Blue
+*color4:  #6272a4
+*color12: #3465a4
+! DarkMagenta + Magenta
+*color5:  #bd93f9
+*color13: #f57900
+!DarkCyan + Cyan (both not tango)
+*color6:  #8be9fd
+*color14: #46a4ff
+! LightGrey + White
+*color7:  #cccccc
+*color15: #f8f8f2
 ! vim: ft=xdefaults
