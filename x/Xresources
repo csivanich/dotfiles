@@ -4,7 +4,7 @@ xterm*VT100.geometry:     80x25
 !xterm*faceName:              Terminess Powerline:style=Regular
 !xterm*faceName:           Sauce Code Powerline:style=Regular
 xterm*faceName:           Inconsolata for Powerline
-xterm*faceSize:           14
+xterm*faceSize:           16
 xterm*termName:           xterm-256color
 ! xterm*font:              -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
 xterm*dynamicColors:      true
