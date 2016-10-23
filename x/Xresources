@@ -1,15 +1,15 @@
 ! xterm ----------------------------------------------------------------------
 !
 xterm*VT100.geometry:     80x25
-!xterm*faceName:			  Terminess Powerline:style=Regular
+!xterm*faceName:              Terminess Powerline:style=Regular
 !xterm*faceName:           Sauce Code Powerline:style=Regular
 xterm*faceName:           Inconsolata for Powerline
 xterm*faceSize:           14
-xterm*termName:	          xterm-256color
+xterm*termName:           xterm-256color
 ! xterm*font:              -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
 xterm*dynamicColors:      true
 xterm*utf8:               2
-xterm*locale:			  true
+xterm*locale:             true
 xterm*eightBitInput:      true
 xterm*saveLines:          4096
 ! xterm*scrollKey:          true
@@ -20,9 +20,9 @@ xterm*scrollTtyOutput:    true
 ! xterm*multiScroll:        true
 ! xterm*toolBar:            false
 
-*fadeColor:					darkGray
-*pointerColorBackground:	white
-*pointerColorForeground:	black
+*fadeColor:                 darkGray
+*pointerColorBackground:    white
+*pointerColorForeground:    black
 
 ! Color-scheme : Relic Dark
 ! Author       : stark <stark@openmailbox.org>
