@@ -155,8 +155,19 @@ _p_color_init(){
     BRANCH=${BRANCH:-""}
 }
 
+# Displays Ruby version string
+# By default only shows MAJOR.MINOR version,
+# with $_P_RUBY_VERSION_LONG set shows MAJOR.MINOR.PATCHpBUILD
 _p_ruby(){
-    find . -maxdepth 1 -name "*.rb" -o -name "*.gem" &>/dev/null && _p_fk "${1:-$C_RED}" "${2:-$C_FG}" "($(ruby --version | cut -d ' ' -f 2))"
+    test $(find . -maxdepth 1 -name "*.rb" -o -name "*.gem" &>/dev/null | wc -l) -gt 0 || return
+    ruby_version="$(ruby --version | cut -d ' ' -f 2)"
+    if [[ -z "$_P_RUBY_VERSION_LONG" ]];then
+        ruby_version="$(echo $ruby_version | cut -d '.' -f1,2)"
+    fi
+
+    _p_fk "$C_BG" "$C_FG" "("
+    _p_fk "${1:-$C_RED}" "${2:-$C_FG}" "${ruby_version:-"?"}"
+    _p_fk "$C_BG" "$C_FG" ")"
 }
 
 # Left side of prompt
@@ -176,6 +187,7 @@ _p_right(){
     _p_git_branch $C_BLUE $C_MAGENTA
     _p_space
     _p_git_diffs $C_GREEN $C_YELLOW $C_RED
+    _p_space
     _p_ruby
 }
 
