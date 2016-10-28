@@ -24,9 +24,8 @@ xterm*scrollTtyOutput:    true
 *pointerColorBackground:    white
 *pointerColorForeground:    black
 
-! Color-scheme : Relic Dark
-! Author       : stark <stark@openmailbox.org>
-! Source       : http://dotshare.it/dots/1039/
+! Color-scheme : Dracula/Xresources
+! Source       : https://github.com/dracula/xresources
 
 *background: #282a36
 *foreground: #f8f8f2
@@ -53,7 +52,7 @@ xterm*scrollTtyOutput:    true
 *color12: #3465a4
 ! DarkMagenta + Magenta
 *color5:  #bd93f9
-*color13: #f57900
+*color13: #ff92d0
 !DarkCyan + Cyan (both not tango)
 *color6:  #8be9fd
 *color14: #46a4ff
