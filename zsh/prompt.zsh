@@ -38,7 +38,7 @@ _p_main(){
 }
 
 _p_location(){
-    _p_k $C_FG "%F{$C_BG}%~%f"
+    _p_fk ${1:-$C_BG} $C_FG "%~"
 }
 
 _timestamp(){
