@@ -178,10 +178,10 @@ bar {
         separator #656565
 
         # Class             Border  BG      Text
-        focused_workspace   #888888 #1c1c1c #91e44b
+        focused_workspace   #888888 #1c1c1c #eaeaea
         active_workspace    #333333 #5f676a #ffffff
         inactive_workspace  #333333 #222222 #888888
-        urgent_workspace    #2f343a #e86700 #ffffff
+        urgent_workspace    #2f343a #ffc123 #ffffff
     }
 }
 
@@ -191,7 +191,7 @@ bar {
 #indicator  - layout type indicator
 
 # class                 border  backgr. text    indicator
-client.focused          #DDDDDD #91e44b #000000 #ffffff
+client.focused          #222222 #6272a4 #ffffff #ffffff
 client.focused_inactive #333333 #222222 #ffffff #888888
 client.unfocused        #333333 #222222 #888888 #888888
-client.urgent           #222222 #e86700 #ffffff #e86700
+client.urgent           #222222 #ffc123 #ffffff #ffc123
