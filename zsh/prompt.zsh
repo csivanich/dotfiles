@@ -147,8 +147,9 @@ _p_color_init(){
     C_WHITE="white"
     C_YELLOW="yellow"
 
-    C_BG=$C_MAGENTA
+    C_BG=$C_WHITE
     C_FG=$C_BLACK
+    C_TEXT=$C_WHITE
 
     # Setup the constants we'll need
     DIVIDER=${DIVIDER:-":"}
@@ -173,18 +174,18 @@ _p_ruby(){
 # Left side of prompt
 _p(){
     _p_space
-    _p_main $C_GREEN
+    _p_main $C_YELLOW
     _p_space
-    _p_location
+    _p_location $C_TEXT
     _p_divider
     _p_space
 }
 
 # Right side of prompt
 _p_right(){
-    _p_jobs $C_RED $C_MAGENTA
+    _p_jobs $C_RED $C_TEXT
     _p_space
-    _p_git_branch $C_BLUE $C_MAGENTA
+    _p_git_branch $C_BLUE $C_YELLOW
     _p_space
     _p_git_diffs $C_GREEN $C_YELLOW $C_RED
     _p_space
@@ -197,7 +198,7 @@ _p_jobs(){
 
     if [[ "${_jobs}" -gt 0 ]]; then
         _p_f ${1:-C_RED} "{"
-        _p_f ${2:-C_MAGENTA} "$_jobs"
+        _p_f ${2:-C_TEXT} "$_jobs"
         _p_f ${1:-C_RED} "}"
     fi
 }
