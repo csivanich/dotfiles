@@ -129,6 +129,7 @@ Submodules
 - [vim-auto-save](https://github.com/vim-scripts/vim-auto-save)
 - [vim-autoclose](https://github.com/Townk/vim-autoclose.git)
 - [vim-automplpop](http://www.vim.org/scripts/script.php?script_id=1879)
+- [vim-elixir](https://github.com/elixir-lang/vim-elixir)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [vim-jinja2-syntax](https://github.com/Glench/Vim-Jinja2-Syntax)
 - [vim-l9](https://github.com/eparreno/vim-l9)
