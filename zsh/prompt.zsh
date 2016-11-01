@@ -197,10 +197,19 @@ _p_jobs(){
     _jobs=$(jobs -l | wc -l | tr -d '\n')
 
     if [[ "${_jobs}" -gt 0 ]]; then
-        _p_f ${1:-C_RED} "{"
+        _p_f ${C_JOBS:-$C_BG} "{"
         _p_f ${2:-C_TEXT} "$_jobs"
-        _p_f ${1:-C_RED} "}"
+        _p_f ${C_JOBS:-$C_BG} "}"
     fi
+}
+
+_p_benchmark(){
+    times=""
+    for i in _p_divider _p_nick _p_main _p_location _p_git_branch _p_git_diffs _p_ruby _p_jobs _p _p_right; do
+        t=$((time ($i) >/dev/null) 2>&1 | rev | cut -d ' ' -f2 | rev)
+        times="$times\n$t $i"
+    done
+    echo $times | sort -n
 }
 
 _p_color_init
