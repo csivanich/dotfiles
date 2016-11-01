@@ -3,14 +3,12 @@
 # prints divider
 # _p_divider [bg] [fg]
 _p_divider(){
-    _p_fk ${1:-$C_BG} ${2:-$C_FG} $DIVIDER
+    _p "${_P_DIVIDER:-":"}"
 }
 
 # prints $nick if set
 _p_nick(){
-    if [ -n "$nick" ]; then
-        _p_fk $1 $2 " $nick "
-    fi
+    _p "$nick"
 }
 
 # prints first character of current username
@@ -33,12 +31,13 @@ _hostname(){
 # _p_main [host color]
 # Ex: c@theta
 _p_main(){
-    _p_fk $C_BG $C_FG "$(_short_user)@"
-    _p_fk ${1:-$C_BG} $C_FG "$(_hostname)"
+    _short_user | _p_f "$C_USER"
+    _p_f "$C_AT" "@"
+    _hostname | _p_f "$C_HOSTNAME"
 }
 
 _p_location(){
-    _p_fk ${1:-$C_BG} $C_FG "%~"
+    _p_f "$C_LOCATION" "%~"
 }
 
 _timestamp(){
@@ -76,13 +75,13 @@ _is_slow(){
 # Ex: (master)
 _p_git_branch(){
     if _is_git && ! _is_slow; then
-        _p_fk $1 $C_FG "${BRANCH}["
-        _p_fk $2 $C_FG "$(git rev-parse --abbrev-ref HEAD | tr -d '\n')"
-        _p_fk $1 $C_FG "]"
+        _p_f "$C_BRANCH" "${_P_BRANCH:-""}["
+        git rev-parse --abbrev-ref HEAD | tr -d '\n' | _p_f "$C_BRANCH_TEXT"
+        _p_f "$C_BRANCH" "]"
     fi
 }
 
-# files_changed insertions deletions
+# +insertions ~files_changed -deletions
 _p_git_diffs(){
     if _is_git && ! _is_slow;then
         i=$(git diff --shortstat)
@@ -91,11 +90,11 @@ _p_git_diffs(){
         deletions=$(echo "$i" | awk '{print $6}')
 
         if [ "$changes" -gt 0 ]; then
-            _p_f $1 "+$additions"
+            _p_f "$C_ADDITIONS" "+$additions"
             _p_space
-            _p_f $2 "~$changes"
+            _p_f "$C_CHANGES" "~$changes"
             _p_space
-            _p_f $3 "-$deletions"
+            _p_f "$C_DELETIONS" "-$deletions"
         fi
     fi
 }
@@ -104,37 +103,45 @@ _p_git_diffs(){
 # shift is not operating on $# == 0
 alias _safe_shift='1=0 && shift'
 
+# prints text with default back and foregrounds
+# _p [message]
+_p(){
+    test -n "$*" && t="$*" || t="$(cat -)"
+    test -n "$t" && _p_fk "" "" "$t"
+}
+
 # prints text with given back and foreground
+# _p_fk [fg_color] [bg_color] <message>
 _p_fk(){
     f=$1
     k=$2
     _safe_shift
     _safe_shift
-    _p_f $f $(_p_k $k $*)
-    unset f k
+    test -n "$*" && t="$*" || t="$(cat -)"
+    test -n "$t" && _p_k "$k" "$t" | _p_f "$f"
 }
 
 # prints text with given background
+# _p_k [bg_color] <message>
 _p_k(){
-    v=$1
+    v=${1:-"black"}
     _safe_shift
-    echo -n "%K{$v}$*%k"
-    unset v
+    test -n "$*" && t="$*" || t="$(cat -)"
+    test -n "$t" && echo -n "%K{$v}$t%k"
 }
 
 # prints text with given foreground
+# _p_f [fg_color] <message>
 _p_f(){
-    v=$1
+    v=${1:-"white"}
     _safe_shift
-    echo -n "%F{$v}$*%f"
-    unset v
+    test -n "$*" && t="$*" || t="$(cat -)"
+    test -n "$t" && echo -n "%F{$v}$t%f"
 }
 
 # prints a space with correct foreground color
-# caches generated space string for increased 'performance' lol
 _p_space(){
-    test $_p_space_cache || export _p_space_cache="$(_p_k $C_FG ' ')"
-    echo -n "$_p_space_cache"
+    _p " "
 }
 
 # loads color variables
@@ -146,50 +153,39 @@ _p_color_init(){
     C_RED="red"
     C_WHITE="white"
     C_YELLOW="yellow"
-
-    C_BG=$C_WHITE
-    C_FG=$C_BLACK
-    C_TEXT=$C_WHITE
-
-    # Setup the constants we'll need
-    DIVIDER=${DIVIDER:-":"}
-    BRANCH=${BRANCH:-""}
 }
 
 # Displays Ruby version string
 # By default only shows MAJOR.MINOR version,
 # with $_P_RUBY_VERSION_LONG set shows MAJOR.MINOR.PATCHpBUILD
 _p_ruby(){
-    test $(find . -maxdepth 1 -name "*.rb" -o -name "*.gem" &>/dev/null | wc -l) -gt 0 || return
+    test "$(find . -maxdepth 1 -name "*.rb" -o -name "*.gem" &>/dev/null | wc -l)" -gt 0 || return
     ruby_version="$(ruby --version | cut -d ' ' -f 2)"
     if [[ -z "$_P_RUBY_VERSION_LONG" ]];then
         ruby_version="$(echo $ruby_version | cut -d '.' -f1,2)"
     fi
 
-    _p_fk "$C_BG" "$C_FG" "("
-    _p_fk "${1:-$C_RED}" "${2:-$C_FG}" "${ruby_version:-"?"}"
-    _p_fk "$C_BG" "$C_FG" ")"
+    _p_f "$C_RUBY" "("
+    _p_f "$C_RUBY_TEXT" "${ruby_version:-"?"}"
+    _p_f "$C_RUBY" ")"
 }
 
 # Left side of prompt
-_p(){
+_p_left(){
     _p_space
-    _p_main $C_YELLOW
+    _p_main
     _p_space
-    _p_location $C_TEXT
+    _p_location
     _p_divider
     _p_space
 }
 
 # Right side of prompt
 _p_right(){
-    _p_jobs $C_RED $C_TEXT
-    _p_space
-    _p_git_branch $C_BLUE $C_YELLOW
-    _p_space
-    _p_git_diffs $C_GREEN $C_YELLOW $C_RED
-    _p_space
-    _p_ruby
+    _p_jobs && _p_space
+    _p_git_branch && _p_space
+    _p_git_diffs && _p_space
+    _p_ruby && _p_space
 }
 
 # Inspired by https://github.com/dekz/prompt/blob/master/prompt.zsh#L141
@@ -197,22 +193,21 @@ _p_jobs(){
     _jobs=$(jobs -l | wc -l | tr -d '\n')
 
     if [[ "${_jobs}" -gt 0 ]]; then
-        _p_f ${C_JOBS:-$C_BG} "{"
-        _p_f ${2:-C_TEXT} "$_jobs"
-        _p_f ${C_JOBS:-$C_BG} "}"
+        _p_f "$C_JOBS" "{"
+        _p_f "$C_JOBS_TEXT" "$_jobs"
+        _p_f "$C_JOBS" "}"
     fi
 }
 
 _p_benchmark(){
     times=""
-    for i in _p_divider _p_nick _p_main _p_location _p_git_branch _p_git_diffs _p_ruby _p_jobs _p _p_right; do
+    for i in _p_divider _p_nick _p_main _p_location _p_git_branch _p_git_diffs _p_ruby _p_jobs _p_left _p_right; do
         t=$((time ($i) >/dev/null) 2>&1 | rev | cut -d ' ' -f2 | rev)
         times="$times\n$t $i"
     done
     echo $times | sort -n
 }
 
-_p_color_init
 setopt PROMPT_SUBST
-PROMPT='$(_p)'
+PROMPT='$(_p_left)'
 RPROMPT='$(_p_right)'
