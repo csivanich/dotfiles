@@ -85,16 +85,17 @@ _p_git_branch(){
 _p_git_diffs(){
     if _is_git && ! _is_slow;then
         i=$(git diff --shortstat)
+        test -z "$i" && return 1
         changes=$(echo "$i" | awk '{print $1}')
         additions=$(echo "$i" | awk '{print $4}')
         deletions=$(echo "$i" | awk '{print $6}')
 
         if [ "$changes" -gt 0 ]; then
-            _p_f "$C_ADDITIONS" "+$additions"
+            _p_f "$C_ADDITIONS" "+${additions:-0}"
             _p_space
-            _p_f "$C_CHANGES" "~$changes"
+            _p_f "$C_CHANGES" "~${changes:-0}"
             _p_space
-            _p_f "$C_DELETIONS" "-$deletions"
+            _p_f "$C_DELETIONS" "-${deletions:-0}"
         fi
     fi
 }
