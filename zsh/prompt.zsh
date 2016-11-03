@@ -171,6 +171,53 @@ _p_ruby(){
     _p_f "$C_RUBY" ")"
 }
 
+_p_battery(){
+    # Grab percentage
+    percentage=$(_battery_percentage) || return 1
+
+    # Determine color
+    case "$(echo $percentage | cut -d '.' -f1)" in
+        [60-100]*)
+            color=${C_BATTERY_GOOD:-"green"}
+            ;;
+        [21-59]*)
+            color=${C_BATTERY_MED:-"yellow"}
+            ;;
+        [0-20]*)
+            color=${C_BATTERY_LOW:-"red"}
+            ;;
+        *)
+            color=${C_BATTERY_UNKNOWN:-"magenta"}
+            ;;
+    esac
+
+    # Calculate number of dots and make them ints
+    full_dots=$(echo $(( $percentage / 20 )) | cut -d '.' -f1)
+    half_dots=$(echo $(( $percentage % 20 / 10)) | cut -d '.' -f1)
+
+    # Generate dots string, ! if under 10%
+    dots=""
+    for i in $(seq 1 $full_dots);do dots="$dots:" done
+    for i in $(seq 1 $half_dots);do dots="$dots." done
+    test -z "$dots" && dots="!"
+
+    _p_f "$C_BATTERY" "|"
+    _p_f "${C_BATTERY_TEXT:-$color}" "$dots"
+    _p_f "$C_BATTERY" "|"
+}
+
+_battery_percentage(){
+    which upower &>/dev/null || return 1
+    # Get raw energy values for each battery
+    for battery in $(upower -e | grep batt); do
+        upower="$(upower -i $battery)"
+        energy=$(( $energy + $(echo $upower | grep "energy:" | rev | cut -d ' ' -f2 | rev)))
+        potential_energy=$(( $potential_energy + $(echo $upower | grep "energy-full:" | rev | cut -d ' ' -f2 | rev)))
+    done
+
+    echo -n $(( $energy / $potential_energy * 100 )) | cut -c-4 | tr -d '\n'
+}
+
 # Left side of prompt
 _p_left(){
     _p_space
@@ -187,6 +234,7 @@ _p_right(){
     _p_git_branch && _p_space
     _p_git_diffs && _p_space
     _p_ruby && _p_space
+    _p_battery && _p_space
 }
 
 # Inspired by https://github.com/dekz/prompt/blob/master/prompt.zsh#L141
@@ -202,7 +250,7 @@ _p_jobs(){
 
 _p_benchmark(){
     times=""
-    for i in _p_divider _p_nick _p_main _p_location _p_git_branch _p_git_diffs _p_ruby _p_jobs _p_left _p_right; do
+    for i in _p_divider _p_nick _p_main _p_location _p_git_branch _p_git_diffs _p_ruby _p_jobs _p_left _p_right _p_battery; do
         t=$((time ($i) >/dev/null) 2>&1 | rev | cut -d ' ' -f2 | rev)
         times="$times\n$t $i"
     done
