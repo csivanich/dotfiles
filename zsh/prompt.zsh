@@ -114,30 +114,30 @@ _p(){
 # prints text with given back and foreground
 # _p_fk [fg_color] [bg_color] <message>
 _p_fk(){
-    f=$1
-    k=$2
+    f=${1:-${C_FG:-"white"}}
+    k=${2:-${C_BG:-"black"}}
     _safe_shift
     _safe_shift
     test -n "$*" && t="$*" || t="$(cat -)"
-    test -n "$t" && _p_k "$k" "$t" | _p_f "$f"
+    test -n "$t" && echo -n "%F{$f}%K{$k}$t%f%k"
 }
 
 # prints text with given background
 # _p_k [bg_color] <message>
 _p_k(){
-    v=${1:-"black"}
+    k=$1
     _safe_shift
     test -n "$*" && t="$*" || t="$(cat -)"
-    test -n "$t" && echo -n "%K{$v}$t%k"
+    _p_fk "" "$k" "$t"
 }
 
 # prints text with given foreground
 # _p_f [fg_color] <message>
 _p_f(){
-    v=${1:-"white"}
+    f=$1
     _safe_shift
     test -n "$*" && t="$*" || t="$(cat -)"
-    test -n "$t" && echo -n "%F{$v}$t%f"
+    _p_fk "$f" "" "$t"
 }
 
 # prints a space with correct foreground color
@@ -173,21 +173,23 @@ _p_ruby(){
 
 _p_battery(){
     # Grab percentage
-    percentage=$(_battery_percentage) || return 1
+    _percentage_charging=$(_battery_percentage) || return 1
+    percentage=$(echo $_percentage_charging | cut -d ' ' -f1)
+    charging=$(echo $_percentage_charging | cut -d ' ' -f2)
 
     # Determine color
     case "$(echo $percentage | cut -d '.' -f1)" in
-        [60-100]*)
-            color=${C_BATTERY_GOOD:-"green"}
+        [7-9][0-9]*)
+            c_text=${C_BATTERY_GOOD:-"green"}
             ;;
-        [21-59]*)
-            color=${C_BATTERY_MED:-"yellow"}
+        [3-6][0-9])
+            c_text=${C_BATTERY_MED:-"yellow"}
             ;;
-        [0-20]*)
-            color=${C_BATTERY_LOW:-"red"}
+        [0-2][0-9])
+            c_text=${C_BATTERY_LOW:-"red"}
             ;;
         *)
-            color=${C_BATTERY_UNKNOWN:-"magenta"}
+            c_text=${C_BATTERY_UNKNOWN:-"magenta"}
             ;;
     esac
 
@@ -201,23 +203,27 @@ _p_battery(){
     for i in $(seq 1 $half_dots);do dots="$dots." done
     test -z "$dots" && dots="!"
 
-    _p_f "$C_BATTERY" "|"
-    _p_f "${C_BATTERY_TEXT:-$color}" "$dots"
-    _p_f "$C_BATTERY" "|"
+    [[ "$charging" == "charging" ]] && c_divider="${C_BATTERY_CHARGING:-"green"}"
+    _p_f "$c_divider" "|"
+    _p_f "${C_BATTERY_TEXT:-$c_text}" "$dots"
+    _p_f "$c_divider" "|"
 }
 
 _battery_percentage(){
     which upower &>/dev/null || return 1
     # Get raw energy values for each battery
-    unset potential_energy
+    unset potential_energy energy
+    charging="discharging"
     for battery in $(upower -e | grep batt); do
         upower="$(upower -i $battery)"
         energy=$(( $energy + $(echo $upower | grep "energy:" | rev | cut -d ' ' -f2 | rev)))
         potential_energy=$(( $potential_energy + $(echo $upower | grep "energy-full:" | rev | cut -d ' ' -f2 | rev)))
+        test -n "$(echo $upower | grep "state: *charging")" && charging="charging"
     done
 
     test -z "$potential_energy" && return 1
-    echo -n $(( $energy / $potential_energy * 100 )) | cut -c-4 | tr -d '\n'
+    echo -n "$(( $energy / $potential_energy * 100 ))" | cut -c-4 | tr -d '\n'
+    echo -n " $charging"
 }
 
 # Left side of prompt
