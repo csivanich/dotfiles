@@ -172,20 +172,21 @@ _p_ruby(){
 }
 
 _p_battery(){
-    # Grab percentage
+    # Grab our battery percentage and charging status
     _percentage_charging=$(_battery_percentage) || return 1
     percentage=$(echo $_percentage_charging | cut -d ' ' -f1)
+    percentage=$(( $percentage + 5.0 ))
     charging=$(echo $_percentage_charging | cut -d ' ' -f2)
 
     # Determine color
     case "$(echo $percentage | cut -d '.' -f1)" in
-        [7-9][0-9]*)
+        [7-9][0-9]|100)
             c_text=${C_BATTERY_GOOD:-"green"}
             ;;
         [3-6][0-9])
             c_text=${C_BATTERY_MED:-"yellow"}
             ;;
-        [0-2][0-9])
+        [1-2][0-9]|[0-9])
             c_text=${C_BATTERY_LOW:-"red"}
             ;;
         *)
@@ -197,7 +198,7 @@ _p_battery(){
     full_dots=$(echo $(( $percentage / 20 )) | cut -d '.' -f1)
     half_dots=$(echo $(( $percentage % 20 / 10)) | cut -d '.' -f1)
 
-    # Generate dots string, ! if under 10%
+    # Generate dots string, ! if under 5%
     dots=""
     for i in $(seq 1 $full_dots);do dots="$dots:" done
     for i in $(seq 1 $half_dots);do dots="$dots." done
