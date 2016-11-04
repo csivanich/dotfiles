@@ -209,12 +209,14 @@ _p_battery(){
 _battery_percentage(){
     which upower &>/dev/null || return 1
     # Get raw energy values for each battery
+    unset potential_energy
     for battery in $(upower -e | grep batt); do
         upower="$(upower -i $battery)"
         energy=$(( $energy + $(echo $upower | grep "energy:" | rev | cut -d ' ' -f2 | rev)))
         potential_energy=$(( $potential_energy + $(echo $upower | grep "energy-full:" | rev | cut -d ' ' -f2 | rev)))
     done
 
+    test -z "$potential_energy" && return 1
     echo -n $(( $energy / $potential_energy * 100 )) | cut -c-4 | tr -d '\n'
 }
 
