@@ -26,6 +26,7 @@ Changelog
 - Updated _p_git_diffs
 - Updated _p_location
 - Updated screenshot for 6.0
+- Updated submodules
 - Updated zsh exports
 
 #### 5.2 - Prompt optimization, color update
