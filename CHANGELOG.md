@@ -1,6 +1,33 @@
 Changelog
 -----
 
+#### 6.0 - Prompt customization, dracula colorscheme
+
+- Add rvm.sh to zsh.d
+- Added Dracula colorscheme and installs for X/vim/i3 (#9)
+- Added _p_battery to prompt
+- Added _p_benchmark to prompt
+- Added _p_ruby to prompt
+- Added ack alias to page output
+- Added background jobs indicator to prompt
+- Added bgrep alias
+- Added cleanroom submodule and script
+- Added creating required directories in install.sh
+- Added new default prompt color file
+- Added optional hostname shortening
+- Added ssh-agent starter (ssh-reload.sh)
+- Added success/failure messages to update.sh
+- Added temps alias
+- Added vim-elixir
+- Removed gitconfig from dotfiles
+- Retabbed Xresources
+- Set TERMINAL env to xterm
+- Update default xterm font size 14 -> 16
+- Updated _p_git_diffs
+- Updated _p_location
+- Updated screenshot for 6.0
+- Updated zsh exports
+
 #### 5.2 - Prompt optimization, color update
 
 - Added escp function (PR #4)
