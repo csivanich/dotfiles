@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-![Screenshot](libs/images/6.0.png)
+![Screenshot](libs/images/6_0.png)
 
 I was tired of having a bunch of configurations across all my machines, especially when trying to keep all the plugins and extras up to date. So I got fed up and threw them on GitHub. It's not perfect (yet!), but it's a great starting point for any Linux config.
 
