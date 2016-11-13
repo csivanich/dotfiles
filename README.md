@@ -113,6 +113,7 @@ Submodules
 - [colorizer](https://github.com/lilydjwg/colorizer)
 - [ctrlp.vim](https://github.com/kien/ctrlp.vim)
 - [cup.vim](https://github.com/vim-scripts/cup.vim)
+- [dracula](https://github.com/dracula/vim)
 - [gruvbox](https://github.com/morhetz/gruvbox)
 - [gundo.vim](https://github.com/sjl/gundo.vim/)
 - [jflex.vim](jflex.de/vim.html)

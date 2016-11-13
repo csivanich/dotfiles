@@ -16,7 +16,8 @@ execute pathogen#infect()
 " Main options and settings --------------------- {{{
 " Default options
 " "https://wiki.archlinux.org/index.php/vim/.vimrc"
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme dracula
 " colorscheme solarized
 " colorscheme molokai
 " let g:molokai_original = 1

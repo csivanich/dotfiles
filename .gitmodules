@@ -115,3 +115,6 @@
 [submodule "libs/github/vim-elixir.git"]
 	path = libs/github/vim-elixir.git
 	url = https://github.com/elixir-lang/vim-elixir.git
+[submodule "libs/github/dracula-vim.git"]
+	path = libs/github/dracula-vim.git
+	url = https://github.com/dracula/vim.git
