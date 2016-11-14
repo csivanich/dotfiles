@@ -1,4 +1,4 @@
-![Header](libs/images/6_0_header.png)
+![Logo](libs/images/6_0_header.png)
 ========
 
 ![Screenshot](libs/images/6_0.png)
