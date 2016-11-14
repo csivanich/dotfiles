@@ -160,7 +160,8 @@ _p_color_init(){
 # By default only shows MAJOR.MINOR version,
 # with $_P_RUBY_VERSION_LONG set shows MAJOR.MINOR.PATCHpBUILD
 _p_ruby(){
-    test "$(find . -maxdepth 1 -name "*.rb" -o -name "*.gem" &>/dev/null | wc -l)" -gt 0 || return
+    which ruby &>/dev/null || return 1
+    test "$(find . -maxdepth 1 -name "*.rb" -o -name "*.gem" &>/dev/null | wc -l)" -gt 0 || return 1
     ruby_version="$(ruby --version | cut -d ' ' -f 2)"
     if [[ -z "$_P_RUBY_VERSION_LONG" ]];then
         ruby_version="$(echo $ruby_version | cut -d '.' -f1,2)"
