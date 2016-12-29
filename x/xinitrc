@@ -7,12 +7,6 @@
 XRESOURCES=$HOME/.Xresources
 export LANG=en_US.utf8
 
-# generates a ssh-agent script to be run on zsh startup
-_ssh_agent(){
-    echo "# ssh-agent generated on $(date) by _ssh_agent"
-    ssh-agent | grep -v "echo" > ~/.zsh.d/ssh-agent
-}
-
 # quiet version of which
 _which(){
     which >/dev/null 2>&1
