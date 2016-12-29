@@ -38,6 +38,7 @@ exec --no-startup-id which unclutter && unclutter -jitter 10 -idle 1 &
 exec --no-startup-id which xbindkeys && xbindkeys
 exec --no-startup-id which redshift-gtk && redshift-gtk
 exec --no-startup-id which xscreensaver && xscreensaver &
+exec --no-startup-id which nm-applet && nm-applet &
 #exec --no-startup-id [ $(which xautolock) ] && xautolock -time 10 -locker lock
 
 # Move the current workspace to other outputs
