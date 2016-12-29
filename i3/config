@@ -28,7 +28,7 @@ workspace_auto_back_and_forth yes
 for_window [class="Xfce4-notifyd"] floating enable
 for_window [class="jetbrains-idea-ce"] floading disable
 
-exec --no-startup-id which clipit && clipit
+exec --no-startup-id which gpaste-client && gpaste-client applet
 exec --no-startup-id which compton && compton -b
 exec --no-startup-id which connman-notify && connman-notify &
 exec --no-startup-id which dunst && dunst &
