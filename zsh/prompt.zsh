@@ -216,7 +216,7 @@ _battery_percentage(){
     # Get raw energy values for each battery
     unset potential_energy energy
     charging="discharging"
-    for battery in $(upower -e | grep batt); do
+    for battery in $(upower -e | grep batt | grep -v keyboard); do
         upower="$(upower -i $battery)"
         energy=$(( $energy + $(echo $upower | grep "energy:" | rev | cut -d ' ' -f2 | rev)))
         potential_energy=$(( $potential_energy + $(echo $upower | grep "energy-full:" | rev | cut -d ' ' -f2 | rev)))
