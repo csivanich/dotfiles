@@ -22,7 +22,6 @@ _rie(){
 [ -r $XRESOURCES ] && xrdb -merge $XRESOURCES
 _rie nvidia-settings -a InitialPixmapPlacement=2
 _which xscreensaver && _rie xss-lock -- xscreensaver-command -lock
-_which ssh-agent && _ssh-agent
 [ -x $HOME/.screenlayout/default.sh ] && $HOME/.screenlayout/default.sh
 
 setxkbmap -option caps:escape
