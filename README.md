@@ -141,6 +141,7 @@ Submodules
 - [vim-sensible](https://github.com/tpope/vim-sensible)
 - [vim-signature](https://github.com/kshenoy/vim-signature)
 - [vim-signify](https://github.com/mhinz/vim-signify)
+- [vim-terraform](https://github.com/hashivim/vim-terraform)
 - [vim-unimpared](https://github.com/tpope/vim-unimpaired)
 
 Install

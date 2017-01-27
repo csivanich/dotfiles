@@ -118,3 +118,6 @@
 [submodule "libs/github/dracula-vim.git"]
 	path = libs/github/dracula-vim.git
 	url = https://github.com/dracula/vim.git
+[submodule "libs/github/vim-terraform"]
+	path = libs/github/vim-terraform
+	url = https://github.com/hashivim/vim-terraform
