@@ -47,6 +47,9 @@ bindsym $mod+Down move workspace to output down
 bindsym $mod+Left move workspace to output left
 bindsym $mod+Right move workspace to output right
 
+# Layout a grid (g)
+bindsym $mod+g split h, focus down, move up, focus down
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 floating_minimum_size 75 x 50
