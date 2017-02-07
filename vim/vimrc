@@ -264,6 +264,10 @@ autocmd BufNewFile,BufRead *.md :inoremap <leader><leader> <esc>o-
 autocmd FileType ruby compiler ruby
 au FileType ruby setl sw=2 ts=2 sts=2 et
 " }}}
+" Terraform ------------------------------------- {{{
+" "https://github.com/bsnape/terraform-style-guide"
+au FileType tf setl sw=2 ts=2 sts=2 et
+" }}}
 " YAML ------------------------------------------ {{{
 " Set YAML to correct indentation
 au FileType yaml setl sw=2 ts=2 sts=2 et
