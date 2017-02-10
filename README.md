@@ -17,7 +17,7 @@ Contents
 - $mod set to Win key
 - Sauce Code for Powerline font - size 10 regular
 - 1px borders
-- Improved window movement between outputs (\$mod+\[ and \])
+- Improved window movement between outputs ($mod+arrows)
 - Named/numbered workspaces, each with switch and move bindings
 - Top hidden bar
 - Custom dmenu1/2 compatability
