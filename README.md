@@ -73,7 +73,7 @@ Contents
 - 4096 lines saved
 - Autostarts tmux with `dux` script
 - Custom colorscheme
-- Iconsolata for Powerline font - size 14 regular
+- Iconsolata for Powerline font - size 16 regular
 - UTF8 enabled
 
 #### Zsh Configuration
