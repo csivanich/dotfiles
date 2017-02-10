@@ -22,13 +22,16 @@ Contents
 - Top hidden bar
 - Custom dmenu1/2 compatability
 - Optionally autostarts (if installed):
-  - [Clipit](http://sourceforge.net/projects/gtkclipit/)
   - [Compton](https://github.com/chjj/compton)
   - [Connman-Notify](https://github.com/wavexx/connman-notify)
   - [Dunst](http://knopwob.org/dunst/index.html)
+  - [GPaste](https://github.com/Keruspe/GPaste)
+  - [Network-Manager-Applet](https://wiki.gnome.org/Projects/NetworkManager)
   - [Nitrogen](http://projects.l3ib.org/nitrogen/)
+  - [Redshift-gtk](https://github.com/jonls/redshift)
   - [Synsei](https://github.com/csivanich/synsei)
   - [Unclutter](http://ftp.x.org/contrib/utilities/unclutter-8.README)
+  - [XScreenSaver](https://www.jwz.org/xscreensaver/)
   - [Xbindkeys](http://www.nongnu.org/xbindkeys/xbindkeys.html)
 
 #### Tmux Configuration
