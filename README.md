@@ -20,6 +20,7 @@ Contents
 - Improved window movement between outputs (\$mod+\[ and \])
 - Named/numbered workspaces, each with switch and move bindings
 - Top hidden bar
+- Custom dmenu1/2 compatability
 - Optionally autostarts (if installed):
   - [Clipit](http://sourceforge.net/projects/gtkclipit/)
   - [Compton](https://github.com/chjj/compton)
