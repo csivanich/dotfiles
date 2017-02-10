@@ -6,7 +6,8 @@
         },
         "link" : {
             "~/bin/dux" : "libs/github/dux/dux.py",
-            "~/bin/glacier" : "libs/github/glacier-cli/glacier.py"
+            "~/bin/glacier" : "libs/github/glacier-cli/glacier.py",
+            "~/bin/lock" : "scripts/lock.sh"
         }
     },
     {
