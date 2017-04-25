@@ -1,5 +1,7 @@
 " Include default global config
-source /etc/vimrc
+if filereadable("/etc/vimrc")
+    source /etc/vimrc
+endif
 
 " Vimscript file settings ---------------------- {{{
 augroup filetype_vim
